@@ -44,7 +44,7 @@ window.onload = function(){
         var time2 = 0;//画面切り替えに使用
         var muki = 10; //全てのキャラクターの向きの判定用
         var rpeat = 10; //繰り返しに使用
-        var map_p = 0; //横スクロールに使用
+        var map_p = 600; //横スクロールに使用
         var map_u = 0; //上スクロールに使用
         var and = 0;
         var jump2 = 2; //二段ジャンプに使用
@@ -250,7 +250,6 @@ window.onload = function(){
             time_mouse +=0.05;
             serval.frame = time % 12;
                 map_p +=5;
-                serval.x += 5;
                 if(zimen1.x < -5000){
                     zimen1.x = 5000;
                 };
@@ -258,7 +257,6 @@ window.onload = function(){
                     zimen2.x = 5000;
                 };
                 if(map_p>=600){
-                    serval.x -= 5;
                     block1.x -= 5;
                     block2.x -= 5;
                     block3.x -= 5;
@@ -1277,12 +1275,12 @@ window.onload = function(){
        // core.rootScene.addChild(dokan4);
         core.rootScene.addChild(zimen1);
         core.rootScene.addChild(zimen2);
-       // core.rootScene.addChild(block1);
-       // core.rootScene.addChild(block2);
-       // core.rootScene.addChild(block3);
-      //  core.rootScene.addChild(mouse);
-       // core.rootScene.addChild(japaricoin);
-       // core.rootScene.addChild(boss);
+        core.rootScene.addChild(block1);
+        core.rootScene.addChild(block2);
+        core.rootScene.addChild(block3);
+        core.rootScene.addChild(mouse);
+        core.rootScene.addChild(japaricoin);
+        core.rootScene.addChild(boss);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
     };
