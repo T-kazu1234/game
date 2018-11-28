@@ -47,7 +47,8 @@ window.onload = function(){
         var map_p = 600; //横スクロールに使用
         var map_u = 0; //上スクロールに使用
         var and = 0;
-        var jump2 = 2; //二段ジャンプに使用
+        var jump2 = 4; //二段ジャンプに使用
+        var rr=0,rrr=0; //回転に使用
         //キャラクターの判定
         var character1;
         var character2;
@@ -249,7 +250,17 @@ window.onload = function(){
             time_japariman_blue +=0.05;
             time_mouse +=0.05;
             serval.frame = time % 12;
+                if(rr<365){
+                rr +=3;
+                };
+                rrr +=30;
                 map_p +=5;
+                if(jump2==1){
+                serval.rotation = rr;
+                };
+                if(jump2==2){
+                    serval.rotation = rrr;
+                };
                 if(zimen1.x < -5000){
                     zimen1.x = 5000;
                 };
@@ -407,6 +418,7 @@ window.onload = function(){
                                 syosoku_serval = 0;
                                 this.y = zimen1.y-400;
                                 jump2 = 0;
+                                serval.rotation = 10;
                                 };
                                 
                                 if(this.intersect(zimen2)){
@@ -414,6 +426,7 @@ window.onload = function(){
                                 syosoku_serval = 0;
                                 this.y = zimen2.y-400;
                                 jump2 = 0;
+                                serval.rotation = 10;
                                 };
                                 
                                 //ブロックの処理
@@ -1230,9 +1243,11 @@ window.onload = function(){
         
         core.rootScene.on('touchstart',function(e){
                           
+    
                           if(jump2<2){
                           jump2 +=1;
                           muki=10;
+                          rr=0;
                           time_serval = 0;
                           if(time_serval<0.1){
                           serval.y-=1;
@@ -1275,9 +1290,9 @@ window.onload = function(){
        // core.rootScene.addChild(dokan4);
         core.rootScene.addChild(zimen1);
         core.rootScene.addChild(zimen2);
-        core.rootScene.addChild(block1);
-        core.rootScene.addChild(block2);
-        core.rootScene.addChild(block3);
+       // core.rootScene.addChild(block1);
+       // core.rootScene.addChild(block2);
+       // core.rootScene.addChild(block3);
         core.rootScene.addChild(mouse);
         core.rootScene.addChild(japaricoin);
         core.rootScene.addChild(boss);
