@@ -247,7 +247,25 @@ window.onload = function(){
             time_toki   +=0.05;
             time_japariman_blue +=0.05;
             time_mouse +=0.05;
-            };
+                             muki =10;
+                                if(and==0){
+                                map_p += 5 ;
+                                };
+                                serval.x += 5;
+                                if(map_p>=600){
+                                if(and==0){
+                                //map_p = 600;
+                                serval.x -= 5;
+                                };
+                                };
+                             if(time_serval<0.1){
+                             serval.frame = time % 12;
+                             if (core.input.left){
+                             serval.frame = 30;
+                                if(map_p>=600){
+                                map_p = 600;
+                                serval.x = 600;
+                                };
         };
         
         function buturi_left(){
