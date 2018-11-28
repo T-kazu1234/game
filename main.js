@@ -1,5 +1,5 @@
 enchant();
 
-window.onload = fnction() {
+window.onload = function() {
 console.log('helloworld');
 };
