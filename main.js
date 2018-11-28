@@ -74,6 +74,13 @@ window.onload = function(){
         jaga.y = 900;
         jaga.frame = 0;
         
+        var toki2 = new Sprite(400,400);
+        toki2.image = core.assets['toki.png'];
+        toki2_x_syoki = -2000;
+        toki2.x = toki2_x_syoki;
+        toki2.y = 150;
+        toki2.frame = 0;
+        
         var tuti = new Sprite(400,400);
         tuti.image = core.assets['tuti.png'];
         tuti_x_syoki = -500;
@@ -249,6 +256,7 @@ window.onload = function(){
             time_toki   +=0.05;
             time_japariman_blue +=0.05;
             time_mouse +=0.05;
+                toki2.frame=time % 6 + 39;
             serval.frame = time % 12;
                 if(rr<365){
                 rr +=3;
@@ -267,21 +275,20 @@ window.onload = function(){
                 if(zimen2.x < -5000){
                     zimen2.x = 5000;
                 };
+                if(toki2.x > 2000){
+                    toki2.x = -2000
+                };
                 if(map_p>=600){
-                    block1.x -= 5;
-                    block2.x -= 5;
-                    block3.x -= 5;
                     if(and==0){
                         map_p -= 5;
                     };
+                    toki2.x +=1;
                     japariman_blue.x -= 5;
                     boss.x -= 5;
                     mouse.x -= 5;
                     zimen1.x -= 5;
                     zimen2.x -= 5;
                     s.x-= 5;
-                    dokan1.x-= 5;
-                    dokan4.x-= 5;
                     jaga.x-= 5;
                 };
             };
@@ -1296,6 +1303,7 @@ window.onload = function(){
         core.rootScene.addChild(mouse);
         core.rootScene.addChild(japaricoin);
         core.rootScene.addChild(boss);
+        core.rootScene.addChild(toki2);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
     };
