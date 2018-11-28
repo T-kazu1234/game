@@ -247,28 +247,25 @@ window.onload = function(){
             time_toki   +=0.05;
             time_japariman_blue +=0.05;
             time_mouse +=0.05;
-            serval.frame = time % 12;
-                map_p +=5;
-                serval.x += 5;
-                if(map_p>=600){
-                    serval.x -= 5;
-                    block1.x -= 5;
-                    block2.x -= 5;
-                    block3.x -= 5;
-                    if(and==0){
-                        map_p -= 5;
-                    };
-                    japariman_blue.x -= 5;
-                    boss.x -= 5;
-                    mouse.x -= 5;
-                    zimen1.x -= 5;
-                    zimen2.x -= 5;
-                    s.x-= 5;
-                    dokan1.x-= 5;
-                    dokan4.x-= 5;
-                    jaga.x-= 5;
-                };
-            };
+                             muki =10;
+                                if(and==0){
+                                map_p += 5 ;
+                                };
+                                serval.x += 5;
+                                if(map_p>=600){
+                                if(and==0){
+                                //map_p = 600;
+                                serval.x -= 5;
+                                };
+                                };
+                             if(time_serval<0.1){
+                             serval.frame = time % 12;
+                             if (core.input.left){
+                             serval.frame = 30;
+                                if(map_p>=600){
+                                map_p = 600;
+                                serval.x = 600;
+                                };
         };
         
         function buturi_left(){
@@ -785,7 +782,7 @@ window.onload = function(){
                                 
                              if(muki>9){
                                 if(time_serval>0.1){
-                                this.frame = 27;
+                             this.frame = 27;
                                 };
                              };
                                 if(muki<-9){
@@ -805,7 +802,7 @@ window.onload = function(){
                                 syosoku_serval=0;
                                 if(muki>9){
                                 muki +=1;
-                                //this.frame = 12;
+                                this.frame = 12;
                                 if(muki>1000){
                                 this.frame = 30;
                                 };
@@ -1223,17 +1220,8 @@ window.onload = function(){
         
         core.rootScene.on('touchstart',function(e){
                           
-                          
-                          if(time_serval<0.1){
-                          serval.y-=1;
-                          };
-                          if(time_serval<0.1){
-                          syosoku_serval = 38;
-                          if(serval.y>-100000){
-                          // var sound = core.assets['jump.wav'].clone();
-                          // sound.play();
-                          };
-                          };
+                          mouse.x = e.x;
+                          mouse.y = e.y;
                           
                           });
         
@@ -1259,18 +1247,18 @@ window.onload = function(){
         core.rootScene.addChild(serval);
         core.rootScene.addChild(japariman_blue);
         core.rootScene.addChild(toki);
-       // core.rootScene.addChild(dokan1);
-       // core.rootScene.addChild(dokan2);
-       // core.rootScene.addChild(dokan3);
-       // core.rootScene.addChild(dokan4);
+        core.rootScene.addChild(dokan1);
+        core.rootScene.addChild(dokan2);
+        core.rootScene.addChild(dokan3);
+        core.rootScene.addChild(dokan4);
         core.rootScene.addChild(zimen1);
         core.rootScene.addChild(zimen2);
-       // core.rootScene.addChild(block1);
-       // core.rootScene.addChild(block2);
-       // core.rootScene.addChild(block3);
-      //  core.rootScene.addChild(mouse);
-       // core.rootScene.addChild(japaricoin);
-       // core.rootScene.addChild(boss);
+        core.rootScene.addChild(block1);
+        core.rootScene.addChild(block2);
+        core.rootScene.addChild(block3);
+        core.rootScene.addChild(mouse);
+        core.rootScene.addChild(japaricoin);
+        core.rootScene.addChild(boss);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
     };
