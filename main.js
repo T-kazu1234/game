@@ -3,7 +3,7 @@ enchant();
 window.onload = function(){
     var core = new Core(1600,1600);
     core.preload('serval.png','toki.png','japariman_blue.png','map0.png','jump.wav','jump.mp3');
-    core.preload('zimen.png','asiba.png','boss.png','mouse.png','jaga.png','s.png','game_over.png','st.png');
+    core.preload('zimen.png','asiba.png','cerulean.png','mouse.png','jaga.png','s.png','game_over.png','st.png');
     core.preload('dokan1.png','dokan2.png','dokan3.png','s2.png','zimen2.png','tuti.png','koe.png','japaricoin.png');
     core.fps = 100;
     core.onload = function(){
@@ -151,14 +151,14 @@ window.onload = function(){
         koe.frame = 0;
         
         //ボスの初期設定
-        var boss = new Sprite(200,240);
-        var syosoku_boss = 0;
-        var spead_boss;
-        var time_boss = 0;
-        boss.image = core.assets['boss.png'];
-        boss.x = 1600;
-        boss.y = 0;
-        boss.frame = 0;
+        var cerulean = new Sprite(200,240);
+        var syosoku_cerulean = 0;
+        var spead_cerulean;
+        var time_cerulean = 0;
+        cerulean.image = core.assets['cerulean.png'];
+        cerulean.x = 1600;
+        cerulean.y = 0;
+        cerulean.frame = 0;
         
         //地面の設定
         
@@ -284,7 +284,7 @@ window.onload = function(){
                     };
                     toki2.x +=1;
                     japariman_blue.x -= 5;
-                    boss.x -= 5;
+                    cerulean.x -= 5;
                     mouse.x -= 5;
                     zimen1.x -= 5;
                     zimen2.x -= 5;
@@ -303,7 +303,7 @@ window.onload = function(){
             map_p += 5;
             };
             japariman_blue.x += 5;
-            boss.x += 5;
+            cerulean.x += 5;
             mouse.x += 5;
             zimen1.x += 5;
             zimen2.x += 5;
@@ -323,7 +323,7 @@ window.onload = function(){
             map_p -= 5;
             };
             japariman_blue.x -= 5;
-            boss.x -= 5;
+            cerulean.x -= 5;
             mouse.x -= 5;
             zimen1.x -= 5;
             zimen2.x -= 5;
@@ -341,8 +341,8 @@ window.onload = function(){
         };
         //ボスの反射係数
         function hansyab(name){
-            time_boss = 0;
-            syosoku_boss = -spead_boss*0.3;
+            time_cerulean = 0;
+            syosoku_cerulean = -spead_cerulean*0.3;
         };
         //ネズミのおもちゃの反射係数
         function hansyam(name){
@@ -1214,7 +1214,7 @@ window.onload = function(){
 
         
         //ボスの動作設定157 187
-        boss.addEventListener('enterframe',function(){
+        cerulean.addEventListener('enterframe',function(){
                               if(map_p>=600){
                               if(core.input.right){
                               this.x-= 5;
@@ -1224,10 +1224,10 @@ window.onload = function(){
                               };
                               };
                               this.frame = time % 5 + 5;
-                                time_boss += 0.05;
-                                spead_boss = syosoku_boss-g*time_boss;
-                                boss.y = boss.y - spead_boss;
-                              boss.x-=3;
+                                time_cerulean += 0.05;
+                                spead_cerulean = syosoku_cerulean-g*time_cerulean;
+                                cerulean.y = cerulean.y - spead_cerulean;
+                              cerulean.x-=3;
                               
                               if(this.x<-200){
                               this.x = 1600;
@@ -1302,7 +1302,7 @@ window.onload = function(){
        // core.rootScene.addChild(block3);
         core.rootScene.addChild(mouse);
         core.rootScene.addChild(japaricoin);
-        core.rootScene.addChild(boss);
+        core.rootScene.addChild(cerulean);
         core.rootScene.addChild(toki2);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
