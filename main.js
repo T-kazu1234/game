@@ -2,8 +2,8 @@ enchant();
 
 window.onload = function(){
     var core = new Core(1600,1600);
-    core.preload('serval.png','toki.png','japariman_blue.png','map0.png','jump.wav','jump.mp3');
-    core.preload('zimen.png','asiba.png','cerulean.png','mouse.png','jaga.png','s.png','game_over.png','st.png');
+    core.preload('serval.png','toki.png','japariman_blue.png','map0.png','jump.wav','jump.mp3','cerulean.png');
+    core.preload('zimen.png','asiba.png','boss.png','mouse.png','jaga.png','s.png','game_over.png','st.png');
     core.preload('dokan1.png','dokan2.png','dokan3.png','s2.png','zimen2.png','tuti.png','koe.png','japaricoin.png');
     core.fps = 100;
     core.onload = function(){
@@ -49,6 +49,7 @@ window.onload = function(){
         var and = 0;
         var jump2 = 4; //二段ジャンプに使用
         var rr=0,rrr=0; //回転に使用
+        var cell = 0;//セルリアンのダメージ判定
         //キャラクターの判定
         var character1;
         var character2;
@@ -104,16 +105,16 @@ window.onload = function(){
         var spead_japariman_blue;
         var time_japariman_blue = 0;
         japariman_blue.image = core.assets['japariman_blue.png'];
-        japariman_blue_x_syoki = -500;
+        japariman_blue_x_syoki = 5000;
         japariman_blue.x = japariman_blue_x_syoki;
         japariman_blue.y = 0;
         japariman_blue.frame = 0;
         
         var japaricoin = new Sprite(350,350);
         japaricoin.image = core.assets['japaricoin.png'];
-        japaricoin_x_syoki = -500;
+        japaricoin_x_syoki = 5000;
         japaricoin.x = japaricoin_x_syoki;
-        japaricoin.y = 0;
+        japaricoin.y = 900;
         japaricoin.frame = 0;
         
         
@@ -128,6 +129,16 @@ window.onload = function(){
         mouse.y = 0;
         mouse.frame = 0;
         
+        // セルリアンの初期設定
+        var cerulean = new Sprite(331,308);
+        var syosoku_cerulean = 0;
+        var spead_cerulean;
+        var time_cerulean = 0;
+        cerulean.image = core.assets['cerulean.png'];
+        cerulean_x_syoki = 5000;
+        cerulean.x = cerulean_x_syoki;
+        cerulean.y = 0;
+        cerulean.frame = 0;
         
         var game_over = new Sprite(1600,1600);
         game_over.image = core.assets['game_over.png'];
@@ -151,14 +162,14 @@ window.onload = function(){
         koe.frame = 0;
         
         //ボスの初期設定
-        var cerulean = new Sprite(200,240);
-        var syosoku_cerulean = 0;
-        var spead_cerulean;
-        var time_cerulean = 0;
-        cerulean.image = core.assets['cerulean.png'];
-        cerulean.x = 1600;
-        cerulean.y = 0;
-        cerulean.frame = 0;
+        var boss = new Sprite(200,240);
+        var syosoku_boss = 0;
+        var spead_boss;
+        var time_boss = 0;
+        boss.image = core.assets['boss.png'];
+        boss.x = 5000;
+        boss.y = 0;
+        boss.frame = 0;
         
         //地面の設定
         
@@ -171,8 +182,8 @@ window.onload = function(){
         
         
         var zimen2 = new Sprite(4000,600);
-        zimen2.image = core.assets['zimen.png'];
-        zimen2_x_syoki = 4800;
+        zimen2.image = core.assets['zimen2.png'];
+        zimen2_x_syoki = 4000;
         zimen2.x = zimen2_x_syoki;
         zimen2.y = 1300;
         zimen2.frame = 0;
@@ -247,6 +258,7 @@ window.onload = function(){
             spead_toki = syosoku_toki-g*0.05*time_toki;
             spead_japariman_blue = syosoku_japariman_blue-g*time_japariman_blue;
             spead_mouse = syosoku_mouse-g*time_mouse;
+            spead_cerulean = syosoku_cerulean-g*time_cerulean;
         };
         function times(name){
             time        +=0.07;
@@ -256,6 +268,7 @@ window.onload = function(){
             time_toki   +=0.05;
             time_japariman_blue +=0.05;
             time_mouse +=0.05;
+                time_cerulean += 0.05;
                 toki2.frame=time % 6 + 39;
             serval.frame = time % 12;
                 if(rr<365){
@@ -269,26 +282,35 @@ window.onload = function(){
                 if(jump2==2){
                     serval.rotation = rrr;
                 };
-                if(zimen1.x < -5000){
-                    zimen1.x = 5000;
+                if(zimen1.x < -4000){
+                    zimen1.x = 4000;
+                    japariman_blue.x = boss.x;
+                    japariman_blue.y = boss.y;
                 };
-                if(zimen2.x < -5000){
-                    zimen2.x = 5000;
+                if(zimen2.x < -4000){
+                    zimen2.x = 4000;
                 };
+                if(s.x<-20000){
+                    s.x = 2500;
+                    jaga.x = 2500;
+                }
                 if(toki2.x > 2000){
                     toki2.x = -2000
+                    japaricoin.y = toki2.y+400;
                 };
                 if(map_p>=600){
                     if(and==0){
                         map_p -= 5;
                     };
                     toki2.x +=1;
-                    japariman_blue.x -= 5;
-                    cerulean.x -= 5;
+                    cerulean.x -= 6;
+                    if(cell==1){cerulean.x+=1;};
+                    boss.x -= 5;
                     mouse.x -= 5;
                     zimen1.x -= 5;
                     zimen2.x -= 5;
                     s.x-= 5;
+                    japariman_blue = 90000;
                     jaga.x-= 5;
                 };
             };
@@ -303,7 +325,7 @@ window.onload = function(){
             map_p += 5;
             };
             japariman_blue.x += 5;
-            cerulean.x += 5;
+            boss.x += 5;
             mouse.x += 5;
             zimen1.x += 5;
             zimen2.x += 5;
@@ -323,7 +345,7 @@ window.onload = function(){
             map_p -= 5;
             };
             japariman_blue.x -= 5;
-            cerulean.x -= 5;
+            boss.x -= 5;
             mouse.x -= 5;
             zimen1.x -= 5;
             zimen2.x -= 5;
@@ -337,12 +359,16 @@ window.onload = function(){
         //ジャパリまんの反射係数設定
         function hansyaj(name){
             time_japariman_blue = 0;
-            syosoku_japariman_blue = -spead_japariman_blue*0.8;
+            syosoku_japariman_blue = -spead_japariman_blue*1;
         };
         //ボスの反射係数
         function hansyab(name){
+            time_boss = 0;
+            syosoku_boss = -spead_boss*0;
+        };
+        function hansyac(name){
             time_cerulean = 0;
-            syosoku_cerulean = -spead_cerulean*0.3;
+            syosoku_cerulean = -spead_cerulean*0.2;
         };
         //ネズミのおもちゃの反射係数
         function hansyam(name){
@@ -1087,6 +1113,12 @@ window.onload = function(){
                                         hansyaj();
                                         this.y = block2.y-70;
                                         };
+                                        if(this.intersect(boss)){
+                                        time_japariman_blue=0;
+                                        spead_japariman_blue=0;
+                                        japariman_blue.x = boss.x+55;
+                                        japariman_blue.y = boss.y-30;
+                                        };
                                     });
         //ネズミのおもちゃの動作設定
         mouse.addEventListener('enterframe',function(){
@@ -1214,7 +1246,7 @@ window.onload = function(){
 
         
         //ボスの動作設定157 187
-        cerulean.addEventListener('enterframe',function(){
+        boss.addEventListener('enterframe',function(){
                               if(map_p>=600){
                               if(core.input.right){
                               this.x-= 5;
@@ -1224,14 +1256,16 @@ window.onload = function(){
                               };
                               };
                               this.frame = time % 5 + 5;
-                                time_cerulean += 0.05;
-                                spead_cerulean = syosoku_cerulean-g*time_cerulean;
-                                cerulean.y = cerulean.y - spead_cerulean;
-                              cerulean.x-=3;
+                                time_boss += 0.05;
+                                spead_boss = syosoku_boss-g*time_boss;
+                                boss.y = boss.y - spead_boss;
+                              boss.x-=3;
                               
-                              if(this.x<-200){
+                              if(this.x<-1200){
                               this.x = 1600;
-                              this.y=0;
+                              this.y=zimen2.y-240;
+                              japariman_blue.x = this.x;
+                              japariman_blue.y = this.y;
                               };
                               if(this.intersect(zimen1)){
                               hansyab();
@@ -1241,8 +1275,53 @@ window.onload = function(){
                               hansyab();
                               this.y = zimen2.y-240;
                               };
-                              
-                              
+                              });
+            
+            cerulean.addEventListener('enterframe',function(){
+                                      
+                                                    spead_cerulean = syosoku_cerulean-g*time_cerulean;
+                                                    cerulean.y = cerulean.y - spead_cerulean;
+                                                    
+                                                    if(this.x<-1000){
+                                                    this.x = 2000;
+                                                    this.y = -400;
+                                                    cell=0;
+                                                    cerulean.frame=0;
+                                                    hansyac();
+                                                    };
+                                                    if(this.intersect(zimen1)){
+                                                    hansyac();
+                                                    this.y = zimen1.y-308;
+                                                    };
+                                                    if(this.intersect(zimen2)){
+                                                    hansyac();
+                                                    this.y = zimen2.y-308;
+                                                    };
+                                      if(cell==1){
+                                      cerulean.frame = time % 4 + 1;
+                                      };
+                                      if(this.intersect(serval)){
+                                      if(cell==0){
+                                      if(serval.y < this.y-300){
+                                      cell = 1;
+                                      muki=10;
+                                      time_serval = 0;
+                                      if(time_serval<0.1){
+                                      serval.y-=1;
+                                      };
+                                      if(time_serval<0.1){
+                                      syosoku_serval = 25;
+                                      if(serval.y>-100000){
+                                      // var sound = core.assets['jump.wav'].clone();
+                                      // sound.play();
+                                      };
+                                      };
+                                      };
+                                      if(serval.y > this.y-300){
+                                      game_over.y = 0;
+                                      };
+                                      };
+                                      };
                               });
         
         
@@ -1300,9 +1379,10 @@ window.onload = function(){
        // core.rootScene.addChild(block1);
        // core.rootScene.addChild(block2);
        // core.rootScene.addChild(block3);
+        core.rootScene.addChild(cerulean);
         core.rootScene.addChild(mouse);
         core.rootScene.addChild(japaricoin);
-        core.rootScene.addChild(cerulean);
+        core.rootScene.addChild(boss);
         core.rootScene.addChild(toki2);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
