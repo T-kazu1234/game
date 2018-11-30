@@ -300,7 +300,7 @@ window.onload = function(){
                 rrr +=30;
                 map_p +=5;
                 rain.frame=time % 3;
-                if(kill>150){rain.y=0;};
+                if(kill>101){rain.y=0;};
                 if(jump2==1){
                 serval.rotation = rr;
                 };
@@ -528,7 +528,7 @@ window.onload = function(){
                                 if(this.intersect(japaricoin)){
                                 japaricoin.x = -500;
                                 koe.frame = 1;
-                                kill += 90;
+                                kill += 100;
                                 };
                                 
                                 if(this.intersect(zimen1)){
