@@ -283,12 +283,12 @@ window.onload = function(){
                     serval.rotation = rrr;
                 };
                 if(zimen1.x < -4000){
-                    zimen1.x = 4000;
+                    zimen1.x = 5000;
                     japariman_blue.x = boss.x;
                     japariman_blue.y = boss.y;
                 };
                 if(zimen2.x < -4000){
-                    zimen2.x = 4000;
+                    zimen2.x = 5000;
                 };
                 if(s.x<-20000){
                     s.x = 2500;
