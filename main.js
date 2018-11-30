@@ -426,6 +426,9 @@ window.onload = function(){
                                 st.y=5000;
                                 };
                                 if(this.y<-800){
+                                cerulean.x=cerulean_x_syoki;
+                                cerulean.y=0;
+                                cell=0;
                                 toki2.y = -1500;
                                 st.y = 0;
                                 syosoku_serval=0;
