@@ -79,7 +79,7 @@ window.onload = function(){
         toki2.image = core.assets['toki.png'];
         toki2_x_syoki = -2000;
         toki2.x = toki2_x_syoki;
-        toki2.y = 150;
+        toki2.y = -1500;
         toki2.frame = 0;
         
         var tuti = new Sprite(400,400);
@@ -408,6 +408,8 @@ window.onload = function(){
                                 if(this.y>2500){
                                 cerulean.x=10000000000;
                                 s2.y=0;
+                                toki2.y = 150;
+                                toki2.x=600;
                                 this.x=0;
                                 this.y=0;
                                 st.y = 0;
@@ -967,6 +969,35 @@ window.onload = function(){
                                 this.y = mouse.y;
                                 };
                                 };
+                                };
+                                if(this.intersect(toki2)){
+                                toki2.y = -1500;
+                                st.y = 0;
+                                time = -20;
+                                time2 =- 20;
+                                map_p = dokan4_x_syoki;
+                                japaricoin.x = -500;
+                                block3.x = block3_x_syoki - dokan4_x_syoki +600;
+                                block2.x = block2_x_syoki - dokan4_x_syoki+600;
+                                block1.x = block1_x_syoki - dokan4_x_syoki+600;
+                                zimen2.x = zimen2_x_syoki - dokan4_x_syoki+600;
+                                zimen1.x = zimen1_x_syoki - dokan4_x_syoki+600;
+                                jaga.x = jaga_x_syoki - dokan4_x_syoki+600;
+                                tuti.x = tuti_x_syoki - dokan4_x_syoki+600;
+                                dokan1.x = dokan1_x_syoki - dokan4_x_syoki+600;
+                                dokan4.x = dokan4_x_syoki - dokan4_x_syoki+600;
+                                mouse.x = mouse_x_syoki - dokan4_x_syoki+600;
+                                japariman_blue.x = japariman_blue_x_syoki - dokan4_x_syoki+600;
+                                s.x = -dokan4_x_syoki+600;;
+                                dokan2.x = -500;
+                                dokan3.x = -500;
+                                zimen2.image = core.assets['zimen.png'];
+                                zimen1.image = core.assets['zimen.png'];
+                                cerulean.x=cerulean_x_syoki;
+                                this.x = 0;
+                                this.y = 900;
+                                and = 0;
+                                s2.y = 5000;
                                 };
                              });
         //トキさんの動作設定
