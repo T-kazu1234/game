@@ -5,7 +5,7 @@ window.onload = function(){
     core.preload('serval.png','toki.png','japariman_blue.png','map0.png','jump.wav','jump.mp3','cerulean.png');
     core.preload('zimen.png','asiba.png','boss.png','mouse.png','jaga.png','s.png','game_over.png','st.png');
     core.preload('dokan1.png','dokan2.png','dokan3.png','s2.png','zimen2.png','tuti.png','koe.png','japaricoin.png');
-    core.preload('game_clear.png');
+    core.preload('game_clear.png','rain.png');
     core.fps = 100;
     core.onload = function(){
         // ここに処理を書いていきます。
@@ -76,6 +76,13 @@ window.onload = function(){
         jaga.x = jaga_x_syoki;
         jaga.y = 900;
         jaga.frame = 0;
+        
+        var rain = new Sprite(1600,1600);
+        rain.image = core.assets['rain.png'];
+        rain_x_syoki = 0;
+        rain.x = rain_x_syoki;
+        rain.y = 50000;
+        rain.frame = 0;
         
         var toki2 = new Sprite(400,400);
         toki2.image = core.assets['toki.png'];
@@ -292,6 +299,8 @@ window.onload = function(){
                 };
                 rrr +=30;
                 map_p +=5;
+                rain.frame=time % 3;
+                if(kill>150){rain.y=0;};
                 if(jump2==1){
                 serval.rotation = rr;
                 };
@@ -1364,10 +1373,6 @@ window.onload = function(){
         
             bag.addEventListener('enterframe',function(){
                                  if(this.intersect(serval)){
-                                 serval.freme=37;
-                                 serval.rotation = 0;
-                                 map_p=-3000;
-                                 time=-10;
                                  game_clear.y=0;
                                  };
                                  });
@@ -1499,6 +1504,7 @@ window.onload = function(){
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
         core.rootScene.addChild(game_clear);
+        core.rootScene.addChild(rain);
     };
     core.start();
 };
