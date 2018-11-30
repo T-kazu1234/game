@@ -5,6 +5,7 @@ window.onload = function(){
     core.preload('serval.png','toki.png','japariman_blue.png','map0.png','jump.wav','jump.mp3','cerulean.png');
     core.preload('zimen.png','asiba.png','boss.png','mouse.png','jaga.png','s.png','game_over.png','st.png');
     core.preload('dokan1.png','dokan2.png','dokan3.png','s2.png','zimen2.png','tuti.png','koe.png','japaricoin.png');
+    core.preload('game_clear.png');
     core.fps = 100;
     core.onload = function(){
         // ここに処理を書いていきます。
@@ -50,6 +51,7 @@ window.onload = function(){
         var jump2 = 4; //二段ジャンプに使用
         var rr=0,rrr=0; //回転に使用
         var cell = 0;//セルリアンのダメージ判定
+        var kill = 0;
         //キャラクターの判定
         var character1;
         var character2;
@@ -144,6 +146,11 @@ window.onload = function(){
         game_over.image = core.assets['game_over.png'];
         game_over.x = 0;
         game_over.y = 5000;
+        
+        var game_clear = new Sprite(1600,1600);
+        game_clear.image = core.assets['game_clear.png'];
+        game_clear.x = 0;
+        game_clear.y = 5000;
         
         var st = new Sprite(1600,1600);
         st.image = core.assets['st.png'];
@@ -250,6 +257,13 @@ window.onload = function(){
         dokan4.y = 901;
         dokan4.frame = 0;
         
+        var bag = new Sprite(400,400);
+        bag.image = core.assets['serval.png'];
+        bag_x_syoki = 0;
+        bag.x = bag_x_syoki;
+        bag.y = -20000;
+        bag.frame =38;
+        
         
         var g = 10;
         
@@ -270,7 +284,9 @@ window.onload = function(){
             time_mouse +=0.05;
                 time_cerulean += 0.05;
                 toki2.frame=time % 6 + 39;
+                if(time>0){
             serval.frame = time % 12;
+                };
                 if(rr<365){
                 rr +=3;
                 };
@@ -289,14 +305,17 @@ window.onload = function(){
                 };
                 if(zimen2.x < -4000){
                     zimen2.x = 5000;
+                    if(kill>100){
+                        bag.x=zimen2.x+3600;
+                        bag.y=zimen2.y-400;
+                    };
                 };
                 if(s.x<-20000){
                     s.x = 2500;
                     jaga.x = 2500;
                 }
                 if(toki2.x > 2000){
-                    toki2.x = -2000
-                    japaricoin.y = toki2.y+400;
+                    toki2.x = -2000;
                 };
                 if(map_p>=600){
                     if(and==0){
@@ -309,6 +328,7 @@ window.onload = function(){
                     mouse.x -= 5;
                     zimen1.x -= 5;
                     zimen2.x -= 5;
+                    bag.x -= 5;
                     s.x-= 5;
                     japariman_blue = 90000;
                     jaga.x-= 5;
@@ -405,8 +425,38 @@ window.onload = function(){
                                 if(time>0){
                                 st.y=5000;
                                 };
+                                if(this.y<-800){
+                                toki2.y = -1500;
+                                st.y = 0;
+                                syosoku_serval=0;
+                                time = -20;
+                                time2 =- 20;
+                                map_p = dokan4_x_syoki;
+                                japaricoin.x = -500;
+                                block3.x = block3_x_syoki - dokan4_x_syoki +600;
+                                block2.x = block2_x_syoki - dokan4_x_syoki+600;
+                                block1.x = block1_x_syoki - dokan4_x_syoki+600;
+                                zimen2.x = zimen2_x_syoki - dokan4_x_syoki+600;
+                                zimen1.x = zimen1_x_syoki - dokan4_x_syoki+600;
+                                jaga.x = jaga_x_syoki - dokan4_x_syoki+600;
+                                tuti.x = tuti_x_syoki - dokan4_x_syoki+600;
+                                dokan1.x = dokan1_x_syoki - dokan4_x_syoki+600;
+                                dokan4.x = dokan4_x_syoki - dokan4_x_syoki+600;
+                                mouse.x = mouse_x_syoki - dokan4_x_syoki+600;
+                                japariman_blue.x = japariman_blue_x_syoki - dokan4_x_syoki+600;
+                                s.x = -dokan4_x_syoki+600;;
+                                dokan2.x = -500;
+                                dokan3.x = -500;
+                                zimen2.image = core.assets['zimen.png'];
+                                zimen1.image = core.assets['zimen.png'];
+                                cerulean.x=cerulean_x_syoki;
+                                this.x = 0;
+                                this.y = 900;
+                                and = 0;
+                                s2.y = 5000;
+                                };
                                 if(this.y>2500){
-                                cerulean.x=10000000000;
+                                cerulean.y=-10000;
                                 s2.y=0;
                                 toki2.y = 150;
                                 toki2.x=600;
@@ -466,6 +516,7 @@ window.onload = function(){
                                 if(this.intersect(japaricoin)){
                                 japaricoin.x = -500;
                                 koe.frame = 1;
+                                kill += 90;
                                 };
                                 
                                 if(this.intersect(zimen1)){
@@ -882,7 +933,7 @@ window.onload = function(){
                                 muki +=1;
                                 //this.frame = 12;
                                 if(muki>1000){
-                                this.frame = 30;
+                                //this.frame = 30;
                                 };
                                 };
                                 if(muki<-9){
@@ -909,7 +960,7 @@ window.onload = function(){
                              if(time_serval<0.1){
                              this.frame = time % 12;
                              if (core.input.left){
-                             this.frame = 30;
+                             //this.frame = 30;
                                 if(map_p>=600){
                                 map_p = 600;
                                 this.x = 600;
@@ -969,35 +1020,15 @@ window.onload = function(){
                                 this.y = mouse.y;
                                 };
                                 };
-                                };
+                                };if(jump2==2){
                                 if(this.intersect(toki2)){
-                                toki2.y = -1500;
-                                st.y = 0;
-                                time = -20;
-                                time2 =- 20;
-                                map_p = dokan4_x_syoki;
-                                japaricoin.x = -500;
-                                block3.x = block3_x_syoki - dokan4_x_syoki +600;
-                                block2.x = block2_x_syoki - dokan4_x_syoki+600;
-                                block1.x = block1_x_syoki - dokan4_x_syoki+600;
-                                zimen2.x = zimen2_x_syoki - dokan4_x_syoki+600;
-                                zimen1.x = zimen1_x_syoki - dokan4_x_syoki+600;
-                                jaga.x = jaga_x_syoki - dokan4_x_syoki+600;
-                                tuti.x = tuti_x_syoki - dokan4_x_syoki+600;
-                                dokan1.x = dokan1_x_syoki - dokan4_x_syoki+600;
-                                dokan4.x = dokan4_x_syoki - dokan4_x_syoki+600;
-                                mouse.x = mouse_x_syoki - dokan4_x_syoki+600;
-                                japariman_blue.x = japariman_blue_x_syoki - dokan4_x_syoki+600;
-                                s.x = -dokan4_x_syoki+600;;
-                                dokan2.x = -500;
-                                dokan3.x = -500;
-                                zimen2.image = core.assets['zimen.png'];
-                                zimen1.image = core.assets['zimen.png'];
-                                cerulean.x=cerulean_x_syoki;
-                                this.x = 0;
-                                this.y = 900;
-                                and = 0;
-                                s2.y = 5000;
+                                this.x=toki2.x;
+                                this.y=toki2.y+200;
+                                toki2.y-=2;
+                                time_serval=0;
+                                rrr=0;
+                                this.frame = 30;
+                                };
                                 };
                              });
         //トキさんの動作設定
@@ -1070,7 +1101,7 @@ window.onload = function(){
                               if(time_toki<0.1){
                               this.frame = time % 12;
                               if (core.input.left){
-                              this.frame = 30;
+                             // this.frame = 30;
                               };
                               };
                               };
@@ -1080,7 +1111,7 @@ window.onload = function(){
                               if(time_toki<0.1){
                               this.frame = time % 12 + 14;
                               if (core.input.right){
-                              this.frame = 29;
+                              //this.frame = 29;
                               };
                               };
                               };
@@ -1327,6 +1358,16 @@ window.onload = function(){
                               this.y = zimen2.y-240;
                               };
                               });
+        
+            bag.addEventListener('enterframe',function(){
+                                 if(this.intersect(serval)){
+                                 serval.freme=37;
+                                 serval.rotation = 0;
+                                 map_p=-3000;
+                                 time=-10;
+                                 game_clear.y=0;
+                                 };
+                                 });
             
             cerulean.addEventListener('enterframe',function(){
                                       
@@ -1338,8 +1379,23 @@ window.onload = function(){
                                                     this.y = -400;
                                                     cell=0;
                                                     cerulean.frame=0;
+                                                    time_cerulean=0;
                                                     hansyac();
                                                     };
+                                      if(this.y>2500){
+                                      this.x = 2000;
+                                      this.y = -400;
+                                      cell=0;
+                                      cerulean.frame=0;
+                                      time_cerulean=0;
+                                      hansyac();
+                                      };
+                                      if(this.y<-5000){
+                                      this.y -= 1;
+                                      this.x  =5 ;
+                                      hansyac();
+                                      cell=1;
+                                      };
                                                     if(this.intersect(zimen1)){
                                                     hansyac();
                                                     this.y = zimen1.y-308;
@@ -1355,6 +1411,7 @@ window.onload = function(){
                                       if(cell==0){
                                       if(serval.y < this.y-300){
                                       cell = 1;
+                                      kill+=1;
                                       muki=10;
                                       time_serval = 0;
                                       if(time_serval<0.1){
@@ -1432,11 +1489,13 @@ window.onload = function(){
        // core.rootScene.addChild(block3);
         core.rootScene.addChild(cerulean);
         core.rootScene.addChild(mouse);
+        core.rootScene.addChild(bag);
         core.rootScene.addChild(japaricoin);
         core.rootScene.addChild(boss);
         core.rootScene.addChild(toki2);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
+        core.rootScene.addChild(game_clear);
     };
     core.start();
 };
