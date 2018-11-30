@@ -181,11 +181,11 @@ window.onload = function(){
         zimen1.frame = 0;
         
         
-        var zimen2 = new Sprite(4000,600);
+        var zimen2 = new Sprite(4000,800);
         zimen2.image = core.assets['zimen.png'];
         zimen2_x_syoki = 4000;
         zimen2.x = zimen2_x_syoki;
-        zimen2.y = 1300;
+        zimen2.y = 1100;
         zimen2.frame = 0;
         
         
