@@ -1462,8 +1462,8 @@ window.onload = function(){
         
         core.rootScene.on('touchstart',function(e){
                           
-    
-                          if(-10<jump2<2){
+                          if(jump2>-10){
+                          if(jump2<2){
                           jump2 +=1;
                           muki=10;
                           rr=0;
@@ -1476,6 +1476,7 @@ window.onload = function(){
                           if(serval.y>-100000){
                           // var sound = core.assets['jump.wav'].clone();
                           // sound.play();
+                          };
                           };
                           };
                           };
