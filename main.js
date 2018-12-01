@@ -1378,7 +1378,7 @@ window.onload = function(){
         
             bag.addEventListener('enterframe',function(){
                                  if(this.intersect(serval)){
-                                 if(serval.y < this.y-390){
+                                 if(serval.x > this.y-100){
                                  game_clear_2.y=0;
                                  };
                                  jump2=-100;
