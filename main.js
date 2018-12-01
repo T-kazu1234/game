@@ -297,7 +297,7 @@ window.onload = function(){
                 if(rr<365){
                 rr +=3;
                 };
-                rrr +=30;
+                rrr +=60;
                 map_p +=5;
                 rain.frame=time % 3;
                 if(kill>101){rain.y=0;};
