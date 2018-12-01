@@ -5,7 +5,7 @@ window.onload = function(){
     core.preload('serval.png','toki.png','japariman_blue.png','map0.png','jump.wav','jump.mp3','cerulean.png');
     core.preload('zimen.png','asiba.png','boss.png','mouse.png','jaga.png','s.png','game_over.png','st.png');
     core.preload('dokan1.png','dokan2.png','dokan3.png','s2.png','zimen2.png','tuti.png','koe.png','japaricoin.png');
-    core.preload('game_clear.png','rain.png');
+    core.preload('game_clear.png','game_clear_2.png','rain.png');
     core.fps = 100;
     core.onload = function(){
         // ここに処理を書いていきます。
@@ -158,6 +158,11 @@ window.onload = function(){
         game_clear.image = core.assets['game_clear.png'];
         game_clear.x = 0;
         game_clear.y = 5000;
+        
+        var game_clear_2 = new Sprite(1600,1600);
+        game_clear_2.image = core.assets['game_clear_2.png'];
+        game_clear_2.x = 0;
+        game_clear_2.y = 5000;
         
         var st = new Sprite(1600,1600);
         st.image = core.assets['st.png'];
@@ -1373,6 +1378,10 @@ window.onload = function(){
         
             bag.addEventListener('enterframe',function(){
                                  if(this.intersect(serval)){
+                                 if(jump2>0){
+                                 game_clear_2.y=0;
+                                 };
+                                 jump2=-100;
                                  this.frame = 40;
                                  time=-20;
                                  map_p=0;
@@ -1454,7 +1463,7 @@ window.onload = function(){
         core.rootScene.on('touchstart',function(e){
                           
     
-                          if(jump2<2){
+                          if(-10<jump2<2){
                           jump2 +=1;
                           muki=10;
                           rr=0;
@@ -1512,6 +1521,7 @@ window.onload = function(){
         core.rootScene.addChild(toki2);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
+        core.rootScene.addChild(game_clear_2)
         core.rootScene.addChild(game_clear);
     };
     core.start();
