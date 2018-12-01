@@ -17,7 +17,8 @@
  	bear.y = 0;
     
     bear.addEventListener('enterframe',function(){
-		this.x += 10;
+		this.x += 5;
+	    	this.frame = this.age % 3;
 		if (this.x > 320) this.x = 0;
 		});
     
