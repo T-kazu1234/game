@@ -14,7 +14,7 @@
  	bear.image = core.assets['image/sample/chara1.png']
  	bear.x = 0;
  	bear.y = 0;
- 	core.rootScene.addChiled(bear);
+ 	core.rootScene.addChild(bear);
  
  }
  core.start();
