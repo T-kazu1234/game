@@ -297,10 +297,10 @@ window.onload = function(){
                 if(rr<365){
                 rr +=3;
                 };
-                rrr +=60;
+                rrr +=30;
                 map_p +=5;
                 rain.frame=time % 3;
-                if(kill>101){rain.y=0;};
+                if(kill>10){rain.y=0;};
                 if(jump2==1){
                 serval.rotation = rr;
                 };
@@ -314,7 +314,7 @@ window.onload = function(){
                 };
                 if(zimen2.x < -4000){
                     zimen2.x = 5000;
-                    if(kill>100){
+                    if(kill>0){
                         bag.x=zimen2.x+3600;
                         bag.y=zimen2.y-400;
                     };
