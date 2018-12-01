@@ -300,7 +300,7 @@ window.onload = function(){
                 rrr +=30;
                 map_p +=5;
                 rain.frame=time % 3;
-                if(kill>10){rain.y=0;};
+                if(kill>15){rain.y=0;};
                 if(jump2==1){
                 serval.rotation = rr;
                 };
@@ -471,7 +471,7 @@ window.onload = function(){
                                 cerulean.y=-10000;
                                 s2.y=0;
                                 toki2.y = 150;
-                                toki2.x=600;
+                                toki2.x=-500;
                                 this.x=0;
                                 this.y=0;
                                 st.y = 0;
@@ -528,7 +528,7 @@ window.onload = function(){
                                 if(this.intersect(japaricoin)){
                                 japaricoin.x = -500;
                                 koe.frame = 1;
-                                kill += 100;
+                                kill += 90;
                                 };
                                 
                                 if(this.intersect(zimen1)){
@@ -1034,12 +1034,12 @@ window.onload = function(){
                                 };
                                 };if(jump2==2){
                                 if(this.intersect(toki2)){
-                                this.x=toki2.x;
-                                this.y=toki2.y+200;
+                                this.x=toki2.x-180;
+                                this.y=toki2.y+300;
                                 toki2.y-=2;
                                 time_serval=0;
-                                rrr=0;
-                                this.frame = 30;
+                                rrr=-30;
+                                this.frame = 39;
                                 };
                                 };
                              });
@@ -1373,6 +1373,14 @@ window.onload = function(){
         
             bag.addEventListener('enterframe',function(){
                                  if(this.intersect(serval)){
+                                 this.frame = 40;
+                                 time=-20;
+                                 map_p=0;
+                                 time_serval=0;
+                                 serval.x=this.x-390;
+                                 serval.y=this.y;
+                                 serval.frame=37;
+                                 serval.rotation=0;
                                  game_clear.y=0;
                                  };
                                  });
@@ -1477,14 +1485,15 @@ window.onload = function(){
         
         //core.rootSceneにチャイルドマップデータ追加
         core.rootScene.addChild(map);
-        core.rootScene.addChild(label);
-        core.rootScene.addChild(s);
+     //   core.rootScene.addChild(label);
+    //    core.rootScene.addChild(s);
+        core.rootScene.addChild(rain);
         core.rootScene.addChild(s2);
-        core.rootScene.addChild(jaga);
-        core.rootScene.addChild(tuti);
-        core.rootScene.addChild(koe);
+    //    core.rootScene.addChild(jaga);
+    //    core.rootScene.addChild(tuti);
+//        core.rootScene.addChild(koe);
         core.rootScene.addChild(serval);
-        core.rootScene.addChild(japariman_blue);
+  //      core.rootScene.addChild(japariman_blue);
         core.rootScene.addChild(toki);
        // core.rootScene.addChild(dokan1);
        // core.rootScene.addChild(dokan2);
@@ -1496,15 +1505,14 @@ window.onload = function(){
        // core.rootScene.addChild(block2);
        // core.rootScene.addChild(block3);
         core.rootScene.addChild(cerulean);
-        core.rootScene.addChild(mouse);
+      //  core.rootScene.addChild(mouse);
         core.rootScene.addChild(bag);
         core.rootScene.addChild(japaricoin);
-        core.rootScene.addChild(boss);
+      //  core.rootScene.addChild(boss);
         core.rootScene.addChild(toki2);
         core.rootScene.addChild(st);
         core.rootScene.addChild(game_over);
         core.rootScene.addChild(game_clear);
-        core.rootScene.addChild(rain);
     };
     core.start();
 };
