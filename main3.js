@@ -200,7 +200,7 @@ window.onload = function() {
         game.rootScene.backgroundColor = 'rgb(182, 255, 255)';
 //*2個目のパッドを追加        
         var pad2 = new Pad();
-        pad2.x = 00;
+        pad2.x = 200;
         pad2.y = 224;
         game.rootScene.addChild(stage);
         game.rootScene.addChild(pad2);
