@@ -3,7 +3,7 @@ enchant();
 enchant.Sound.enabledInMobileSafari = true;
 
 if(location.protocol == 'file:'){
-    enchant.ENV.USE_WEBAUDIO = false;
+   // enchant.ENV.USE_WEBAUDIO = false;
     console.log('1');
 }
 
@@ -29,7 +29,8 @@ window.onload = function() {
 
     var game = new Game(320, 320);
     game.fps = 24;
-    game.preload('chara1.gif', 'map2.gif', 'jump.wav', 'gameover.wav');
+    //game.preload('chara1.gif', 'map2.gif', 'jump.wav', 'gameover.wav');
+    game.preload('chara1.gif', 'map2.gif');
     game.onload = function() {
         var blocks = [
             [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
@@ -89,7 +90,7 @@ window.onload = function() {
                 if (game.input.up) {
                     this.jumpBoost = 5;
                     this.ay = -5;
-                    game.assets['jump.wav'].clone().play();
+                    //game.assets['jump.wav'].clone().play();
                 }
             }
             this.ax = 0;
@@ -169,7 +170,7 @@ window.onload = function() {
             this.y = dest.y-2;
 
             if (this.y > 320) {
-                game.assets['gameover.wav'].play();
+                //game.assets['gameover.wav'].play();
                 var score = Math.round(bear.x);
                 this.frame = 3;
                 this.vy = -20;
