@@ -218,17 +218,16 @@ window.onload = function(){
             
             //セルリアン
             if(name.intersect(cerulean)){
-                if(cerulean.y > name.y-400){
-                    if(cerulean.y < name.y-100){
+                if(cerulean.y > name.y-308){
+                    if(cerulean.y < name.y-208){
                         time_cerulean = 0;
                         syosoku_cerulean = -spead_cerulean*0.2;//反射係数
                         spead_cerulean = 0;
                         cerulean.y = name.y-308;
                     };
                 };
-                if(cerulean.y > name.y-100){
+                if(cerulean.y > name.y-208){
                     cerulean.x = name.x-331;
-                    cerulean.y = 0;
                 };
             };//セルリアンここまで
             
