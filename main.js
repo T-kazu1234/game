@@ -118,13 +118,6 @@ window.onload = function(){
         st.y = 0;
         core.rootScene.addChild(st);
         
-        //ゲームオーバー画面の初期設定
-        var game_over = new Sprite(1600,1600);
-        game_over.image = core.assets['game_over.png'];
-        game_over.x = 0;
-        game_over.y = 5000;
-        core.rootScene.addChild(game_over);
-        
         //ゲームクリア画面2の初期設定
         var game_clear_2 = new Sprite(1600,1600);
         game_clear_2.image = core.assets['game_clear_2.png'];
@@ -138,6 +131,13 @@ window.onload = function(){
         game_clear.x = 0;
         game_clear.y = 5000;
         core.rootScene.addChild(game_clear);
+        
+        //ゲームオーバー画面の初期設定
+        var game_over = new Sprite(1600,1600);
+        game_over.image = core.assets['game_over.png'];
+        game_over.x = 0;
+        game_over.y = 5000;
+        core.rootScene.addChild(game_over);
         
         //リプレイボタンの初期設定
         var replay = new Sprite(500,200);
@@ -190,16 +190,9 @@ window.onload = function(){
             japaricoin.y = 900;
             toki.x = -2000;
             toki.y = 5000;
-            st.x = 0;
             st.y = 0;
-            game_over.x = 0;
-            game_over.y = 5000;
-            game_clear_2.x = 0;
             game_clear_2.y = 5000;
-            game_clear.x = 0;
             game_clear.y = 5000;
-            replay.x = 0;
-            replay.y = 5000;
         };//リセット関数ここまで
 
         //地面に接した時の処理の関数
@@ -226,15 +219,16 @@ window.onload = function(){
             //セルリアン
             if(name.intersect(cerulean)){
                 if(cerulean.y > name.y-400){
-                    if(cerulean.y < name.y-10){
+                    if(cerulean.y < name.y-100){
                         time_cerulean = 0;
                         syosoku_cerulean = -spead_cerulean*0.2;//反射係数
                         spead_cerulean = 0;
                         cerulean.y = name.y-308;
                     };
                 };
-                if(cerulean.y > name.y-10){
+                if(cerulean.y > name.y-100){
                     cerulean.x = name.x-331;
+                    cerulean.y = 0;
                 };
             };//セルリアンここまで
             
@@ -288,9 +282,9 @@ window.onload = function(){
                     toki.x = -2000;
                 };
                 toki.x +=3;
-                cerulean.x -= 13-kill/10;
+                cerulean.x -= 13-kill;
                 if(cell==1){
-                    cerulean.x+=3-kill/10;
+                    cerulean.x+=3-kill;
                 };
                 zimen1.x -= 10;
                 zimen2.x -= 10;
@@ -442,9 +436,11 @@ window.onload = function(){
         
         //リプレイボタンの動作設定
         replay.addEventListener('enterframe',function(){
-                                if(this.intersect(serval)){
+                                if(this.intersect(japaricoin)){
                                 reset();
                                 kill=0;
+                                game_over.y = 5000;
+                                replay.y = 5000;
                                 };
                                 });//リプレイボタンの動作設定ここまで
 
@@ -464,8 +460,8 @@ window.onload = function(){
                           };
                           };
                           if(replay.y==0){
-                          serval.x=e.x;
-                          serval.y=e.y;
+                          japaricoin.x=e.x;
+                          japaricoin.y=e.y;
                           };
                           });//タッチアクションの設定ここまで
     };
