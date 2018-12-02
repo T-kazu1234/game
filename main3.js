@@ -29,7 +29,7 @@ window.onload = function() {
 
     var game = new Game(320, 320);
     game.fps = 24;
-    //game.preload('chara1.gif', 'map2.gif', 'jump.wav', 'gameover.wav');
+    //game.preload('toki_mini.png', 'map2.gif', 'jump.wav', 'gameover.wav');
     game.preload('toki_mini.png', 'map2.gif');
     game.onload = function() {
         var blocks = [
@@ -192,13 +192,13 @@ window.onload = function() {
                 this.x = 64 - bear.x;
             }
         });
-/*        var pad = new Pad();
+        var pad = new Pad();
         pad.x = 0;
         pad.y = 224;
         game.rootScene.addChild(stage);
         game.rootScene.addChild(pad);
         game.rootScene.backgroundColor = 'rgb(182, 255, 255)';
-*/
+
 //*2個目のパッドを追加        
         var pad2 = new Pad();
         pad2.x = 200;
