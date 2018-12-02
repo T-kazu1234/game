@@ -30,7 +30,7 @@ window.onload = function() {
     var game = new Game(320, 320);
     game.fps = 24;
     //game.preload('chara1.gif', 'map2.gif', 'jump.wav', 'gameover.wav');
-    game.preload('chara1.gif', 'map2.gif');
+    game.preload('toki_mini.png', 'map2.gif');
     game.onload = function() {
         var blocks = [
             [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
@@ -69,7 +69,7 @@ window.onload = function() {
         bear.pose = 0;
         bear.jumping = true;
         bear.jumpBoost = 0;
-        bear.image = game.assets['chara1.gif'];
+        bear.image = game.assets['toki_mini.png'];
         bear.addEventListener('enterframe', function(e) {
             var friction = 0; 
             if (this.vx > 0.3) {
