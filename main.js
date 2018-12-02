@@ -271,7 +271,7 @@ window.onload = function(){
                 };
                 if(zimen2.x < -4000){
                     zimen2.x = 5000;
-                    if(kill>10){
+                    if(kill>0){
                         bag.x=zimen2.x+3600;
                         bag.y=zimen2.y-400;
                     };
