@@ -192,12 +192,13 @@ window.onload = function() {
                 this.x = 64 - bear.x;
             }
         });
-        var pad = new Pad();
+/*        var pad = new Pad();
         pad.x = 0;
         pad.y = 224;
         game.rootScene.addChild(stage);
         game.rootScene.addChild(pad);
         game.rootScene.backgroundColor = 'rgb(182, 255, 255)';
+*/
 //*2個目のパッドを追加        
         var pad2 = new Pad();
         pad2.x = 200;
