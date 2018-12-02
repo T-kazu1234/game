@@ -466,4 +466,5 @@ window.onload = function(){
                           });//タッチアクションの設定ここまで
     };
     core.start();//？なにこれ
+    //Coreコアとは https://scrapbox.io/Tanakake-memo/Core
 };
