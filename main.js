@@ -360,6 +360,7 @@ window.onload = function(){
                              replay.y = 0;
                              };
                              jump=-100;
+                             japaricoin.y=5000;
                              this.frame = 40;
                              time=-20;
                              time_serval=0;
@@ -429,7 +430,7 @@ window.onload = function(){
         japaricoin.addEventListener('enterframe',function(){
                              if(this.intersect(serval)){
                              this.x = -500;
-                             kill += 90;
+                             kill += 10;
                              };
                              });//ジャパリコインの動作設定ここまで
         
