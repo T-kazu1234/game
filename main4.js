@@ -5,7 +5,7 @@ window.onload = function(){
     core.preload('tail.png','back_hair.png','right_leg.png','left_leg.png');
     core.preload('right_hand.png','left_hand.png','body.png','face.png');
     core.preload('neck.png','right_wing.png','left_wing.png','hair.png');
-    core.preload('z.png','eye.png')
+    core.preload('z.png','eye.png','eyes.png');
     core.fps = 100;
     core.onload = function(){
         
@@ -112,18 +112,25 @@ window.onload = function(){
         hair.y = 745-488;
         core.rootScene.addChild(hair);
         
+        //髪の初期設定
+        var eyes = new Sprite(173,129);
+        eyes.image = core.assets['eyes.png'];
+        eyes.x = 280;
+        eyes.y = 0;
+        core.rootScene.addChild(eyes);
+        
         function idou(name){
             if (core.input.down){
-                name.y+=1;
+                name.y+=5;
             };
             if (core.input.up){
-                name.y-=1;
+                name.y-=5;
             };
             if (core.input.left){
-                name.x-=1;
+                name.x-=5;
             };
             if (core.input.right){
-                name.x+=1;
+                name.x+=5;
             };
         };
         
@@ -167,18 +174,36 @@ window.onload = function(){
                               time+=1*iii;
                               right_wing.rotation=time;
                               left_wing.rotation=-time;
+                              right_hand.rotation=time+30;
+                              left_hand.rotation=time-30;
+                              right_leg.rotation=-time+30;
+                              left_leg.rotation=-time-30;
                               idou(eye);
-                              if(eye.x>300){
-                              eye.x=300;
+                              idou(back_hair);
+                              idou(tail);
+                              idou(hair);
+                              idou(left_hand);
+                              idou(right_hand);
+                              idou(left_leg);
+                              idou(right_leg);
+                              idou(left_wing);
+                              idou(right_wing);
+                              idou(body);
+                              idou(neck);
+                              idou(face);
+                              eye.x=eyes.x;
+                              eye.y=eyes.y;
+                              if(eye.x>face.x+64){
+                              eye.x=face.x+64;
                               };
-                              if(eye.x<270){
-                              eye.x=270;
+                              if(eye.x<face.x+32){
+                              eye.x=face.x+32;
                               };
-                              if(eye.y>440){
-                              eye.y=440;
+                              if(eye.y>face.y+90){
+                              eye.y=face.y+90;
                               };
-                              if(eye.y<410){
-                              eye.y=410;
+                              if(eye.y<face.y+50){
+                              eye.y=face.y+50;
                               };
                               });
         
@@ -186,10 +211,10 @@ window.onload = function(){
                           eee+=1;
                           face1+=1;
                           face.frame=face1;
-                          eye.x=e.x-63;
-                          eye.y=e.y-33;
+                          eyes.x=e.x;
+                          eyes.y=e.y;
                           });
         
     };
-    core.start();//？なにこれ
+    core.start();
 };
