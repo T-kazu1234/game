@@ -19,18 +19,21 @@
         <title>スマホ回転対応サンプル</title>
 
 
-
+//自分よりも上の階層を指定する際に"../"の書き方を使う
+//githubのRepositoryのrootDirectoryを取得している？
         <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
 
         <script type="text/javascript" src="../js/lib/enchant.js"></script>
         
         <script type="text/javascript" src="../js/lib/nineleap.enchant.js"></script>
-
+      
         <script type="text/javascript" src="../../lib/ui.enchant.js"></script>
 
 
-
-        <script type="text/javascript" src="main.js"></script>
+//この行に書かれているmain.jsファイルを繋ぎ変える事で別のメインゲームを読み込ませる事が出来る
+//**src="Action_main.js" 横スクロールアクションゲームのサンプル
+//**src="main.js"画面回転対応のサンプル
+        <script type="text/javascript" src="Action_main.js"></script>
 
         <script type="text/javascript" src="common.js"></script>
 
