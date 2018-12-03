@@ -277,8 +277,8 @@ window.onload = function(){
                     };
                 };
                 
-                if(toki.x > 2000){
-                    toki.x = -2000;
+                if(toki.x > 3800){
+                    toki.x = -500;
                 };
                 toki.x +=3;
                 cerulean.x -= 13-kill;
