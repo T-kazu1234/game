@@ -27,7 +27,7 @@ window.onload = function() {
         }
     });
 
-    var game = new Game(600, 1200);//gameオブジェクトを定義ゲーム画面領域のサイズを指定する
+    var game = new Game(320, 320);//gameオブジェクトを定義ゲーム画面領域のサイズを指定する
     game.fps = 24;
     //game.preload('toki_mini.png', 'map2.gif', 'jump.wav', 'gameover.wav');
     game.preload('toki_mini.png', 'map2.gif');
