@@ -12,6 +12,7 @@ window.onload = function(){
         var eee=1;
         var time=0;
         var iii=1;
+        var face1 = 0;
         
         var toki = new Sprite(700,1400);
         toki.image = core.assets['z.png'];
@@ -80,6 +81,7 @@ window.onload = function(){
         face.image = core.assets['face.png'];
         face.x = 442-205;
         face.y = 580-222;
+        face.frame = 3;
         core.rootScene.addChild(face);
         
         //首の初期設定
@@ -166,10 +168,26 @@ window.onload = function(){
                               right_wing.rotation=time;
                               left_wing.rotation=-time;
                               idou(eye);
+                              if(eye.x>300){
+                              eye.x=300;
+                              };
+                              if(eye.x<270){
+                              eye.x=270;
+                              };
+                              if(eye.y>440){
+                              eye.y=440;
+                              };
+                              if(eye.y<410){
+                              eye.y=410;
+                              };
                               });
         
         core.rootScene.on('touchstart',function(e){
                           eee+=1;
+                          face1+=1;
+                          face.frame=face1;
+                          eye.x=e.x-63;
+                          eye.y=e.y-33;
                           });
         
     };
