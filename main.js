@@ -1,7 +1,7 @@
 enchant();
 
 window.onload = function(){
-    var core = new Core(1600,1600);
+    var core = new Core(1080,1920);
     core.preload('serval.png','toki.png','map0.png','cerulean.png');
     core.preload('zimen.png','game_over.png','st.png','replay.png');
     core.preload('s2.png','zimen2.png','japaricoin.png');
