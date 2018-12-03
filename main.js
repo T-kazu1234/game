@@ -56,7 +56,7 @@ window.onload = function(){
         var spead_serval;
         var time_serval = 0;
         serval.image = core.assets['serval.png'];
-        serval.x = 200;
+        serval.x = 1200;
         serval.y = 900;
         serval.frame = 0;
         core.rootScene.addChild(serval);
@@ -167,7 +167,7 @@ window.onload = function(){
             syosoku_serval = 0;
             spead_serval;
             time_serval = 0;
-            serval.x = 200;
+            serval.x = 1200;
             serval.y = 900;
             bag.x = 0;
             bag.y = 5000;
