@@ -236,7 +236,7 @@ window.onload = function(){
         //セルリアンが画面外に出た時の処理
         function out(){
             if(s2.y==5000){
-                cerulean.x = 2000;
+                cerulean.x = 3500;
                 cerulean.y = -800;
                 syosoku_cerulean = 0;
                 spead_cerulean = 0;
