@@ -10,6 +10,8 @@ window.onload = function(){
     core.onload = function(){
         
         var eee=1;
+        var time=0;
+        var iii=1;
         
         var toki = new Sprite(700,1400);
         toki.image = core.assets['z.png'];
@@ -154,12 +156,15 @@ window.onload = function(){
         };
         
         tail.addEventListener('enterframe',function(){
-                              rrr(right_leg);
-                              lll(left_leg);
-                              rrr(right_hand);
-                              lll(left_hand);
-                              rrr(right_wing);
-                              lll(left_wing);
+                              if(time>30){
+                              iii*=-1;
+                              };
+                              if(time<-20){
+                              iii*=-1;
+                              };
+                              time+=1*iii;
+                              right_wing.rotation=time;
+                              left_wing.rotation=-time;
                               idou(eye);
                               });
         
