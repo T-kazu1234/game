@@ -17,7 +17,7 @@ window.onload = function(){
         toki.image = core.assets['z.png'];
         toki.x = 0;
         toki.y = 0;
-        core.rootScene.addChild(toki);
+        //core.rootScene.addChild(toki);
         
         //尻尾の初期設定
         var tail = new Sprite(350,250);
