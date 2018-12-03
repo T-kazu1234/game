@@ -15,10 +15,10 @@ console.log('Window.onload');
             this.y = y;
             this.width = width;
             this.height = height;
-console.log('this.x');
-console.log('this.y');
-console.log('this.width');
-console.log('this.height');
+console.log('this.x='this.x);
+console.log('this.y='this.y);
+console.log('this.width='this.width);
+console.log('this.height='this.height);
         },
         right: {
             get: function() {
