@@ -36,7 +36,6 @@ window.onload = function(){
         right_leg.image = core.assets['right_leg.png'];
         right_leg.x = 208-4;
         right_leg.y = 1309-926;
-        right_leg.rotation = 30;
         core.rootScene.addChild(right_leg);
         
         //左脚の初期設定
@@ -44,7 +43,6 @@ window.onload = function(){
         left_leg.image = core.assets['left_leg.png'];
         left_leg.x = 399-93;
         left_leg.y = 1309-918;
-        left_leg.rotation = -30;
         core.rootScene.addChild(left_leg);
         
         //右腕の初期設定
