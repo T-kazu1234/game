@@ -8,12 +8,17 @@ if(location.protocol == 'file:'){
 }
 
 window.onload = function() {
+console.log('Window.onload');
     var Rectangle = enchant.Class.create({
         initialize: function(x, y, width, height) {
             this.x = x;
             this.y = y;
             this.width = width;
             this.height = height;
+console.log('this.x');
+console.log('this.y');
+console.log('this.width');
+console.log('this.height');
         },
         right: {
             get: function() {
