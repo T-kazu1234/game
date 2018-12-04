@@ -8,7 +8,9 @@ if(location.protocol == 'file:'){
     console.log('1');
 }
 
-window.onload = function() {
+//window.onload = function() {
+function gameLoad(width,height){
+    game = new Core(width, height);
     var Rectangle = enchant.Class.create({
         initialize: function(x, y, width, height) {
             this.x = x;
@@ -28,14 +30,7 @@ window.onload = function() {
         }
     });
 
-   function gameLoad(width,height){
-
-    //game = new Core(320, 320);
-
-    game = new Core(width, height);
-   
-    var game = new Game(320, 320);
-    game.fps = 24;
+   game.fps = 24;
     //game.preload('toki_mini.png', 'map2.gif', 'jump.wav', 'gameover.wav');
     game.preload('toki_mini.png', 'map2.gif');
     game.onload = function() {
