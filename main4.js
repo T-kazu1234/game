@@ -1,11 +1,11 @@
 enchant();
 
 window.onload = function(){
-    var core = new Core(700,1400);
+    var core = new Core(1400,1400);
     core.preload('tail.png','back_hair.png','right_leg.png','left_leg.png');
     core.preload('right_hand.png','left_hand.png','body.png','face.png');
     core.preload('neck.png','right_wing.png','left_wing.png','hair.png');
-    core.preload('z.png','eye.png','eyes.png');
+    core.preload('eye.png','eyes.png');
     core.fps = 100;
     core.onload = function(){
         
@@ -13,12 +13,6 @@ window.onload = function(){
         var time=0;
         var iii=1;
         var face1 = 0;
-        
-        var toki = new Sprite(700,1400);
-        toki.image = core.assets['z.png'];
-        toki.x = 0;
-        toki.y = 0;
-        //core.rootScene.addChild(toki);
         
         //尻尾の初期設定
         var tail = new Sprite(350,250);
@@ -168,16 +162,26 @@ window.onload = function(){
                               if(time>30){
                               iii*=-1;
                               };
-                              if(time<-20){
+                              if(time<-30){
                               iii*=-1;
                               };
                               time+=1*iii;
                               right_wing.rotation=time;
                               left_wing.rotation=-time;
-                              right_hand.rotation=time+30;
-                              left_hand.rotation=time-30;
-                              right_leg.rotation=-time+30;
-                              left_leg.rotation=-time-30;
+                              right_hand.rotation=-time*0.2;
+                              left_hand.rotation=time*0.2;
+                              right_leg.rotation=-time*0.8;
+                              left_leg.rotation=time*0.8;
+                              face.y += time*0.015;
+                              right_wing.y += time*0.015;
+                              left_wing.y += time*0.015;
+                              hair.y += time*0.015;
+                              back_hair.y += time*0.015;
+                              body.y += time*0.008;
+                              left_hand.y += time*0.008;
+                              right_hand.y += time*0.008;
+                              neck.y += time*0.015;
+                              tail.y += time*0.015;
                               idou(eye);
                               idou(back_hair);
                               idou(tail);
@@ -216,5 +220,5 @@ window.onload = function(){
                           });
         
     };
-    core.start();
+    core.start();//？なにこれ
 };
