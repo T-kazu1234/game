@@ -5,7 +5,7 @@ window.onload = function(){
     core.preload('tail.png','back_hair.png','right_leg.png','left_leg.png');
     core.preload('right_hand.png','left_hand.png','body.png','face.png');
     core.preload('neck.png','right_wing.png','left_wing.png','hair.png');
-    core.preload('eye.png','eyes.png','z.png');
+    core.preload('eye.png','eyes.png','z.png','zimen.png');
     core.fps = 100;
     core.onload = function(){
         
@@ -13,6 +13,7 @@ window.onload = function(){
         var time=0;
         var iii=1;
         var face1 = 0;
+        var gra = 10;//重力加速度
         
         //全体の初期設定
         var z = new Sprite(700,1400);
@@ -37,6 +38,9 @@ window.onload = function(){
         
         //右脚の初期設定
         var right_leg = new Sprite(200,926);
+        var syosoku = 0;
+        var spead=0;
+        var ggg = 0;
         right_leg.image = core.assets['right_leg.png'];
         right_leg.x = tail.x-13;
         right_leg.y = tail.y-316;
@@ -80,7 +84,7 @@ window.onload = function(){
         //顔の初期設定
         var face = new Sprite(225,225);
         face.image = core.assets['face.png'];
-        face.x = tail.x+20
+        face.x = tail.x+20;
         face.y = tail.y-341;
         face.frame = 3;
         core.rootScene.addChild(face);
@@ -95,7 +99,7 @@ window.onload = function(){
         //右羽の初期設定
         var right_wing = new Sprite(360,360);
         right_wing.image = core.assets['right_wing.png'];
-        right_wing.x = tail.x-103
+        right_wing.x = tail.x-103;
         right_wing.y = tail.y-585;
         core.rootScene.addChild(right_wing);
         
@@ -120,6 +124,39 @@ window.onload = function(){
         eyes.y = 0;
         core.rootScene.addChild(eyes);
         
+        var zimen1 = new Sprite(4000,600);
+        zimen1.image = core.assets['zimen.png'];
+        zimen1.x = 0;
+        zimen1.y = 1300;
+        zimen1.frame = 0;
+        core.rootScene.addChild(zimen1);
+        
+        function move(){
+            back_hair.x = right_leg.x-60+13;
+            back_hair.y = right_leg.y-405+316;
+            left_leg.x = right_leg.x+89+13;
+            right_hand.x = right_leg.x-80+13;
+            right_hand.y = right_leg.y-483+316;
+            left_hand.x = right_leg.x+50+13;
+            left_hand.y = right_leg.y-483+316;
+            body.x = right_leg.x-61+13;
+            body.y = right_leg.y-174+316;
+            eye.x = right_leg.x+68+13;
+            eye.y = right_leg.y-275+316;
+            face.x = right_leg.x+20+13;
+            face.y = right_leg.y-341+316;
+            neck.x = right_leg.x+3+13;
+            neck.y = right_leg.y-199+316;
+            right_wing.x = right_leg.x-103+13;
+            right_wing.y = right_leg.y-585+316;
+            left_wing.x = right_leg.x+17+13;
+            left_wing.y = right_leg.y-579+316;
+            hair.x = right_leg.x-67+13;
+            hair.y = right_leg.y-442+316;
+            tail.x = right_leg.x+13;
+            tail.y = right_leg.y+316;
+        };
+        
         function idou(name){
             if (core.input.down){
                 name.y+=5;
@@ -135,11 +172,15 @@ window.onload = function(){
                 name.x-=5;
                 right_leg.rotation=-time*0.8;
                 left_leg.rotation=time*0.8;
+                right_hand.rotation=-time*0.1;
+                left_hand.rotation=time*0.1;
             };
             if (core.input.right){
                 name.x+=5;
                 right_leg.rotation=-time*0.8;
                 left_leg.rotation=time*0.8;
+                right_hand.rotation=-time*0.1;
+                left_hand.rotation=time*0.1;
             };
         };
         
@@ -173,7 +214,7 @@ window.onload = function(){
             };
         };
         
-        tail.addEventListener('enterframe',function(){
+        right_leg.addEventListener('enterframe',function(){
                               if(time>30){
                               iii*=-1;
                               };
@@ -181,8 +222,8 @@ window.onload = function(){
                               iii*=-1;
                               };
                               time+=1*iii;
-                              right_hand.rotation=-time*0.1;
-                              left_hand.rotation=time*0.1;
+                              ggg+=0.1;
+                              eyes.y -= spead;
                               face.y += time*0.015;
                               right_wing.y += time*0.015;
                               left_wing.y += time*0.015;
@@ -193,6 +234,7 @@ window.onload = function(){
                               right_hand.y += time*0.008;
                               neck.y += time*0.015;
                               tail.y += time*0.015;
+                              spead = syosoku-gra*ggg;
                               idou(eye);
                               idou(back_hair);
                               idou(tail);
@@ -200,12 +242,12 @@ window.onload = function(){
                               idou(left_hand);
                               idou(right_hand);
                               idou(left_leg);
-                              idou(right_leg);
                               idou(left_wing);
                               idou(right_wing);
                               idou(body);
                               idou(neck);
                               idou(face);
+                              idou(right_leg);
                               eye.x=eyes.x;
                               eye.y=eyes.y;
                               if(eye.x>face.x+64){
@@ -221,6 +263,20 @@ window.onload = function(){
                               eye.y=face.y+50;
                               };
                               });
+        
+        
+        zimen1.addEventListener('enterframe',function(){
+                                if(zimen1.intersect(eyes)){
+                                if(eyes.y > zimen1.y-129){
+                                if(eyes.y < zimen1.y-29){
+                                ggg = 0;
+                                syosoku = -spead*0.5;//反射係数
+                                spead = 0;
+                                eyes.y = zimen1.y-129;
+                                };
+                                };
+                                };
+                                });//地面1
         
         core.rootScene.on('touchstart',function(e){
                           eee+=1;
