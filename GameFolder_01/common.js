@@ -1,16 +1,54 @@
-  //enchantjs‚Ì‰æ–ÊƒTƒCƒY‚Ìİ’è
+  //enchantjsã®ç”»é¢ã‚µã‚¤ã‚ºã®è¨­å®š
 
-  function resetScreen(){
+  function resetScreen(gameWidth,gameHeight){
 
 
 
-    //ƒx[ƒX‚Ì•‚ğ‰æ–Ê‚¢‚Á‚Ï‚¢‚ÉL‚°‚é
+    //ãƒ™ãƒ¼ã‚¹ã®å¹…ã‚’ç”»é¢ã„ã£ã±ã„ã«åºƒã’ã‚‹
 
     $("#base").width(window.innerWidth).height(window.innerHeight);
 
 
 
-    //enchantjs-stage‚Ì‰æ–ÊƒTƒCƒY‚ğŒvZ
+    //å¹…ã€é«˜ã•ã®ã‚¹ã‚±ãƒ¼ãƒ«ã‚’è¨ˆç®—
+
+    var scaleWidth  = window.innerWidth  / gameWidth;
+
+    var scaleHeight = window.innerHeight / gameHeight;
+
+    
+
+    //ã‚¹ã‚±ãƒ¼ãƒ«ãŒå°ã•ã„å€¤ã‚’å…¨ä½“ã®ã‚¹ã‚±ãƒ¼ãƒ«ã«è¨­å®š
+
+    var orientation = "";
+
+    if(scaleWidth < scaleHeight){
+
+      orientation = "portrait";
+
+      scale = scaleWidth;
+
+    }else{
+
+      orientation = "landscape";
+
+      scale = scaleHeight;
+
+    }
+
+    
+
+    //enchantjs-stageã®ç”»é¢ã‚µã‚¤ã‚ºã‚’è¨ˆç®—
+
+    var width = gameWidth * scale;
+
+    var height = gameHeight * scale;
+
+    
+
+/*    
+
+    //enchantjs-stageã®ç”»é¢ã‚µã‚¤ã‚ºã‚’è¨ˆç®—
 
     var width = window.innerWidth;
 
@@ -18,13 +56,13 @@
 
 
 
-    //‰ñ“]•ûŒü‚ğ•‚Æ‚‚³‚ğ”äŠr‚µ‚ÄŠm”F
+    //å›è»¢æ–¹å‘ã‚’å¹…ã¨é«˜ã•ã‚’æ¯”è¼ƒã—ã¦ç¢ºèª
 
     var orientation = "";
 
     if(width < height){
 
-      //c
+      //ç¸¦
 
       orientation = "portrait";
 
@@ -32,7 +70,7 @@
 
     }else{
 
-      //‰¡
+      //æ¨ª
 
       orientation = "landscape";
 
@@ -40,23 +78,29 @@
 
     }
 
+*/
+
     
 
-    //div enchant-stage‚ğæ“¾
+    //div enchant-stageã‚’å–å¾—
 
     var stage = $("#enchant-stage");
 
 
 
-    //ƒXƒP[ƒ‹‚ğŒvZ
+/*
+
+    //ã‚¹ã‚±ãƒ¼ãƒ«ã‚’è¨ˆç®—
 
     var scale = height / 320.0;
 
+*/
 
 
-    //div enchant-stage”z‰º‚Ìdivi‚»‚Ì”z‰º‚Écanvas‚ªŠi”[‚³‚ê‚Ä‚¢‚éj‚É
 
-    //ƒXƒP[ƒ‹‚ğİ’è
+    //div enchant-stageé…ä¸‹ã®divï¼ˆãã®é…ä¸‹ã«canvasãŒæ ¼ç´ã•ã‚Œã¦ã„ã‚‹ï¼‰ã«
+
+    //ã‚¹ã‚±ãƒ¼ãƒ«ã‚’è¨­å®š
 
     var transformKey = "-" + enchant.ENV.VENDOR_PREFIX + "-transform";
 
@@ -64,7 +108,7 @@
 
     
 
-    //enchantjs‚Ì‰æ–Ê‚ğ’†‰›‚ÉŠñ‚¹‚é
+    //enchantjsã®ç”»é¢ã‚’ä¸­å¤®ã«å¯„ã›ã‚‹
 
     var left,top;
 
@@ -88,13 +132,13 @@
 
     
 
-    //ƒXƒNƒ[ƒ‹ˆÊ’u‚ğ0,0‚Éİ’è
+    //ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ä½ç½®ã‚’0,0ã«è¨­å®š
 
     $(window).scrollLeft(0).scrollTop(0);
 
 
 
-    //enchant.Core‚Ö‚Ì”½‰fî•ñ‚Æ‚µ‚Ä˜A‘z”z—ñ‚ğ•Ô‚·
+    //enchant.Coreã¸ã®åæ˜ æƒ…å ±ã¨ã—ã¦é€£æƒ³é…åˆ—ã‚’è¿”ã™
 
     return {"scale":scale,"left":left,"top":top};
 
@@ -102,23 +146,29 @@
 
 
 
-  //‰Šúİ’è
+  //åˆæœŸè¨­å®š
 
   $(function(){
 
+    //ã‚²ãƒ¼ãƒ å†…ã®ç”»é¢ã‚µã‚¤ã‚º
+
+    var gameWidth = 480;
+
+    var gameHeight = 320;
+
     
 
-    //‰ñ“]‚Ìˆ—
+    //å›è»¢æ™‚ã®å‡¦ç†
 
     var orientationChange = function(){
 
-      //‰æ–ÊƒTƒCƒYİ’è
+      //ç”»é¢ã‚µã‚¤ã‚ºè¨­å®š
 
-      var result = resetScreen();
+      var result = resetScreen(gameWidth,gameHeight);
 
       
 
-      //enchant.Core‚Ö‚Ì•ÏXî•ñ‚ğ”½‰f
+      //enchant.Coreã¸ã®å¤‰æ›´æƒ…å ±ã‚’åæ˜ 
 
       var game = enchant.Core.instance;
 
@@ -136,7 +186,7 @@
 
     
 
-    //‰ñ“]ƒCƒxƒ“ƒg
+    //å›è»¢ã‚¤ãƒ™ãƒ³ãƒˆ
 
     $(window).on("resize",function(event){
 
@@ -152,14 +202,22 @@
 
     
 
-    //—]”’•”•ª‚ğƒhƒ‰ƒbƒO‚·‚é‚±‚Æ‚É‚æ‚éƒXƒNƒ[ƒ‹‚ğ–³Œø‚É‚·‚é
+    //ä½™ç™½éƒ¨åˆ†ã‚’ãƒ‰ãƒ©ãƒƒã‚°ã™ã‚‹ã“ã¨ã«ã‚ˆã‚‹ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚’ç„¡åŠ¹ã«ã™ã‚‹
 
     $("#base").on("touchstart",function(event){event.preventDefault();});
 
 
 
-    //‰‰ñ‚ÌƒXƒNƒŠ[ƒ“İ’è
+    //ã‚²ãƒ¼ãƒ ã‚’å®Ÿè¡Œã™ã‚‹
+
+    gameLoad(gameWidth,gameHeight);
+
+
+
+    //åˆå›æ™‚ã®ã‚¹ã‚¯ãƒªãƒ¼ãƒ³è¨­å®š
 
     orientationChange();
+
+    
 
   });
