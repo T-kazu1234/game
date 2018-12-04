@@ -1,7 +1,11 @@
 enchant();
 
 window.onload = function(){
-    game = new Game(320, 320);
+
+function gameLoad(width,height){
+   //game = new Core(320, 320);
+    game = new Core(width, height);
+  //game = new Game(320, 320);
     game.preload("bar.png");
     game.fps = 30;
     game.onload = function(){
