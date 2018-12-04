@@ -19,7 +19,7 @@ window.onload = function(){
         z.image = core.assets['z.png'];
         z.x = 0;
         z.y = 0;
-        core.rootScene.addChild(z);
+        //core.rootScene.addChild(z);
         
         //尻尾の初期設定
         var tail = new Sprite(350,250);
