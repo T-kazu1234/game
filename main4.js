@@ -52,8 +52,8 @@ window.onload = function(){
         //左腕の初期設定
         var left_hand = new Sprite(300,740);
         left_hand.image = core.assets['left_hand.png'];
-        left_hand.x = 137+74+52;
-        left_hand.y = 958-740;
+        left_hand.x = 137+74+56;
+        left_hand.y = 956-740;
         core.rootScene.addChild(left_hand);
         
         //身体の初期設定
