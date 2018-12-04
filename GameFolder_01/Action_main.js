@@ -2,6 +2,7 @@ enchant();
 
 enchant.Sound.enabledInMobileSafari = true;
 
+
 if(location.protocol == 'file:'){
    // enchant.ENV.USE_WEBAUDIO = false;
     console.log('1');
@@ -27,6 +28,12 @@ window.onload = function() {
         }
     });
 
+   function gameLoad(width,height){
+
+    //game = new Core(320, 320);
+
+    game = new Core(width, height);
+   
     var game = new Game(320, 320);
     game.fps = 24;
     //game.preload('toki_mini.png', 'map2.gif', 'jump.wav', 'gameover.wav');
