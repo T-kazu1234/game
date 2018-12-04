@@ -26,7 +26,7 @@ window.onload = function(){
         var tail = new Sprite(350,250);
         tail.image = core.assets['tail.png'];
         tail.x = 217+300;
-        tail.y = 699;
+        tail.y = 699-9;
         core.rootScene.addChild(tail);
         
         //後ろ髪の初期設定
@@ -234,6 +234,8 @@ window.onload = function(){
                               right_hand.y += time*0.008;
                               neck.y += time*0.015;
                               tail.y += time*0.015;
+                              eyes.x +=time;
+                                   eyes.rotation=time;
                               spead = syosoku-gra*ggg;
                               idou(eye);
                               idou(back_hair);
@@ -248,6 +250,7 @@ window.onload = function(){
                               idou(neck);
                               idou(face);
                               idou(right_leg);
+                              idou(zimen1);
                               eye.x=eyes.x;
                               eye.y=eyes.y;
                               if(eye.x>face.x+64){
@@ -270,7 +273,7 @@ window.onload = function(){
                                 if(eyes.y > zimen1.y-129){
                                 if(eyes.y < zimen1.y-29){
                                 ggg = 0;
-                                syosoku = -spead*0.5;//反射係数
+                                syosoku = -spead*1;//反射係数
                                 spead = 0;
                                 eyes.y = zimen1.y-129;
                                 };
@@ -284,6 +287,9 @@ window.onload = function(){
                           face.frame=face1;
                           eyes.x=e.x;
                           eyes.y=e.y;
+                          spead=0;
+                          syosoku=0;
+                          ggg=0;
                           });
         
     };
