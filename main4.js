@@ -116,15 +116,23 @@ window.onload = function(){
         function idou(name){
             if (core.input.down){
                 name.y+=5;
+                right_wing.rotation=time;
+                left_wing.rotation=-time;
             };
             if (core.input.up){
                 name.y-=5;
+                right_wing.rotation=time;
+                left_wing.rotation=-time;
             };
             if (core.input.left){
                 name.x-=5;
+                right_leg.rotation=-time*0.8;
+                left_leg.rotation=time*0.8;
             };
             if (core.input.right){
                 name.x+=5;
+                right_leg.rotation=-time*0.8;
+                left_leg.rotation=time*0.8;
             };
         };
         
@@ -166,12 +174,8 @@ window.onload = function(){
                               iii*=-1;
                               };
                               time+=1*iii;
-                              right_wing.rotation=time;
-                              left_wing.rotation=-time;
-                              right_hand.rotation=-time*0.2;
-                              left_hand.rotation=time*0.2;
-                              right_leg.rotation=-time*0.8;
-                              left_leg.rotation=time*0.8;
+                              right_hand.rotation=-time*0.1;
+                              left_hand.rotation=time*0.1;
                               face.y += time*0.015;
                               right_wing.y += time*0.015;
                               left_wing.y += time*0.015;
@@ -220,5 +224,5 @@ window.onload = function(){
                           });
         
     };
-    core.start();//？なにこれ
+    core.start();
 };
