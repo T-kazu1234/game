@@ -195,7 +195,7 @@ function gameLoad(width,height){
             }
         });
        
-console.log('this.wigth  = 'this.width );
+console.log('this.wigth  = 'this.width);
 console.log('this.height = 'this.height);      
         var pad = new Pad();
         pad.x = 0;
