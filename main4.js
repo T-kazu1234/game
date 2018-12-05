@@ -356,9 +356,6 @@ window.onload = function(){
                               };
                               time+=1*iii;
                               ggg+=0.1;
-                               
-                              eyes.y -= spead;
-                        
                               face.y += time*0.015;
                               eye.y += time*0.015;
                               right_wing.y += time*0.015;
@@ -370,8 +367,11 @@ window.onload = function(){
                               right_hand.y += time*0.008;
                               neck.y += time*0.015;
                               tail.y += time*0.015;
-                              eyes.x +=time;
-                              eyes.rotation=time;
+                                   if(face1 % 2 == 0){
+                                   eyes.x +=time;
+                                   eyes.rotation=time;
+                                   eyes.y -= spead;
+                                   };
                               spead = syosoku-gra*ggg;
                               idou(eye);
                               idou(back_hair);
@@ -429,7 +429,7 @@ window.onload = function(){
                                 };
                                 };
                                 if(eyes.x < zimen1.x+1200){
-                                if(eyes.x > zimen1.x-50+800){
+                                if(eyes.x > zimen1.x-50+1200){
                                 eyes.x = zimen1.x+1200;
                                 };
                                 };
