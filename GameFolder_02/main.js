@@ -3,7 +3,7 @@
   this.Game = (function() {
     var YOUTUBE_ID, _endTime, _game, _generateNote, _isNoteGenerateTiming, _judge, _proccesRootSceneFrame, _status, _timing, _timingIndex, _yt;
 
-    YOUTUBE_ID = 'HNYkOJ-T63k';
+    YOUTUBE_ID = 'xkMdLcB_vNU';
 
     _game = null;
 
