@@ -195,19 +195,19 @@ function gameLoad(width,height){
             }
         });
        
-//console.log('this.wigth  = 'this.width);
-//console.log('this.height = 'this.height);      
+console.log('wigth  = ' + game.width);
+console.log('height = ' + game.height);      
         var pad = new Pad();
         pad.x = 0;
-        pad.y = 224;
+        pad.y = game.height - 100;
         game.rootScene.addChild(stage);
         game.rootScene.addChild(pad);
         game.rootScene.backgroundColor = 'rgb(182, 255, 255)';
 
 //*2個目のパッドを追加        
         var pad2 = new Pad();
-        pad2.x = 200;
-        pad2.y = 224;
+        pad2.x = game.width  - 100;
+        pad2.y = game.height - 100;
         game.rootScene.addChild(stage);
         game.rootScene.addChild(pad2);
         game.rootScene.backgroundColor = 'rgb(182, 255, 255)';
