@@ -13,7 +13,7 @@ window.onload = function(){
         var time=0;
         var iii=1;
         var face1 = 0;
-        var gra = 10;//重力加速度
+        var gra = 1;//重力加速度
         
         //全体の初期設定
         var z = new Sprite(700,1400);
