@@ -5,7 +5,10 @@ window.onload = function(){
     core.preload('tail.png','back_hair.png','right_leg.png','left_leg.png');
     core.preload('right_hand.png','left_hand.png','body.png','face.png');
     core.preload('neck.png','right_wing.png','left_wing.png','hair.png');
-    core.preload('eye.png','eyes.png','z.png','zimen.png');
+    core.preload('eye.png','eyes.png','z.png','zimen.png','back.png');
+    core.preload('tail2.png','back_hair2.png','right_leg2.png','left_leg2.png');
+    core.preload('right_hand2.png','left_hand2.png','body2.png','face2.png');
+    core.preload('neck2.png','right_wing2.png','left_wing2.png','hair2.png');
     core.fps = 100;
     core.onload = function(){
         
@@ -15,6 +18,97 @@ window.onload = function(){
         var face1 = 0;
         var gra = 1;//重力加速度
         
+        //尻尾の初期設定
+        var back = new Sprite(1400,1400);
+        back.image = core.assets['back.png'];
+        back.x = 0;
+        back.y = 0;
+        core.rootScene.addChild(back);
+        
+        //尻尾の初期設定
+        var tail2 = new Sprite(350,250);
+        tail2.image = core.assets['tail2.png'];
+        tail2.x = 217+300;
+        tail2.y = 699-9-100+100;
+        core.rootScene.addChild(tail2);
+        
+        //後ろ髪の初期設定
+        var back_hair2 = new Sprite(400,300);
+        back_hair2.image = core.assets['back_hair2.png'];
+        back_hair2.x = tail2.x-60;
+        back_hair2.y = tail2.y-405;
+        core.rootScene.addChild(back_hair2);
+        
+        //右脚の初期設定
+        var right_leg2 = new Sprite(200,926);
+        right_leg2.image = core.assets['right_leg2.png'];
+        right_leg2.x = tail2.x-13;
+        right_leg2.y = tail2.y-316;
+        core.rootScene.addChild(right_leg2);
+        
+        //左脚の初期設定
+        var left_leg2 = new Sprite(200,918);
+        left_leg2.image = core.assets['left_leg2.png'];
+        left_leg2.x = tail2.x+89;
+        left_leg2.y = tail2.y-308;
+        core.rootScene.addChild(left_leg2);
+        
+        //右腕の初期設定
+        var right_hand2 = new Sprite(300,740);
+        right_hand2.image = core.assets['right_hand2.png'];
+        right_hand2.x = tail2.x-80;
+        right_hand2.y = tail2.y-483;
+        core.rootScene.addChild(right_hand2);
+        
+        //左腕の初期設定
+        var left_hand2 = new Sprite(300,740);
+        left_hand2.image = core.assets['left_hand2.png'];
+        left_hand2.x = tail2.x+50;
+        left_hand2.y = tail2.y-483;
+        core.rootScene.addChild(left_hand2);
+        
+        //身体の初期設定
+        var body2 = new Sprite(400,400);
+        body2.image = core.assets['body2.png'];
+        body2.x = tail2.x-61;
+        body2.y = tail2.y-174;
+        core.rootScene.addChild(body2);
+
+        //顔の初期設定
+        var face2 = new Sprite(225,225);
+        face2.image = core.assets['face2.png'];
+        face2.x = tail2.x+20;
+        face2.y = tail2.y-341;
+        face2.frame = 3;
+        core.rootScene.addChild(face2);
+        
+        //首の初期設定
+        var neck2 = new Sprite(250,150);
+        neck2.image = core.assets['neck2.png'];
+        neck2.x = tail2.x+3;
+        neck2.y = tail2.y-199;
+        core.rootScene.addChild(neck2);
+        
+        //右羽の初期設定
+        var right_wing2 = new Sprite(360,360);
+        right_wing2.image = core.assets['right_wing2.png'];
+        right_wing2.x = tail2.x-103;
+        right_wing2.y = tail2.y-585;
+        core.rootScene.addChild(right_wing2);
+        
+        //左羽の初期設定
+        var left_wing2 = new Sprite(360,360);
+        left_wing2.image = core.assets['left_wing2.png'];
+        left_wing2.x = tail2.x+17;
+        left_wing2.y = tail2.y-579;
+        core.rootScene.addChild(left_wing2);
+        
+        //髪の初期設定
+        var hair2 = new Sprite(400,500);
+        hair2.image = core.assets['hair2.png'];
+        hair2.x = tail2.x-67;
+        hair2.y = tail2.y-442;
+        core.rootScene.addChild(hair2);
         //全体の初期設定
         var z = new Sprite(700,1400);
         z.image = core.assets['z.png'];
@@ -157,6 +251,45 @@ window.onload = function(){
             tail.y = right_leg.y+316;
         };
         
+        function kage(){
+            back_hair2.x = back_hair.x-100;
+            back_hair2.y = back_hair.y-100;
+            back_hair2.rotation = back_hair.rotation;
+            left_leg2.x = left_leg.x-100;
+            left_leg2.y = left_leg.y-100;
+            left_leg2.rotation = left_leg.rotation;
+            right_leg2.x = right_leg.x-100;
+            right_leg2.y = right_leg.y-100;
+            right_leg2.rotation = right_leg.rotation;
+            right_hand2.x = right_hand.x-100;
+            right_hand2.y = right_hand.y-100;
+            right_hand2.rotation = right_hand.rotation;
+            left_hand2.x = left_hand.x-100;
+            left_hand2.y = left_hand.y-100;
+            left_hand2.rotation = left_hand.rotation;
+            body2.x = body.x-100;
+            body2.y = body.y-100;
+            body2.rotation = body.rotation;
+            face2.x = face.x-100;
+            face2.y = face.y-100;
+            face2.rotation = face.rotation;
+            neck2.x = neck.x-100;
+            neck2.y = neck.y-100;
+            neck2.rotation = neck.rotation;
+            right_wing2.x = right_wing.x-100;
+            right_wing2.y = right_wing.y-100;
+            right_wing2.rotation = right_wing.rotation;
+            left_wing2.x = left_wing.x-100;
+            left_wing2.y = left_wing.y-100;
+            left_wing2.rotation = left_wing.rotation;
+            hair2.x = hair.x-100;
+            hair2.y = hair.y-100;
+            hair2.rotation = hair.rotation;
+            tail2.x = tail.x-100;
+            tail2.y = tail.y-100;
+            tail2.rotation = tail.rotation;
+        };
+        
         function idou(name){
             if (core.input.down){
                 name.y+=10;
@@ -224,9 +357,10 @@ window.onload = function(){
                               time+=1*iii;
                               ggg+=0.1;
                                
-                              //eyes.y -= spead;
+                              eyes.y -= spead;
                         
                               face.y += time*0.015;
+                              eye.y += time*0.015;
                               right_wing.y += time*0.015;
                               left_wing.y += time*0.015;
                               hair.y += time*0.015;
@@ -236,7 +370,7 @@ window.onload = function(){
                               right_hand.y += time*0.008;
                               neck.y += time*0.015;
                               tail.y += time*0.015;
-                              //eyes.x +=time;
+                              eyes.x +=time;
                               eyes.rotation=time;
                               spead = syosoku-gra*ggg;
                               idou(eye);
@@ -253,6 +387,7 @@ window.onload = function(){
                               idou(face);
                               idou(right_leg);
                               idou(zimen1);
+                              kage();
                               eye.x=eyes.x;
                               eye.y=eyes.y;
                               if(eye.x>face.x+64){
@@ -294,7 +429,7 @@ window.onload = function(){
                                 };
                                 };
                                 if(eyes.x < zimen1.x+1200){
-                                if(eyes.x > zimen1.x-50+1200){
+                                if(eyes.x > zimen1.x-50+800){
                                 eyes.x = zimen1.x+1200;
                                 };
                                 };
