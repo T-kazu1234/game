@@ -294,7 +294,7 @@ window.onload = function(){
                                 };
                                 };
                                 if(eyes.x < zimen1.x+1200){
-                                if(eyes.x > zimen1.x-50+800){
+                                if(eyes.x > zimen1.x-50+1200){
                                 eyes.x = zimen1.x+1200;
                                 };
                                 };
