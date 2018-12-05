@@ -26,7 +26,7 @@ window.onload = function(){
         var tail = new Sprite(350,250);
         tail.image = core.assets['tail.png'];
         tail.x = 217+300;
-        tail.y = 699-9;
+        tail.y = 699-9-100;
         core.rootScene.addChild(tail);
         
         //後ろ髪の初期設定
@@ -124,10 +124,10 @@ window.onload = function(){
         eyes.y = 0;
         core.rootScene.addChild(eyes);
         
-        var zimen1 = new Sprite(4000,600);
+        var zimen1 = new Sprite(1200,200);
         zimen1.image = core.assets['zimen.png'];
-        zimen1.x = 0;
-        zimen1.y = 1300;
+        zimen1.x = 50;
+        zimen1.y = 1300-100;
         zimen1.frame = 0;
         core.rootScene.addChild(zimen1);
         
@@ -159,24 +159,24 @@ window.onload = function(){
         
         function idou(name){
             if (core.input.down){
-                name.y+=5;
+                name.y+=10;
                 right_wing.rotation=time;
                 left_wing.rotation=-time;
             };
             if (core.input.up){
-                name.y-=5;
+                name.y-=10;
                 right_wing.rotation=time;
                 left_wing.rotation=-time;
             };
             if (core.input.left){
-                name.x-=5;
+                name.x-=10;
                 right_leg.rotation=-time*0.8;
                 left_leg.rotation=time*0.8;
                 right_hand.rotation=-time*0.1;
                 left_hand.rotation=time*0.1;
             };
             if (core.input.right){
-                name.x+=5;
+                name.x+=10;
                 right_leg.rotation=-time*0.8;
                 left_leg.rotation=time*0.8;
                 right_hand.rotation=-time*0.1;
@@ -223,7 +223,9 @@ window.onload = function(){
                               };
                               time+=1*iii;
                               ggg+=0.1;
+                               
                               eyes.y -= spead;
+                        
                               face.y += time*0.015;
                               right_wing.y += time*0.015;
                               left_wing.y += time*0.015;
@@ -235,7 +237,7 @@ window.onload = function(){
                               neck.y += time*0.015;
                               tail.y += time*0.015;
                               eyes.x +=time;
-                                   eyes.rotation=time;
+                              eyes.rotation=time;
                               spead = syosoku-gra*ggg;
                               idou(eye);
                               idou(back_hair);
@@ -271,11 +273,29 @@ window.onload = function(){
         zimen1.addEventListener('enterframe',function(){
                                 if(zimen1.intersect(eyes)){
                                 if(eyes.y > zimen1.y-129){
-                                if(eyes.y < zimen1.y-29){
+                                if(eyes.y < zimen1.y+50-129){
                                 ggg = 0;
                                 syosoku = -spead*1;//反射係数
                                 spead = 0;
                                 eyes.y = zimen1.y-129;
+                                };
+                                };
+                                if(eyes.y < zimen1.y+200){
+                                if(eyes.y > zimen1.y-50+200){
+                                ggg = 0;
+                                syosoku = -spead*1;//反射係数
+                                spead = 0;
+                                eyes.y = zimen1.y+200;
+                                };
+                                };
+                                if(eyes.x > zimen1.x-173){
+                                if(eyes.x < zimen1.x+50-173){
+                                eyes.x = zimen1.x-173;
+                                };
+                                };
+                                if(eyes.x < zimen1.x+1200){
+                                if(eyes.x > zimen1.x-50+800){
+                                eyes.x = zimen1.x+1200;
                                 };
                                 };
                                 };
