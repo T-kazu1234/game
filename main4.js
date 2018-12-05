@@ -224,7 +224,7 @@ window.onload = function(){
                               time+=1*iii;
                               ggg+=0.1;
                                
-                              eyes.y -= spead;
+                              //eyes.y -= spead;
                         
                               face.y += time*0.015;
                               right_wing.y += time*0.015;
@@ -236,7 +236,7 @@ window.onload = function(){
                               right_hand.y += time*0.008;
                               neck.y += time*0.015;
                               tail.y += time*0.015;
-                              eyes.x +=time;
+                              //eyes.x +=time;
                               eyes.rotation=time;
                               spead = syosoku-gra*ggg;
                               idou(eye);
