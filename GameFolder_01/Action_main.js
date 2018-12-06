@@ -61,16 +61,16 @@ function gameLoad(width,height){
         map.image = game.assets['map2.gif'];
         map.loadData(blocks);
         
-        var rrr = 0;//追加分
+        var rrr = 360;//追加分
         
         var bear = new Sprite(32, 32);
         bear.x = 8;
         bear.y = -32;
-        bear.vx = 0;
+        bear.vx = 0; //x,yは座標だとわかるがvxやaxとはなんぞや。わかったら大きい気がする。
         bear.vy = 0;
         bear.ax = 0;
         bear.ay = 0;
-        bear.pose = 0;
+        bear.pose = 0;//これはframeと同義か？
         bear.jumping = true;
         bear.jumpBoost = 0;
         bear.image = game.assets['toki_mini.png'];
@@ -96,7 +96,7 @@ function gameLoad(width,height){
                               }
                               } else {
                               if (game.input.up) {
-                              this.jumpBoost = 5;
+                              this.jumpBoost = 7;
                               this.ay = -5;
                               rrr = 0;//追加分
                               //game.assets['jump.wav'].clone().play();
