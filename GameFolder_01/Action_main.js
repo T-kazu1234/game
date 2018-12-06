@@ -60,6 +60,8 @@ function gameLoad(width,height){
         var map = new Map(16, 16);
         map.image = game.assets['map2.gif'];
         map.loadData(blocks);
+       
+       var rrr = 0;//追加分
 
         var bear = new Sprite(32, 32);
         bear.x = 8;
@@ -92,6 +94,7 @@ function gameLoad(width,height){
                 if (game.input.up) {
                     this.jumpBoost = 5;
                     this.ay = -5;
+                    this.rotation = rrr;//追加文
                     //game.assets['jump.wav'].clone().play();
                 }
             }
