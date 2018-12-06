@@ -16,7 +16,7 @@ window.onload = function(){
         var time=0;
         var iii=1;
         var face1 = 0;
-        var gra = 1;//重力加速度
+        var gra = 9.8;//重力加速度
         
         //尻尾の初期設定
         var back = new Sprite(1400,1400);
@@ -410,7 +410,7 @@ window.onload = function(){
                                 if(eyes.y > zimen1.y-129){
                                 if(eyes.y < zimen1.y+50-129){
                                 ggg = 0;
-                                syosoku = -spead*1;//反射係数
+                                syosoku = -spead*0.3;//反射係数
                                 spead = 0;
                                 eyes.y = zimen1.y-129;
                                 };
@@ -418,7 +418,7 @@ window.onload = function(){
                                 if(eyes.y < zimen1.y+200){
                                 if(eyes.y > zimen1.y-50+200){
                                 ggg = 0;
-                                syosoku = -spead*1;//反射係数
+                                syosoku = -spead*0.3;//反射係数
                                 spead = 0;
                                 eyes.y = zimen1.y+200;
                                 };
