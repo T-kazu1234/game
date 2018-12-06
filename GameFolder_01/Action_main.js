@@ -66,7 +66,7 @@ function gameLoad(width,height){
         var bear = new Sprite(32, 32);
         bear.x = 8;
         bear.y = -32;
-        bear.vx = 0; //x,yは座標だとわかるがvxやaxとはなんぞや。わかったら大きい気がする。
+        bear.vx = 0; //x,yは座標だとわかるがvxやaxとはなんぞや。
         bear.vy = 0;
         bear.ax = 0;
         bear.ay = 0;
