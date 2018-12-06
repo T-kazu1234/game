@@ -75,7 +75,10 @@ function gameLoad(width,height){
         bear.jumpBoost = 0;
         bear.image = game.assets['toki_mini.png'];
         bear.addEventListener('enterframe', function(e) {
-            rrr+=1;//追加文
+            rrr+=1;//追加文始め
+            if(jumpBoost > 0){
+            this.rotation = rrr;
+               }//追加文終わり
             var friction = 0; 
             if (this.vx > 0.3) {
                 friction = -0.3;
@@ -95,7 +98,6 @@ function gameLoad(width,height){
                 if (game.input.up) {
                     this.jumpBoost = 5;
                     this.ay = -5;
-                    this.rotation = rrr;//追加文
                     //game.assets['jump.wav'].clone().play();
                 }
             }
