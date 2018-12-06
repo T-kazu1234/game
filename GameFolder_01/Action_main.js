@@ -32,7 +32,7 @@ function gameLoad(width,height){
     
     game.fps = 24;
     //game.preload('toki_mini.png', 'map2.gif', 'jump.wav', 'gameover.wav');
-    game.preload('toki_mini.png', 'map2.gif');
+    game.preload('mario.png', 'map2.gif');
     game.onload = function() {
         var blocks = [
                       [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
@@ -73,7 +73,7 @@ function gameLoad(width,height){
         bear.pose = 0;//これはframeと同義か？
         bear.jumping = true;
         bear.jumpBoost = 0;
-        bear.image = game.assets['toki_mini.png'];
+        bear.image = game.assets['mario.png'];
         bear.addEventListener('enterframe', function(e) {
                               if(rrr<360){//追加文始め
                               rrr +=60;
