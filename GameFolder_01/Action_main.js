@@ -76,7 +76,7 @@ function gameLoad(width,height){
         bear.image = game.assets['toki_mini.png'];
         bear.addEventListener('enterframe', function(e) {
             rrr+=10;//追加文始め
-            if (jumpBoost > 0) {
+            if (this.jumpBoost > 0) {
                this.rotation = rrr;
             }//追加文終わり
             var friction = 0; 
