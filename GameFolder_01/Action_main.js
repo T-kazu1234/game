@@ -98,6 +98,7 @@ function gameLoad(width,height){
                 if (game.input.up) {
                     this.jumpBoost = 5;
                     this.ay = -5;
+                    rrr = 0;//追加分
                     //game.assets['jump.wav'].clone().play();
                 }
             }
