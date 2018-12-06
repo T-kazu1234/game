@@ -368,7 +368,7 @@ window.onload = function(){
                               neck.y += time*0.015;
                               tail.y += time*0.015;
                                    if(face1 % 2 == 0){
-                                   eyes.x +=time;
+                                  // eyes.x +=time;
                                    eyes.rotation=time;
                                    eyes.y -= spead;
                                    };
