@@ -38,11 +38,11 @@ function gameLoad(width,height){                            //関数 gameLoad(�
     });
 
 
-
-
+//ゲーム.プレロード　画像読み込み
+//ゲーム.オンロード
    game.fps = 24;                                           //ゲームのfps(frame per second)を24に設定。秒間24フレーム動く
-   game.preload('serval.png', 'map2.gif');                  //ゲーム.プレロード　画像読み込み
-   game.onload = function() {                               //ゲーム.オンロード
+   game.preload('toki_mini.png', 'map2.gif');
+   game.onload = function() {
 
 //値　ブロックス
         var blocks = [
@@ -69,39 +69,59 @@ function gameLoad(width,height){                            //関数 gameLoad(�
         ];
 //↑ブロックの配置位置を指定？
 
-        var map = new Map(16, 16);                             //マップの一マスを16×16に設定
-        map.image = game.assets['map2.gif'];                   // 画像の読み込み
-        map.loadData(blocks);                                  //マップデータの読み込み　読み込む値は54行目から始まる blocks
+      	
+	var label = new Label();	                                                //ラベルを生成
+	label.moveTo(20, 20);                                                       //ラベルの位置を20,20へと移動する
+	label.on('enterframe',function(){                                           //on.enterframe　おまじない？ドットインストールのラベルにて解説。
+		label.text = "PlayTime:" + (game.frame / game.fps).toFixed(2);          //gameフレームを取得し、それをfpsで割る。表示は小数点以下2桁まで（.toFixed(2))・・・fixフィックスって確定した箇所って意味らしいが、なんで桁表示のことになるのかイマイチわっかんないや
+		});                                                                     //
+    game.rootScene.addChild(label);		                                        // ルートシーンに追加　→　このActionMain.js内ではcore.rootSceneではなく、game.rootSceneなので、継承している他の箇所（上記game.frame)なども全てcore　→　gameに書換えたら動いた。
 
-        var rrr = 360;                                         //追加分　回転に使用
 
-        var bear = new Sprite(32, 32);                         //bear(クマ)　を新しいSpriteクラスで作成する。サイズは(32*32)
-        bear.x = 8;                                            //bearのx座標を8に
-        bear.y = -32;                                          //bearのy座標を-32に（自身のサイズを引いてる？)
-        bear.vx = 0;                                           //bearのvx(x方向のベクトルの意？）
-        bear.vy = 0;                                           //bearのvy(y方向のベクトルの意？）
-                                                               //http://www.ohshiro.tuis.ac.jp/~ohshiro/gamesoft/coordinate/index.html
-		bear.ax = 0;                                           //傾き用に使う変数？
-        bear.ay = 0;
-        bear.pose = 0;                                         //bearのポーズ　　　　　　　　　※注pauseでは無いので一時停止の意味ではない。ポーズだろう
-        bear.jumping = true;                                   //bearのジャンピングをtrue     (有効化)
-        bear.jumpBoost = 0;                                    //bearのジャンプブースト？ = 0 (初期化）
-        bear.image = game.assets['serval.png'];　　　　         //bearのイメージ　ゲームアセット serval.png　を指定
-        bear.addEventListener('enterframe', function(e) {      
-            if(rrr<360){                                       //追加文始め　回転ジャンプを機能追加
-                              rrr +=30;
-                              };
-                              this.rotation = rrr;             //追加文終わり
-            var friction = 0;                                  //フリクション　＝　 0 　擦るが　0?　・・・摩擦係数かコレ
-            if (this.vx > 0.3) {                               //this(bearにかかる?)　　vx(x方向ベクトル)が  0.3 より大きい時
-                friction = -0.3;                               //フリクション　＝　-0.3
-            } else if (this.vx > 0) {                          //this(bearにかかる?)vx(x方向ベクトル)が  0   より大きい時
-                friction = -this.vx;                           //フリクション　＝　-this.vx　（摩擦係数フリクションは-bear.vx　→　x方向ベクトルに0以上で進む際、摩擦はbearとは反対のxベクトルに対してかかる・・・ってなるのかなコレ）
-            }
-            if (this.vx < -0.3) {                              //this(bearにかかる?)　　vx(x方向ベクトル)が -0.3 より小さい時
-                friction = 0.3;                                //フリクション　＝　 0.3
-            } else if (this.vx < 0) {                          //this(bearにかかる?)　　vx(x方向ベクトル)が  0   より小さい時
-                friction = -this.vx;                           //フリクション　＝　-this.vx　（摩擦係数フリクションは常にbearのx方向ベクトル対し、反対のxベクトルに対してかかる）
+/*                                                                              //game.inputupをラベル表示しようとしたが、game.input.upがgame.onload内で未定義とのエラーが返ってきたので、一時コメントアウト。
+	var label_game_inputup = new Label();	    
+	label.moveTo(20, 20);           
+	label.on('enterframe',function()
+	     label.text = "!game.input.up = " + !game.input.up;
+		});                         
+	game.rootScene.addChild(label_game_inputup);	
+*/
+
+
+                                                                                //
+        var map = new Map(16, 16);                                              //マップの一マスを16×16に設定
+        map.image = game.assets['map2.gif'];                                    // 画像の読み込み
+        map.loadData(blocks);                                                   //マップデータの読み込み　読み込む値は54行目から始まる blocks
+                                                                                //
+        var rrr = 360;                                                          //追加分　回転に使用
+                                                                                //
+        var bear = new Sprite(32, 32);                                          //bear(クマ)　を新しいSpriteクラスで作成する。サイズは(32*32)
+        bear.x = 8;                                                             //bearのx座標を8に
+        bear.y = -32;                                                           //bearのy座標を-32に（自身のサイズを引いてる？)
+        bear.vx = 0;                                                            //bearのvx(x方向のベクトルの意？）
+        bear.vy = 0;                                                            //bearのvy(y方向のベクトルの意？）
+                                                                                //http://www.ohshiro.tuis.ac.jp/~ohshiro/gamesoft/coordinate/index.html
+		bear.ax = 0;                                                            //傾き用に使う変数？
+        bear.ay = 0;                                                            //
+        bear.pose = 0;                                                          //bearのポーズ　　　　　　　　　※注pauseでは無いので一時停止の意味ではない。ポーズだろう
+        bear.jumping = true;                                                    //bearのジャンピングをtrue     (有効化)
+        bear.jumpBoost = 0;                                                     //bearのジャンプブースト？ = 0 (初期化）
+        bear.image = game.assets['toki_mini.png'];                              //bearのイメージ　ゲームアセット toki_mini.png　を指定
+        bear.addEventListener('enterframe', function(e) {                       //
+            if(rrr<360){                                                        //追加文始め　回転ジャンプを機能追加
+                              rrr +=30;                                         //
+                              };                                                //
+                              this.rotation = rrr;                              //追加文終わり
+            var friction = 0;                                                   //フリクション　＝　 0 　擦るが　0?　・・・摩擦係数かコレ
+            if (this.vx > 0.3) {                                                //this(bearにかかる?)　　vx(x方向ベクトル)が  0.3 より大きい時
+                friction = -0.3;                                                //フリクション　＝　-0.3
+            } else if (this.vx > 0) {                                           //this(bearにかかる?)vx(x方向ベクトル)が  0   より大きい時
+                friction = -this.vx;                                            //フリクション　＝　-this.vx　（摩擦係数フリクションは-bear.vx　→　x方向ベクトルに0以上で進む際、摩擦はbearとは反対のxベクトルに対してかかる・・・ってなるのかなコレ）
+            }                                                                   //
+            if (this.vx < -0.3) {                                               //this(bearにかかる?)　　vx(x方向ベクトル)が -0.3 より小さい時
+                friction = 0.3;                                                 //フリクション　＝　 0.3
+            } else if (this.vx < 0) {                                           //this(bearにかかる?)　　vx(x方向ベクトル)が  0   より小さい時
+                friction = -this.vx;                                            //フリクション　＝　-this.vx　（摩擦係数フリクションは常にbearのx方向ベクトル対し、反対のxベクトルに対してかかる）
             }
             
             
@@ -109,7 +129,7 @@ function gameLoad(width,height){                            //関数 gameLoad(�
             
             
             if (this.jumping) {
-                if (!game.input.up || --this.jumpBoost < 0) {  //上矢印キー又は上十字キーが押されたらジャンプする（!game.input.upはブール関数（true/falseを返す）)
+                if (!game.input.up || --this.jumpBoost < 0) {                   //上矢印キー又は上十字キーが押されたらジャンプする（!game.input.upはブール関数（true/falseを返す）)
                     this.ay = 0;
             //        console.log('!game.input.up = ' + !game.input.up);
                     
@@ -118,7 +138,7 @@ function gameLoad(width,height){                            //関数 gameLoad(�
                 if (game.input.up) {
                     this.jumpBoost = 5;
                     this.ay = -5;
-                    rrr     =  0;                              //追加分
+                    rrr     =  0;                                               //回転ジャンプ追加分
                     //game.assets['jump.wav'].clone().play();
                 }
             }
@@ -198,11 +218,13 @@ function gameLoad(width,height){                            //関数 gameLoad(�
             this.x = dest.x-5;
             this.y = dest.y-2;
 
-            if (this.y > 320) {
-                //game.assets['gameover.wav'].play();
-                var score = Math.round(bear.x);
-                this.frame = 3;
-                this.vy = -20;
+
+                                                                                //*****ゲームオーバー処理
+            if (this.y > 320) {                                                 //キャラの位置が320より大きい（画面外に出た時）→　ゲームオーバー
+                //game.assets['gameover.wav'].play();                           //gameover.wav → gameover音を鳴らす
+                var score = Math.round(bear.x);                                 //スコア　　＝　
+                this.frame = 3;                                                 //this.frame　　→game内の処理時間？
+                this.vy = -20;                                                  //this.vy = -20
                 this.addEventListener('enterframe', function() {
                     this.vy += 2;
                     this.y += Math.min(Math.max(this.vy, -10), 10);
