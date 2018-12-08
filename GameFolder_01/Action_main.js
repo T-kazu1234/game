@@ -86,7 +86,7 @@ function gameLoad(width,height){                            //関数 gameLoad(�
         bear.pose = 0;                                         //bearのポーズ　　　　　　　　　※注pauseでは無いので一時停止の意味ではない。ポーズだろう
         bear.jumping = true;                                   //bearのジャンピングをtrue     (有効化)
         bear.jumpBoost = 0;                                    //bearのジャンプブースト？ = 0 (初期化）
-        bear.image = game.assets['toki_mini.png'];             //bearのイメージ　ゲームアセット toki_mini.png　を指定
+        bear.image = game.assets['serval.png'];　　　　         //bearのイメージ　ゲームアセット serval.png　を指定
         bear.addEventListener('enterframe', function(e) {      
             if(rrr<360){                                       //追加文始め　回転ジャンプを機能追加
                               rrr +=30;
