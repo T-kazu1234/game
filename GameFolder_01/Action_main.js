@@ -38,11 +38,11 @@ function gameLoad(width,height){                            //関数 gameLoad(�
     });
 
 
-//ゲーム.プレロード　画像読み込み
-//ゲーム.オンロード
+
+
    game.fps = 24;                                           //ゲームのfps(frame per second)を24に設定。秒間24フレーム動く
-   game.preload('toki_mini.png', 'map2.gif');
-   game.onload = function() {
+   game.preload('serval.png', 'map2.gif');                  //ゲーム.プレロード　画像読み込み
+   game.onload = function() {                               //ゲーム.オンロード
 
 //値　ブロックス
         var blocks = [
