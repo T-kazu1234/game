@@ -271,7 +271,7 @@ window.onload = function(){
                 };
                 if(zimen2.x < -4000){
                     zimen2.x = 5000;
-                    if(kill>0){
+                    if(kill>14){
                         bag.x=zimen2.x+3600;
                         bag.y=zimen2.y-400;
                     };
@@ -440,7 +440,7 @@ window.onload = function(){
         label1.color = 'red';
         label1.font = '50px "Arial"';
         label1.on('enterframe', function(){
-                  label1.text = ('ぱっかーんしたかず　'+(kill));
+                  label1.text = ('ぱっかーんしたかず      '+(kill));
                   });
         core.rootScene.addChild(label1)
         
