@@ -41,7 +41,7 @@ function gameLoad(width,height){                            //関数 gameLoad(�
 //ゲーム.プレロード　画像読み込み
 //ゲーム.オンロード
    game.fps = 24;                                           //ゲームのfps(frame per second)を24に設定。秒間24フレーム動く
-   game.preload('toki_mini.png', 'map2.gif');
+   game.preload('mario', 'map2.gif');
    game.onload = function() {
 
 //値　ブロックス
@@ -106,7 +106,7 @@ function gameLoad(width,height){                            //関数 gameLoad(�
         bear.pose = 0;                                                          //bearのポーズ　　　　　　　　　※注pauseでは無いので一時停止の意味ではない。ポーズだろう
         bear.jumping = true;                                                    //bearのジャンピングをtrue     (有効化)
         bear.jumpBoost = 0;                                                     //bearのジャンプブースト？ = 0 (初期化）
-        bear.image = game.assets['.png'];                              //bearのイメージ　ゲームアセット toki_mini.png　を指定
+        bear.image = game.assets['mario.png'];                              //bearのイメージ　ゲームアセット toki_mini.png　を指定
         bear.addEventListener('enterframe', function(e) {                       //
             if(rrr<360){                                                        //追加文始め　回転ジャンプを機能追加
                               rrr +=30;                                         //
