@@ -1,5 +1,6 @@
 enchant();
 
+/*
 function gameLoad(width,height){                            //関数 gameLoad(幅,高さ)
     game = new Core(width, height);                         //game = new コア(幅,高さ);
     var Rectangle = enchant.Class.create({                  //値 rectangle【語源】ラテン語「まっすぐな角」の意　をEnchantクラス生成
@@ -9,9 +10,9 @@ function gameLoad(width,height){                            //関数 gameLoad(�
             this.width = width;
             this.height = height;
         },
-
-//window.onload = function(){
-//    var core = new Core(3300,1600);
+*/
+window.onload = function(){
+    var core = new Core(3300,1600);
     core.preload('serval.png','toki.png','map0.png','cerulean.png');
     core.preload('zimen.png','game_over.png','st.png','replay.png');
     core.preload('s2.png','zimen2.png','japaricoin.png');
