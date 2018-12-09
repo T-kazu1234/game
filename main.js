@@ -434,6 +434,16 @@ window.onload = function(){
                                     };
                                     });//ジャパリコインの動作設定ここまで
         
+        var label1 = new Label();
+        label1.x = 0;
+        label1.y = 0;
+        label1.color = 'red';
+        label1.font = '50px "Arial"';
+        label1.on('enterframe', function(){
+                  label1.text = ('ぱっかーんしたかず　'+(cell));
+                  });
+        core.rootScene.addChild(label1)
+        
         //リプレイボタンの動作設定
         replay.addEventListener('enterframe',function(){
                                 if(this.intersect(japaricoin)){
