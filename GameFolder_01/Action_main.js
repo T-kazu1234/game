@@ -41,7 +41,7 @@ function gameLoad(width,height){                            //関数 gameLoad(�
 //ゲーム.プレロード　画像読み込み
 //ゲーム.オンロード
    game.fps = 24;                                           //ゲームのfps(frame per second)を24に設定。秒間24フレーム動く
-   game.preload('mario', 'map2.gif');
+   game.preload('mario.png', 'map2.gif');
    game.onload = function() {
 
 //値　ブロックス
