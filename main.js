@@ -440,7 +440,7 @@ window.onload = function(){
         label1.color = 'red';
         label1.font = '50px "Arial"';
         label1.on('enterframe', function(){
-                  label1.text = ('ぱっかーんしたかず　'+(cell));
+                  label1.text = ('ぱっかーんしたかず　'+(kill));
                   });
         core.rootScene.addChild(label1)
         
