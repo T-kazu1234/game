@@ -1,7 +1,17 @@
 enchant();
 
-window.onload = function(){
-    var core = new Core(3300,1600);
+function gameLoad(width,height){                            //関数 gameLoad(幅,高さ)
+    game = new Core(width, height);                         //game = new コア(幅,高さ);
+    var Rectangle = enchant.Class.create({                  //値 rectangle【語源】ラテン語「まっすぐな角」の意　をEnchantクラス生成
+        initialize: function(x, y, width, height) {         //関数初期化　初期化項目(x座標の値,y座標の値,幅,高さ)
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        },
+
+//window.onload = function(){
+//    var core = new Core(3300,1600);
     core.preload('serval.png','toki.png','map0.png','cerulean.png');
     core.preload('zimen.png','game_over.png','st.png','replay.png');
     core.preload('s2.png','zimen2.png','japaricoin.png');
