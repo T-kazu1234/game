@@ -2,8 +2,8 @@
  * enchant.js v0.8.3
  * http://enchantjs.com
  *
- * Copyright UEI Corporation
- * Released under the MIT license.
+ * 著作権UEI株式会社
+ * MITライセンスでリリースされました。
  */
 
 (function(window, undefined) {
@@ -105,22 +105,22 @@ window.requestAnimationFrame =
     }());
 
 /**
- * Export the library classes globally.
+ *ライブラリクラスをグローバルにエクスポートします。
  *
- * When no arguments are given, all classes defined in enchant.js as well as all classes defined in
- * plugins will be exported. When more than one argument is given, by default only classes defined
- * in enchant.js will be exported. When you wish to export plugin classes you must explicitly deliver
- * the plugin identifiers as arguments.
+ *引数が指定されていない場合、enchant.jsで定義されているすべてのクラス、および
+ *プラグインがエクスポートされます。複数の引数が指定された場合、デフォルトで定義されているクラス
+ * in enchant.jsがエクスポートされます。プラグインクラスをエクスポートする場合は、明示的に配信する必要があります
+ *引数としてのプラグイン識別子。
  *
  * @example
- * enchant();     // All classes will be exported.
- * enchant('');   // Only classes in enchant.js will be exported.
- * enchant('ui'); // enchant.js classes and ui.enchant.js classes will be exported.
+ * enchant();   //すべてのクラスがエクスポートされます。
+ * enchant(''); // enchant.jsのクラスだけがエクスポートされます。
+ * enchant('ui');  // enchant.jsクラスとui.enchant.jsクラスがエクスポートされます。
  *
- * @param {...String} [modules] Export module. Multiple designations possible.
- * @function
- * @global
- * @name enchant
+ * @param {... String} [modules]モジュールをエクスポートします。複数の指定が可能です。
+ * @関数
+ * @グローバル
+ * @nameエンチャント
  */
 var enchant = function(modules) {
     if (modules != null) {
@@ -199,62 +199,60 @@ window.addEventListener("message", function(msg, origin) {
 }, false);
 
 /**
- * @name enchant.Class
- * @class
- * A Class representing a class which supports inheritance.
- * @param {Function} [superclass] The class from which the
- * new class will inherit the class definition.
- * @param {*} [definition] Class definition.
- * @constructor
- */
+* 継承をサポートするクラスを表すクラス。
+* @param {関数} [スーパークラス]
+*  新しいクラスはクラス定義を継承します。
+* @param {*} [定義]クラス定義。
+* @constructor
+*/
 enchant.Class = function(superclass, definition) {
     return enchant.Class.create(superclass, definition);
 };
 
 /**
- * Creates a class.
- *
- * When defining a class that extends from another class, 
- * the constructor of the other class will be used by default.
- * Even if you override this constructor, you must still call it
- * to ensure that the class is initialized correctly.
- *
- * @example
- * // Creates a Ball class.
- * var Ball = Class.create({ 
- *
- *     // Ball's constructor
- *     initialize: function(radius) {
- *       // ... code ...
- *     }, 
- *
- *     // Defines a fall method that doesn't take any arguments.
- *     fall: function() { 
- *       // ... code ...
- *     }
- * });
- *
- * // Creates a Ball class that extends from "Sprite"
- * var Ball = Class.create(Sprite);  
- *
- * // Creates a Ball class that extends from "Sprite"
- * var Ball = Class.create(Sprite, { 
- *
- *     // Overwrite Sprite's constructor
- *     initialize: function(radius) { 
- *
- *         // Call Sprite's constructor.
- *         Sprite.call(this, radius * 2, radius * 2);
- *
- *         this.image = core.assets['ball.gif'];
- *     }
- * });
- *
- * @param {Function} [superclass] The class from which the
- * new class will inherit the class definition.
- * @param {*} [definition] Class definition.
- * @static
- */
+* クラスを作成します。
+*
+* 別のクラスから継承したクラスを定義する場合、
+* デフォルトでは、他のクラスのコンストラクタが使用されます。
+* このコンストラクタをオーバーライドしても、それを呼び出す必要があります
+* クラスが正しく初期化されるようにします。
+*
+* @example
+*// Ballクラスを作成します。
+* var Ball = Class.create（{
+*
+* //ボールのコンストラクタ
+* 初期化：関数（半径）{
+* // ...コード...
+* }、
+*
+* //引数を取らないfallメソッドを定義します。
+* fall：function（）{
+* // ...コード...
+* }
+* }）;
+*
+* // "Sprite"から継承するBallクラスを作成します。
+* var Ball = Class.create（スプライト）;
+*
+* // "Sprite"から継承するBallクラスを作成します。
+* var Ball = Class.create（スプライト、{
+*
+* //スプライトのコンストラクタを上書きする
+*初期化：関数（半径）{
+*
+* //スプライトのコンストラクタを呼び出します。
+* Sprite.call（これは半径* 2、半径* 2）。
+*
+* this.image = core.assets ['ball.gif'];
+*}
+*}）;
+*
+* @param {関数} [スーパークラス]
+*新しいクラスはクラス定義を継承します。
+* @param {*} [定義]クラス定義。
+* @static
+*/
 enchant.Class.create = function(superclass, definition) {
     if (superclass == null && definition) {
         throw new Error("superclass is undefined (enchant.Class.create)");
