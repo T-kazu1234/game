@@ -345,7 +345,7 @@ function getNextSceneName(){
 imglist = ["title.jpg","mio1.jpg","aine1.jpg"]
 //imglist = ["title.jpg","yeki.jpg","ymiti.jpg","yokujo.jpg","ynakaniwa.jpg","tosho.jpg","kaidan.jpg","yekimae.jpg","ymati.jpg","koki.png","akoen.jpg","yhome.jpg","ykoen.jpg","nakaniwa.jpg","kyositu.jpg","nene.png","gako.jpg","home.jpg","shuzinko.png","miya.png"]
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
-bgmlist = ["op.mp3"]
+//bgmlist = ["op.mp3"]
 
 
 // シーンを生成する
@@ -365,18 +365,18 @@ window.onload = function() {
   core.fps = 16;
   //使用する画像をプリロードする(配列を渡せばOK)
   core.preload(imglist);
-  core.preload(bgmlist);
+  //core.preload(bgmlist);
 
-  core.bgm = Sound.load('op.mp3');
+  //core.bgm = Sound.load('op.mp3');
 
   //ここで初期化処理が始まる
   core.onload = function() {
 
-
+/*
       core.bgm.volume = 0.3;
       core.bgm.play();
       core.bgm.loop = true;
-
+*/
 
       //レイヤーで管理する
       bgLayer = new Group();
