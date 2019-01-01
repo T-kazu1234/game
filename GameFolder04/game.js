@@ -54,7 +54,7 @@ PlayBGM(args){
       charaImage.x = 10;
       charaImage.y = 15;
       charaImage.opacity = 0;
-      charaImage.tl.fadeIn(8);
+      charaImage.tl.fadeIn(10);
       imageLayer.addChild(charaImage);
 
 
@@ -64,11 +64,22 @@ PlayBGM(args){
   SetCharactorRight(args){
     let charaImage = new Sprite(150,165);
     charaImage.image = core.assets[args];
-    charaImage.x = 180;
+    charaImage.x = 160;
     charaImage.y = 15;
-    //charaImage.tl.moveTo(174, 30, 30);
     charaImage.opacity = 0;
-    charaImage.tl.fadeIn(8);
+    charaImage.tl.fadeIn(10);
+    //charaImage.tl.moveTo(10, 15, 100);
+
+    // ジグザグに移動するアニメーションを登録する
+    /*
+    charaImage.tl.moveTo(174, 30, 10, enchant.Easing.QUAD_EASEINOUT);     // x=174, y=30の地点?まで10フレームかけて移動させる
+    charaImage.tl.moveTo(114, 90, 20, enchant.Easing.QUAD_EASEINOUT);     // x=114, y=90の地点?まで20フレームかけて移動させる
+    charaImage.tl.moveTo(174, 150, 20, enchant.Easing.QUAD_EASEINOUT);     // x=174, y=150の地点?まで20フレームかけて移動させる
+    charaImage.tl.moveTo(114, 210, 20, enchant.Easing.QUAD_EASEINOUT);     // x=114, y=210の地点?まで20フレームかけて移動させる
+    charaImage.tl.moveTo(144, 240, 10, enchant.Easing.QUAD_EASEINOUT);     // x=144, y=240の地点?まで10フレームかけて移動させる
+    charaImage.tl.moveTo(144, 0, 10, enchant.Easing.QUAD_EASEINOUT);      // x=144, y=0の地点?まで10フレームかけて移動させる
+    charaImage.tl.loop();                 // 全て終わったら初めから繰り返す
+    */
     imageLayer.addChild(charaImage);
   }
 
@@ -110,7 +121,7 @@ PlayBGM(args){
         textLayer.addChild(text);
 
         //次へボタン
-        let nextlabel = new Label("< ▼ >");
+        let nextlabel = new Label("< 次 >");
         nextlabel.font  = "16px monospace";
         nextlabel.color = "rgb(0, 0, 0)";
         nextlabel.y     = 280;
@@ -120,7 +131,7 @@ PlayBGM(args){
         textLayer.addChild(nextlabel);
 
         //戻るボタン
-        let backLabel = new Label("< ▲ >");
+        let backLabel = new Label("< 前 >");
         backLabel.font  = "16px monospace";
         backLabel.color = "rgb(0, 0, 0)";
         backLabel.y     = 280;
@@ -342,8 +353,8 @@ function getNextSceneName(){
 //////////////////////////////////////
 // 各種設定等
 //////////////////////////////////////
-imglist = ["title.jpg","mio1.jpg","aine1.jpg"]
-//imglist = ["title.jpg","yeki.jpg","ymiti.jpg","yokujo.jpg","ynakaniwa.jpg","tosho.jpg","kaidan.jpg","yekimae.jpg","ymati.jpg","koki.png","akoen.jpg","yhome.jpg","ykoen.jpg","nakaniwa.jpg","kyositu.jpg","nene.png","gako.jpg","home.jpg","shuzinko.png","miya.png"]
+imglist = ["title.png","mio1.png","aine1.png"]
+//imglist = ["title.png","yeki.png","ymiti.png","yokujo.png","ynakaniwa.png","tosho.png","kaidan.png","yekimae.png","ymati.png","koki.png","akoen.png","yhome.png","ykoen.png","nakaniwa.png","kyositu.png","nene.png","gako.png","home.png","shuzinko.png","miya.png"]
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
 //bgmlist = ["op.mp3"]
 
@@ -372,11 +383,11 @@ window.onload = function() {
   //ここで初期化処理が始まる
   core.onload = function() {
 
-/*
-      core.bgm.volume = 0.3;
-      core.bgm.play();
-      core.bgm.loop = true;
-*/
+
+      //core.bgm.volume = 0.3;
+      //core.bgm.play();
+      //core.bgm.loop = true;
+
 
       //レイヤーで管理する
       bgLayer = new Group();
@@ -390,7 +401,7 @@ window.onload = function() {
 
 
       /*これが最初のシーンです */
-      _currentScene.SetBackGroundImage("title.jpg");
+      _currentScene.SetBackGroundImage("title.png");
       //引数リスト
       //選択肢１　遷移先１　選択肢２　遷移先２
       //最初は選択肢のあるシーンを作成しています。
