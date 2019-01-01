@@ -53,7 +53,6 @@ PlayBGM(args){
       charaImage.image = core.assets[args];
       charaImage.x = 10;
       charaImage.y = 15;
-      //charaImage.tl.moveTo(174, 30, 30);
       charaImage.opacity = 0;
       charaImage.tl.fadeIn(8);
       imageLayer.addChild(charaImage);
@@ -67,6 +66,7 @@ PlayBGM(args){
     charaImage.image = core.assets[args];
     charaImage.x = 180;
     charaImage.y = 15;
+    //charaImage.tl.moveTo(174, 30, 30);
     charaImage.opacity = 0;
     charaImage.tl.fadeIn(8);
     imageLayer.addChild(charaImage);
@@ -194,7 +194,7 @@ SetChoiceScene(args){
   let text = new Label(args[0]);
   text.font  = "16px monospace";
   text.color = "rgb(0, 0, 0)";
-  text.y     = 180;
+  text.y     = 200;
   text.x = 10;
   text.width = 300;
   text.height = 120;
@@ -210,7 +210,7 @@ SetChoiceScene(args){
   let text2 = new Label(args[2]);
   text2.font  = "16px monospace";
   text2.color = "rgb(0, 0, 0)";
-  text2.y     = 230;
+  text2.y     = 220;
   text2.x = 10;
   text2.width = 300;
   text2.height = 120;
@@ -221,6 +221,22 @@ SetChoiceScene(args){
   text2.addEventListener('touchstart',function(e){
       executeNext(eval(args[3]));
   });
+
+  //選択肢3
+  let text3 = new Label(args[4]);
+  text3.font  = "16px monospace";
+  text3.color = "rgb(0, 0, 0)";
+  text3.y     = 240;
+  text3.x = 10;
+  text3.width = 300;
+  text3.height = 120;
+
+  textLayer.addChild(text3);
+
+  //シーン名が渡されます
+  text3.addEventListener('touchstart',function(e){
+      executeNext(eval(args[5]));
+  });//
 
 
 }
@@ -239,16 +255,26 @@ AddPlayerStatusFlag(args){
 }
 
 
-
-
-DeleteCharactor(){
+DeleteBG(){
   //背景を削除する
   bgLayer.removeChild(bgLayer.firstChild);
+}
+
+DeleteCharactor(){
   //キャラクターを削除する
   imageLayer.removeChild(imageLayer.firstChild);
   imageLayer.removeChild(imageLayer.lastChild);
 }
 
+DeleteCharactorf(){
+  //キャラクターを削除する
+  imageLayer.removeChild(imageLayer.firstChild);
+}
+
+DeleteCharactorl(){
+  //キャラクターを削除する
+imageLayer.removeChild(imageLayer.lastChild);
+}
 
 
 //条件(int)によって処理を変えるメソッド
@@ -312,13 +338,14 @@ function getNextSceneName(){
 
 
 
+
 //////////////////////////////////////
 // 各種設定等
 //////////////////////////////////////
-imglist = ["title.jpg"]
+imglist = ["title.jpg","mio1.jpg","aine1.jpg"]
 //imglist = ["title.jpg","yeki.jpg","ymiti.jpg","yokujo.jpg","ynakaniwa.jpg","tosho.jpg","kaidan.jpg","yekimae.jpg","ymati.jpg","koki.png","akoen.jpg","yhome.jpg","ykoen.jpg","nakaniwa.jpg","kyositu.jpg","nene.png","gako.jpg","home.jpg","shuzinko.png","miya.png"]
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
-//bgmlist = ["op.mp3"]
+bgmlist = ["op.mp3"]
 
 
 // シーンを生成する
@@ -340,16 +367,16 @@ window.onload = function() {
   core.preload(imglist);
   core.preload(bgmlist);
 
-  //core.bgm = Sound.load('op.mp3');
+  core.bgm = Sound.load('op.mp3');
 
   //ここで初期化処理が始まる
   core.onload = function() {
 
-/*
+
       core.bgm.volume = 0.3;
       core.bgm.play();
       core.bgm.loop = true;
-*/
+
 
       //レイヤーで管理する
       bgLayer = new Group();
@@ -367,7 +394,7 @@ window.onload = function() {
       //引数リスト
       //選択肢１　遷移先１　選択肢２　遷移先２
       //最初は選択肢のあるシーンを作成しています。
-      _currentScene.SetChoiceScene(["▶︎ ゲームスタート",scene1,"▶︎ このゲームについて",aboutscene]);
+      _currentScene.SetChoiceScene(["▶︎ ゲームスタート",scene1,"▶︎ 説明",aboutscene]);
 
 
   }
