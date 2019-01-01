@@ -16,7 +16,7 @@ aboutscene =
 aboutscene1 =
 {
 'DeleteCharactor':"",
-'SetCharactorRight': 'mio1.jpg',
+'SetCharactorRight': 'mio1.png',
 'SetText': ['', 'この娘は湊みお。ピュアパレットのピュアじゃない方です。'],
 'SetNextSceneName':'aboutscene2'
 }
@@ -24,7 +24,7 @@ aboutscene1 =
 aboutscene2 =
 {
 'DeleteCharactor':"",
-'SetCharactorLeft': 'aine1.jpg',
+'SetCharactorLeft': 'aine1.png',
 'SetText': ['', 'この娘が友希あいねちゃん。ピュアパレットのピュアな方です。',
                 'かわいいですね。(かわいいです)',
                 'ちなみにこの写真は二人がフレンズを組んで 一度解散し、再結成した後のみおちゃんの電話の呼び出し画面の画像です。',
@@ -36,7 +36,7 @@ aboutscene2 =
 
 aboutscene3 =
 {
-'SetCharactorRight': 'mio1.jpg',
+'SetCharactorRight': 'mio1.png',
 'SetText': ['', 'このゲームは'
               ],
 'SetNextSceneName':'aboutscene4'
@@ -51,7 +51,6 @@ aboutscene4 = {
 scene1 = {
   'DeleteCharactor':"",
   'SetText': ['','何も思いつかぬ','何が思いつかぬかというと、ノベルゲームの文章である','『この文章はサンプルです。兄が適当に執筆している為、実際のキャラクターが喋らない内容を書いている可能性があります。予めご了承ください'],
-  'PlayBGM' : 'op.mp3',
   'SetNextSceneName':'scene2'
 }
 
