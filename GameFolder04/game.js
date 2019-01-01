@@ -315,7 +315,8 @@ function getNextSceneName(){
 //////////////////////////////////////
 // 各種設定等
 //////////////////////////////////////
-imglist = ["title.jpg","yeki.jpg","ymiti.jpg","yokujo.jpg","ynakaniwa.jpg","tosho.jpg","kaidan.jpg","yekimae.jpg","ymati.jpg","koki.png","akoen.jpg","yhome.jpg","ykoen.jpg","nakaniwa.jpg","kyositu.jpg","nene.png","gako.jpg","home.jpg","shuzinko.png","miya.png"]
+imglist = ["title.jpg"]
+//imglist = ["title.jpg","yeki.jpg","ymiti.jpg","yokujo.jpg","ynakaniwa.jpg","tosho.jpg","kaidan.jpg","yekimae.jpg","ymati.jpg","koki.png","akoen.jpg","yhome.jpg","ykoen.jpg","nakaniwa.jpg","kyositu.jpg","nene.png","gako.jpg","home.jpg","shuzinko.png","miya.png"]
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
 bgmlist = ["op.mp3"]
 
