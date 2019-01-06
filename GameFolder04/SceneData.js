@@ -17,7 +17,7 @@ aboutscene1 =
 {
 'DeleteCharactor':"",
 'SetCharactorRight': 'mio1.png',
-'SetText': ['', 'この娘は湊みお。ピュアパレットのピュアじゃない方です。'],
+'SetText': ['', 'この娘は湊みお。                                         ピュアパレットのピュアじゃない方です。'],
 'SetNextSceneName':'aboutscene2'
 }
 
@@ -25,7 +25,7 @@ aboutscene2 =
 {
 'DeleteCharactor':"",
 'SetCharactorLeft': 'aine1.png',
-'SetText': ['', 'この娘が友希あいねちゃん。ピュアパレットのピュアな方です。',
+'SetText': ['', 'この娘が友希あいねちゃん。                        ピュアパレットのピュアな方です。',
                 'かわいいですね。(かわいいです)',
                 'ちなみにこの写真は二人がフレンズを組んで 一度解散し、再結成した後のみおちゃんの電話の呼び出し画面の画像です。',
                 'どう見ても盗撮しようとして気づかれたみたいな構図の写真だけども、みおちゃんが写真を撮らせてもらえないのか、',
@@ -36,14 +36,28 @@ aboutscene2 =
 
 aboutscene3 =
 {
-'SetCharactorRight': 'mio1.png',
-'SetText': ['', 'このゲームは'
+'DeleteCharactor':"",
+'SetCharactorLeft': 'koko1.png',
+'SetText': ['', 'ついでに、アイカツ！ナビのココちゃん。            アイカツ！モバイルに「ハロー、ココちゃん！」    と呼びかけると出てきてくれるAIです。',
+                '要はアイカツフレンズ!世界のSiriといったところでしょうか。',
+                'AIのくせに一人しかいないらしく、忙しい時は呼んでも出でこなかったり、自分にわからないことは人任せにして電話を勝手にかけるくらいの高性能AIです。'
               ],
 'SetNextSceneName':'aboutscene4'
 }
 
-
 aboutscene4 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft': 'aine1.png',
+  'SetCharactorRight': 'mio1.png',
+  'SetText': ['', 'このゲームはあいねちゃんとみおちゃんがフレンズ(要はユニット)を組むまでのお話です。',
+                  'みおちゃんとなって選択肢を選んでいき、あいねちゃんとフレンズを組みましょう。',
+                  'アニメ本編が正解ルートなので間違ったりするとすぐ終わっちゃったりします。',
+                  '終わらない場合もありますが、どれぐらい正しかったか%表示します。頑張って100%クリアを目指しましょう。本編通り進めばOKです。'
+                ],
+  'SetNextSceneName':'aboutscene5'
+}
+
+aboutscene5 = {
   'DeleteCharactor':"",
   'SetChoiceScene': [" ▶︎ 始める","scene1"," ▶︎ タイトルに戻る","titlescene"],
 }
