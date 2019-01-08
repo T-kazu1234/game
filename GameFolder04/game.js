@@ -399,7 +399,20 @@ window.onload = function() {
       textLayer = new Group();
       core.rootScene.addChild(textLayer);
 
-
+//////////////////////////////////////////////////////////////////////////
+//  youtube再生
+//////////////////////////////////////////////////////////////////////////
+      YOUTUBE_ID = '3uRdxB6GdCc';
+      video = new Entity()
+      video.visible =  true;
+      video.opacity =  0.1;
+      video._element = document.createElement('div')
+      video.x = 10 //width  //動画設X置座標
+      video.y = 10 //height //動画設置Y座標
+      video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/'+YOUTUBE_ID+'?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="10" height="10" frameborder="0" id="player"></iframe>'
+      core.rootScene.addChild(video); // # 動画をシーンに追加
+//////////////////////////////////////////////////////////////////////////
+      
       /*これが最初のシーンです */
       _currentScene.SetBackGroundImage("title.png");
       //引数リスト
