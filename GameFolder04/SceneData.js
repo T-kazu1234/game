@@ -2,8 +2,16 @@
 //必要部分のみ掲載
 
 titlescene = {
+  'DeleteBG':"",
   'DeleteCharactor':"",
+  'SetBackGroundImage':"title.png",
   'SetChoiceScene': [" ▶︎ 始める","scene1"," ▶︎ 説明","aboutscene"],
+}
+
+
+titlescene_back = {
+  'DeleteCharactor':"",
+  'SetChoiceScene': [" ▶︎ タイトルに戻る","titlescene"],
 }
 
 aboutscene =
@@ -40,7 +48,7 @@ aboutscene3 =
 'SetCharactorLeft': 'koko1.png',
 'SetText': ['', 'ついでに、アイカツ！ナビのココちゃん。            アイカツ！モバイルに「ハロー、ココちゃん！」    と呼びかけると出てきてくれるAIです。',
                 '要はアイカツフレンズ!世界のSiriといったところでしょうか。',
-                'AIのくせに一人しかいないらしく、忙しい時は呼んでも出でこなかったり、自分にわからないことは人任せにして電話を勝手にかけるくらいの高性能AIです。'
+                'AIのくせに一人しかいないらしく、忙しい時は呼んでも出でこなかったり、舌を噛んだり、自分にわからないことは人任せにして電話を勝手にかけるくらいの高性能AIです。'
               ],
 'SetNextSceneName':'aboutscene4'
 }
@@ -52,28 +60,103 @@ aboutscene4 = {
   'SetText': ['', 'このゲームはあいねちゃんとみおちゃんがフレンズ(要はユニット)を組むまでのお話です。',
                   'みおちゃんとなって選択肢を選んでいき、あいねちゃんとフレンズを組みましょう。',
                   'アニメ本編が正解ルートなので間違ったりするとすぐ終わっちゃったりします。',
-                  '終わらない場合もありますが、どれぐらい正しかったか%表示します。頑張って100%クリアを目指しましょう。本編通り進めばOKです。'
+                  '終わらない場合もありますが、どれぐらい正しかったか%表示します。頑張って100%クリアを目指しましょう。第11話「告白はドラマチック！」本編通り進めばOKです。'
                 ],
-  'SetNextSceneName':'aboutscene5'
+  'SetNextSceneName':'titlescene_back'
 }
 
-aboutscene5 = {
-  'DeleteCharactor':"",
-  'SetChoiceScene': [" ▶︎ 始める","scene1"," ▶︎ タイトルに戻る","titlescene"],
-}
 
 scene1 = {
   'DeleteCharactor':"",
-  'SetText': ['','何も思いつかぬ','何が思いつかぬかというと、ノベルゲームの文章である','『この文章はサンプルです。兄が適当に執筆している為、実際のキャラクターが喋らない内容を書いている可能性があります。予めご了承ください'],
+  'DeleteBG':"",
+  'SetBackGroundImage': '1.png',
+  'SetText': ['友希あいね',
+                  'これまでの『アイカツフレンズ！』。',
+                  '私　友希あいね。',
+                  'スターハーモニー学園に通う中学２年生。',
+                  '学園のトップアイドル　湊みおちゃんと出会ってアイドル科に転入したんだ。'
+              ],
   'SetNextSceneName':'scene2'
 }
 
 scene2 = {
-  'SetText': ['シーン2','２壊滅','３壊滅'],
+  'SetCharactorRight': 'ema.png',
+  'SetCharactorLeft': 'maika.png',
+  'SetText': ['あいね',
+              'ダンスとお祭りが大好きな舞花ちゃんと一つ上の先輩で　私たちを元気に引っ張ってくれるエマちゃん。',
+              '凸凹だけどすっごく仲よしな２人はついにフレンズになった。',
+              ],
   'SetNextSceneName':'scene3'
 }
 
 scene3 = {
   'DeleteCharactor':"",
-  'SetChoiceScene': [" ▶︎ タイトルに戻る","titlescene"],
+  'SetText': ['あいね',
+              'アイドルは　カードも友達　ファンも友達。',
+              '目指せ　友達100万人！'
+              ],
+  'SetNextSceneName':'scene4'
+}
+
+scene4 = {
+  'SetCharactorRight': 'ema.png',
+  'SetBackGroundImage': 'school_room.png',
+  'SetText': ['日向エマ',
+              'プリティー！'
+              ],
+  'SetNextSceneName':'scene5'
+}
+
+scene5 = {
+  'SetCharactorLeft': 'maika.png',
+  'SetText': ['蝶乃舞花',
+              'セクシー！'
+              ],
+  'SetNextSceneName':'scene6'
+}
+
+scene6 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '2.png',
+  'SetText': ['二人',
+              'ハニーキャット！'
+              ],
+  'SetNextSceneName':'scene7'
+}
+
+scene7 = {
+  'DeleteBG':"",
+  'SetCharactorLeft': 'aine1.png',
+  'SetCharactorRight': 'ema.png',
+  'SetBackGroundImage': 'school_room.png',
+  'SetText': ['あいね',
+              'うわ～！かっこいい！！'
+              ],
+  'SetNextSceneName':'scene8'
+}
+
+scene8 = {
+  'DeleteCharactorl':"",
+  'SetCharactorRight': 'mio1.png',
+  'SetText': ['湊みお',
+              'ハニーキャット…２人にぴったりなフレンズ名ね。'
+              ],
+  'SetNextSceneName':'scene9'
+}
+
+scene9 = {
+  'SetText': ['あいね',
+              'たしかに。舞花ちゃんもエマちゃんも猫っぽいイメージあるし。'
+              ],
+  'SetNextSceneName':'scene_0'
+}
+
+scene_0 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetText': ['',
+              'ここから先は出来てません。'
+              ],
+  'SetNextSceneName':'titlescene_back'
 }
