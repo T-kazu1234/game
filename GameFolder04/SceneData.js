@@ -25,6 +25,7 @@ aboutscene1 =
 {
 'DeleteCharactor':"",
 'SetCharactorRight': 'mio1.png',
+//'SetYoutube_Video': '3uRdxB6GdCc', //youtube再生用関数
 'SetText': ['', 'この娘は湊みお。                                         ピュアパレットのピュアじゃない方です。'],
 'SetNextSceneName':'aboutscene2'
 }
