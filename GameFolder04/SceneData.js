@@ -25,7 +25,6 @@ aboutscene1 =
 {
 'DeleteCharactor':"",
 'SetCharactorRight': 'mio1.png',
-//'SetYoutube_Video': '3uRdxB6GdCc', //youtube再生用関数
 'SetText': ['', 'この娘は湊みお。                                         ピュアパレットのピュアじゃない方です。'],
 'SetNextSceneName':'aboutscene2'
 }
@@ -128,7 +127,7 @@ scene6 = {
 
 scene7 = {
   'DeleteBG':"",
-  'SetCharactorLeft': 'aine1.png',
+  'SetCharactorLeft': 'aine2.png',
   'SetCharactorRight': 'ema.png',
   'SetBackGroundImage': 'school_room.png',
   'SetText': ['あいね',
@@ -139,7 +138,7 @@ scene7 = {
 
 scene8 = {
   'DeleteCharactorl':"",
-  'SetCharactorRight': 'mio1.png',
+  'SetCharactorRight': 'mio2.png',
   'SetText': ['湊みお',
               'ハニーキャット…２人にぴったりなフレンズ名ね。'
               ],
@@ -150,10 +149,80 @@ scene9 = {
   'SetText': ['あいね',
               'たしかに。舞花ちゃんもエマちゃんも猫っぽいイメージあるし。'
               ],
-  'SetNextSceneName':'scene_0'
+  'SetNextSceneName':'scene10'
 }
 
-scene_0 = {
+scene10 = {
+  'DeleteCharactorl':"",
+  'SetCharactorRight': 'ema.png',
+  'SetText': ['エマ',
+              'フレンズ組もうってなったら２人で盛り上がっちゃって。コンセプトとか一から作り上げてくのってワクワクするよね。'
+              ],
+  'SetNextSceneName':'scene11'
+}
+
+scene11 = {
+  'DeleteCharactorf':"",
+  'SetCharactorLeft': 'maika.png',
+  'SetText': ['舞花',
+              'あのキメポーズはちょっと恥ずいんですけど…'
+              ],
+  'SetNextSceneName':'scene12'
+}
+
+scene12 = {
+  'SetText': ['エマ',
+              'え～っ！？舞花だってノリノリで考えてたじゃん！'
+              ],
+  'SetNextSceneName':'scene13'
+}
+
+scene13 = {
+  'SetText': ['舞花',
+              'あのときは…。エマとフレンズを組めたからテンション上がっちゃって…。'
+              ],
+  'SetNextSceneName':'scene14'
+}
+
+scene14 = {
+  'SetText': ['エマ',
+              'うんうん。かわいいやつめ！'
+              ],
+  'SetNextSceneName':'scene15'
+}
+
+scene15 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'aine2.png',
+  'SetText': ['あいね',
+              '二人ともすっごく楽しそう。フレンズっていいな〜。'
+              ],
+  'SetNextSceneName':'scene16'
+}
+
+scene16 = {
+  'DeleteCharactorf':"",
+  'SetCharactorRight': 'mio2.png',
+  'SetText': ['みお',
+              '……………'
+              ],
+  'SetNextSceneName':'scene17'
+}
+
+scene17 = {
+  'SetChoiceScene': [" ▶︎ ……………","scene18"," ▶︎ 「あいね！                                                        私達もフレンズを組みましょう！」","scene0"],
+}
+
+scene18 = {
+  'DeleteCharactor':"",
+  'SetCharactorRight': 'mio3.png',
+  'SetText': ['みお',
+              '……………'
+              ],
+  'SetNextSceneName':'scene0'
+}
+
+scene0 = {
   'DeleteBG':"",
   'DeleteCharactor':"",
   'SetText': ['',
