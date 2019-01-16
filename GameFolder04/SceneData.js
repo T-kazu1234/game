@@ -219,7 +219,72 @@ scene18 = {
   'SetText': ['みお',
               '……………'
               ],
-  'SetNextSceneName':'scene0'
+  'SetNextSceneName':'scene19'
+}
+
+scene19 = {
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '3.png',
+  'SetText': ['',
+              'その晩　みおの自室'
+              ],
+  'SetNextSceneName':'scene20'
+}
+
+scene20 = {
+  'SetCharactorRight': 'mio2.png',
+  'SetText': ['みお',
+              'フレンズを組むのは、やっぱりあいねしかいない。まずは…'
+              ],
+  'SetNextSceneName':'scene21'
+}
+
+scene21 = {
+  'SetChoiceScene': [" ▶︎ 告白の練習","scene0"," ▶︎ 相性を占いで確かめる","scene0"," ▶︎ 両方","scene22"],
+}
+
+scene22 = {
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '4.png',
+  'SetText': ['みお',
+              'あいね、私とフレンズになりましょう。'
+              ],
+  'SetNextSceneName':'scene23'
+}
+
+scene23 = {
+  'SetBackGroundImage': '3.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetText': ['みお',
+              'フゥ…。',
+              '古今東西あらゆる占いで私とあいねの相性はバッチリだってわかったし…。',
+              'それに何より私の直感があいねとフレンズを組めばすごいことが起きるってビビっと訴えかけてる。',
+              'あとは…'
+              ],
+  'SetNextSceneName':'scene24'
+}
+
+scene24 = {
+  'SetChoiceScene': [" ▶︎ ドラマチックな展開のフレンズ結成ね。","scene25"," ▶︎ 今すぐあいねに電話をかけましょう。","scene0"],
+}
+
+scene25 = {
+  'SetText': ['みお',
+              'あとはドラマチックな展開あってのフレンズ結成ね。',
+              'そう…ラブミーティアの二人みたいに。'
+              ],
+  'SetNextSceneName':'scene26'
+}
+
+scene26 = {
+  'SetText': ['',
+              'ラブミーティアの結成について復習しておく？'
+              ],
+  'SetNextSceneName':'scene27'
+}
+
+scene27 = {
+  'SetChoiceScene': [" ▶︎ はい","scene0"," ▶︎ いいえ","scene0"],
 }
 
 scene0 = {
