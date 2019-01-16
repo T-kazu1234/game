@@ -30,17 +30,17 @@ class CurrentScene{
 
 
 PlayBGM(args){
-  core.bgm.stop();
-  core.bgm = Sound.load(args);
-  core.bgm.volume = 0.3;
-  core.bgm.play();
-  core.bgm.loop = true;
+  game.bgm.stop();
+  game.bgm = Sound.load(args);
+  game.bgm.volume = 0.3;
+  game.bgm.play();
+  game.bgm.loop = true;
 }
 
   //背景画像をシーンに設定する
   SetBackGroundImage(args){
       let backImage = new Sprite(320,180);
-      backImage.image = core.assets[args];
+      backImage.image = game.assets[args];
       backImage.x = 0;
       backImage.y = 0;
       bgLayer.addChild(backImage);
@@ -50,7 +50,7 @@ PlayBGM(args){
   SetCharactorLeft(args){
 
       let charaImage = new Sprite(150,165);
-      charaImage.image = core.assets[args];
+      charaImage.image = game.assets[args];
       charaImage.x = 10;
       charaImage.y = 15;
       charaImage.opacity = 0;
@@ -63,7 +63,7 @@ PlayBGM(args){
   //右側のキャラクターをシーンに設定する
   SetCharactorRight(args){
     let charaImage = new Sprite(150,165);
-    charaImage.image = core.assets[args];
+    charaImage.image = game.assets[args];
     charaImage.x = 160;
     charaImage.y = 15;
     charaImage.opacity = 0;
@@ -372,32 +372,32 @@ var player = new MainPlayer();
 window.onload = function() {
 
 
-  core = new Core(330, 320);
-  core.fps = 16;
+  game = new Core(330, 320);
+  game.fps = 16;
   //使用する画像をプリロードする(配列を渡せばOK)
-  core.preload(imglist);
-  //core.preload(bgmlist);
+  game.preload(imglist);
+  //game.preload(bgmlist);
 
-  //core.bgm = Sound.load('op.mp3');
+  //game.bgm = Sound.load('op.mp3');
 
   //ここで初期化処理が始まる
-  core.onload = function() {
+  game.onload = function() {
 
 
-      //core.bgm.volume = 0.3;
-      //core.bgm.play();
-      //core.bgm.loop = true;
+      //game.bgm.volume = 0.3;
+      //game.bgm.play();
+      //game.bgm.loop = true;
 
 
       //レイヤーで管理する
       bgLayer = new Group();
-      core.rootScene.addChild(bgLayer);
+      game.rootScene.addChild(bgLayer);
 
       imageLayer = new Group();
-      core.rootScene.addChild(imageLayer);
+      game.rootScene.addChild(imageLayer);
 
       textLayer = new Group();
-      core.rootScene.addChild(textLayer);
+      game.rootScene.addChild(textLayer);
 
 //////////////////////////////////////////////////////////////////////////
 //  youtube再生
@@ -410,7 +410,7 @@ window.onload = function() {
       video.x = 10 //width  //動画設X置座標
       video.y = 10 //height //動画設置Y座標
       video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/'+YOUTUBE_ID+'?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="10" height="10" frameborder="0" id="player"></iframe>'
-      core.rootScene.addChild(video); // # 動画をシーンに追加
+      game.rootScene.addChild(video); // # 動画をシーンに追加
 //////////////////////////////////////////////////////////////////////////
 
       /*これが最初のシーンです */
@@ -423,6 +423,6 @@ window.onload = function() {
 
   }
 
-  core.start();
+  game.start();
 
 }
