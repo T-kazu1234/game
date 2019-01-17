@@ -353,7 +353,7 @@ function getNextSceneName(){
 //////////////////////////////////////
 // 各種設定等
 //////////////////////////////////////
-imglist = ["title.png","mio1.png","mio2.png","mio3.png","aine1.png","aine2.png","koko1.png","ema.png","maika.png","school_room.png","1.png","2.png","3.png","4.png"]
+imglist = ["title.png","mio1.png","mio2.png","mio3.png","aine1.png","aine2.png","koko1.png","koko2.png","mirai.png","karen.png","ema.png","maika.png","school_room.png","airport.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"]
 //imglist = ["title.png","yeki.png","ymiti.png","yokujo.png","ynakaniwa.png","tosho.png","kaidan.png","yekimae.png","ymati.png","koki.png","akoen.png","yhome.png","ykoen.png","nakaniwa.png","kyositu.png","nene.png","gako.png","home.png","shuzinko.png","miya.png"]
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
 //bgmlist = ["op.mp3"]
@@ -402,7 +402,7 @@ window.onload = function() {
 //////////////////////////////////////////////////////////////////////////
 //  youtube再生
 //////////////////////////////////////////////////////////////////////////
-      YOUTUBE_ID = '3uRdxB6GdCc';
+      YOUTUBE_ID = 'QqYsu2SshyQ';
       video = new Entity()
       video.visible =  true;
       video.opacity =  0.1;

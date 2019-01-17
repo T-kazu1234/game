@@ -1,13 +1,9 @@
-//実際のゲームのシナリオが見えてしまうので
-//必要部分のみ掲載
-
 titlescene = {
   'DeleteBG':"",
   'DeleteCharactor':"",
   'SetBackGroundImage':"title.png",
   'SetChoiceScene': [" ▶︎ 始める","scene1"," ▶︎ 説明","aboutscene"],
 }
-
 
 titlescene_back = {
   'DeleteCharactor':"",
@@ -100,6 +96,7 @@ scene3 = {
 
 scene4 = {
   'SetCharactorRight': 'ema.png',
+  'DeleteBG':"",
   'SetBackGroundImage': 'school_room.png',
   'SetText': ['日向エマ',
               'プリティー！'
@@ -224,9 +221,11 @@ scene18 = {
 
 scene19 = {
   'DeleteCharactor':"",
+  'DeleteBG':"",
   'SetBackGroundImage': '3.png',
   'SetText': ['',
-              'その晩　みおの自室'
+              'その晩　みおの自室',
+              '(明らかに晩じゃないけど画像がないからしゃあない。)'
               ],
   'SetNextSceneName':'scene20'
 }
@@ -245,6 +244,7 @@ scene21 = {
 
 scene22 = {
   'DeleteCharactor':"",
+  'DeleteBG':"",
   'SetBackGroundImage': '4.png',
   'SetText': ['みお',
               'あいね、私とフレンズになりましょう。'
@@ -253,7 +253,8 @@ scene22 = {
 }
 
 scene23 = {
-  'SetBackGroundImage': '3.png',
+  'DeleteBG':"",
+  'SetBackGroundImage': '5.png',
   'SetCharactorRight': 'mio2.png',
   'SetText': ['みお',
               'フゥ…。',
@@ -284,7 +285,135 @@ scene26 = {
 }
 
 scene27 = {
-  'SetChoiceScene': [" ▶︎ はい","scene0"," ▶︎ いいえ","scene0"],
+  'SetChoiceScene': [" ▶︎ はい","scene28"," ▶︎ いいえ","scene38"],
+}
+
+scene28 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '6.png',
+  'SetText': ['みお',
+              'ラブミーティアのドラマチック極まりない結成エピソードは　もはや伝説。',
+              'いえ、アイカツ界における神話とすらなっている。'
+              ],
+  'SetNextSceneName':'scene29'
+}
+
+scene29 = {
+  'SetCharactorRight': 'mirai.png',
+  'SetCharactorLeft': 'karen.png',
+  'DeleteBG':"",
+  'SetBackGroundImage': 'school_room.png',
+  'SetText': ['みお',
+              'スターハーモニー学園に入ってトップアイドルに駆け上がったカレンさんとミライさん。',
+              '二人は出会ってすぐに意気投合したのだけど　フレンズ結成にはあと一歩踏み込めないでいた。'
+              ],
+  'SetNextSceneName':'scene30'
+}
+
+scene30 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '7.png',
+  'SetText': ['みお',
+              'そんなとき　二人を揺るがす大事件が！'
+              ],
+  'SetNextSceneName':'scene31'
+}
+
+scene31 = {
+  'SetCharactorRight': 'karen.png',
+  'DeleteBG':"",
+  'SetBackGroundImage': 'airport.png',
+  'SetText': ['みお',
+              'カレンさんは世界的プロデューサーからアイドルとしてプロデュースしたいというオファーを受けてアメリカに旅立つことになったのだ。'
+              ],
+  'SetNextSceneName':'scene32'
+}
+
+scene32 = {
+  'SetCharactorLeft': 'mirai.png',
+  'SetText': ['ミライ',
+              'カレン！',
+              'ハァ…ハァ…ハァ…。'
+              ],
+  'SetNextSceneName':'scene33'
+}
+
+scene33 = {
+  'SetText': ['カレン',
+              'ミライさん…。'
+              ],
+  'SetNextSceneName':'scene34'
+}
+
+scene34 = {
+  'SetText': ['ミライ',
+              'アメリカになんて行かせない。カレンをいちばん輝かせることができるのは…。',
+              '私なんだから！'
+              ],
+  'SetNextSceneName':'scene35'
+}
+
+scene35 = {
+  'SetText': ['カレン',
+              '…！',
+              'はい 知ってました。'
+              ],
+  'SetNextSceneName':'scene36'
+}
+
+scene36 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '8.png',
+  'SetText': ['みお',
+              'こうして二人はラブミーティアを結成したのであった…。'
+              ],
+  'SetNextSceneName':'scene37'
+}
+
+scene37 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '9.png',
+  'SetText': ['みお',
+              'う～っ…ハァ！何度読んでもやっぱりいい！！ずっと憧れていた…。私もフレンズを組むならこんなふうにドラマチックにって。'
+              ],
+  'SetNextSceneName':'scene38'
+}
+
+scene38 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '5.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetText': ['みお',
+              'ドラマチックな告白か…。',
+              'う〜ん…　考えてみると難しい。',
+              '自分がやるとなると想像がつかないというか。'
+              ],
+  'SetNextSceneName':'scene39'
+}
+
+scene39 = {
+  'SetChoiceScene': [" ▶︎ ココちゃんに相談してみましょう。","scene40"," ▶︎ 諦める","scene0"],
+}
+
+
+scene40 = {
+  'SetText': ['みお',
+              'ハロー　ココちゃん。'
+              ],
+  'SetNextSceneName':'scene41'
+}
+
+scene41 = {
+  'SetCharactorLeft': 'koko2.png',
+  'SetText': ['ココ',
+              'ココだよ。'
+              ],
+  'SetNextSceneName':'scene0'
 }
 
 scene0 = {
