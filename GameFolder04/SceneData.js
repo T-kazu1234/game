@@ -21,7 +21,7 @@ aboutscene1 =
 {
 'DeleteCharactor':"",
 'SetCharactorRight': 'mio1.png',
-'SetText': ['', 'この娘は湊みお。                                         ピュアパレットのピュアじゃない方です。'],
+'SetText': ['', 'この娘は湊みお。ピュアパレットのピュアじゃない方です。'],
 'SetNextSceneName':'aboutscene2'
 }
 
@@ -29,7 +29,7 @@ aboutscene2 =
 {
 'DeleteCharactor':"",
 'SetCharactorLeft': 'aine1.png',
-'SetText': ['', 'この娘が友希あいねちゃん。                        ピュアパレットのピュアな方です。',
+'SetText': ['', 'この娘が友希あいねちゃん。ピュアパレットのピュアな方です。',
                 'かわいいですね。(かわいいです)',
                 'ちなみにこの写真は二人がフレンズを組んで 一度解散し、再結成した後のみおちゃんの電話の呼び出し画面の画像です。',
                 'どう見ても盗撮しようとして気づかれたみたいな構図の写真だけども、みおちゃんが写真を撮らせてもらえないのか、',
@@ -41,8 +41,8 @@ aboutscene2 =
 aboutscene3 =
 {
 'DeleteCharactor':"",
-'SetCharactorLeft': 'koko1.png',
-'SetText': ['', 'ついでに、アイカツ！ナビのココちゃん。            アイカツ！モバイルに「ハロー、ココちゃん！」    と呼びかけると出てきてくれるAIです。',
+'SetCharactorLeft': 'koko0.png',
+'SetText': ['', 'ついでに、アイカツ！ナビのココちゃん。　アイカツ！モバイルに「ハロー、ココちゃん！」　と呼びかけると出てきてくれるAIです。',
                 '要はアイカツフレンズ!世界のSiriといったところでしょうか。',
                 'AIのくせに一人しかいないらしく、忙しい時は呼んでも出でこなかったり、舌を噛んだり、自分にわからないことは人任せにして電話を勝手にかけるくらいの高性能AIです。'
               ],
@@ -409,11 +409,245 @@ scene40 = {
 }
 
 scene41 = {
-  'SetCharactorLeft': 'koko2.png',
+  'SetCharactorLeft': 'koko1.png',
   'SetText': ['ココ',
               'ココだよ。'
               ],
+  'SetNextSceneName':'scene42'
+}
+
+scene42 = {
+  'SetChoiceScene': [" ▶︎ フレンズの誘い方を教えて。","scene0"," ▶︎ ドラマチックな告白について教えて。","scene43"," ▶︎ あいねのアイカツモバイルを盗聴して。","scene0"],
+}
+
+scene43 = {
+  'SetText': ['みお',
+              'ドラマチックな告白について教えて。'
+              ],
+  'SetNextSceneName':'scene44'
+}
+
+scene44 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko2.png',
+  'SetText': ['ココ',
+              'ココろえ…'
+              ],
+  'SetNextSceneName':'scene45'
+}
+
+scene45 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko3.png',
+  'SetText': ['ココ',
+              'え～っ！？ドラマチックな告白？'
+              ],
+  'SetNextSceneName':'scene46'
+}
+
+scene46 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko4.png',
+  'SetText': ['ココ',
+              'そ…それって恋愛について知りたいってことだよね？'
+              ],
+  'SetNextSceneName':'scene47'
+}
+
+scene47 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko5.png',
+  'SetText': ['ココ',
+              'さすがみおちゃん大人だ！'
+              ],
+  'SetNextSceneName':'scene48'
+}
+
+scene48 = {
+  'SetChoiceScene': [" ▶︎ はい","scene0"," ▶︎ いいえ","scene49"],
+}
+
+scene49 = {
+  'SetText': ['みお',
+              '違う違う。フレンズになってくださいってドラマチックに告白するにはってこと。'
+              ],
+  'SetNextSceneName':'scene50'
+}
+
+scene50 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko6.png',
+  'SetText': ['ココ',
+              'あっ…'
+              ],
+  'SetNextSceneName':'scene51'
+}
+
+scene51 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko7.png',
+  'SetText': ['ココ',
+              'そういうことか。'
+              ],
+  'SetNextSceneName':'scene52'
+}
+
+scene52 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko1.png',
+  'SetText': ['ココ',
+              'ドラマチックな告白で検索。'
+              ],
+  'SetNextSceneName':'scene53'
+}
+
+scene53 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko8.png',
+  'SetText': ['ココ',
+              'あっ。'
+              ],
+  'SetNextSceneName':'scene54'
+}
+
+scene54 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko1.png',
+  'SetText': ['ココ',
+              'こんな結果が出たよ。'
+              ],
+  'SetNextSceneName':'scene55'
+}
+
+scene55 = {
+  'SetText': ['みお',
+              '映画館で　ドラマチックに…。'
+              ],
+  'SetNextSceneName':'scene56'
+}
+
+scene56 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '10.png',
+  'SetText': ['イメージ',
+              '(なぜか他に客がいない映画館)'
+              ],
+  'SetNextSceneName':'scene57'
+}
+
+scene57 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '11.png',
+  'SetText': ['イメージ',
+              '(おそらくペンギンが二時間ほどかっこつけるだけの映画)'
+              ],
+  'SetNextSceneName':'scene58'
+}
+
+scene58 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '12.png',
+  'SetText': ['イメージ',
+              '(突然途切れる映像)'
+              ],
+  'SetNextSceneName':'scene59'
+}
+
+scene59 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '13.png',
+  'SetText': ['映像　みお',
+              'あいね　私とフレンズになりましょう。'
+              ],
+  'SetNextSceneName':'scene60'
+}
+
+scene60 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '14.png',
+  'SetText': ['あいね',
+              'わぁ…'
+              ],
+  'SetNextSceneName':'scene61'
+}
+
+scene61 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '15.png',
+  'SetText': ['あいね',
+              'うん！！'
+              ],
+  'SetNextSceneName':'scene62'
+}
+
+scene62 = {
+  'SetChoiceScene': [" ▶︎ うん！　これよ！！","scene0"," ▶︎ いや…　ないわね。","scene63"],
+}
+
+scene63 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '5.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetCharactorLeft': 'koko1.png',
+  'SetText': ['みお',
+              'いや…　ないわね。'
+              ],
+  'SetNextSceneName':'scene64'
+}
+
+scene64 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko9.png',
+  'SetText': ['ココ',
+              'そっか。'
+              ],
+  'SetNextSceneName':'scene65'
+}
+
+scene65 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko10.png',
+  'SetText': ['ココ',
+              'だったら…。'
+              ],
+  'SetNextSceneName':'scene66'
+}
+
+scene66 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko11.png',
+  'SetText': ['ココ',
+              'う〜ん…。'
+              ],
+  'SetNextSceneName':'scene67'
+}
+
+scene67 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko8.png',
+  'SetText': ['ココ',
+              '(ピコン)'
+              ],
+  'SetNextSceneName':'scene68'
+}
+
+scene68 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko1.png',
+  'SetText': ['みお',
+              'ゲーム感覚でドラマチックに…。'
+              ],
   'SetNextSceneName':'scene0'
+}
+
+dbscene = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetText': ['',
+              'それなりに飛びます。'
+              ],
+  'SetNextSceneName':'scene63'
 }
 
 scene0 = {

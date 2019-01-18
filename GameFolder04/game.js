@@ -353,7 +353,7 @@ function getNextSceneName(){
 //////////////////////////////////////
 // 各種設定等
 //////////////////////////////////////
-imglist = ["title.png","mio1.png","mio2.png","mio3.png","aine1.png","aine2.png","koko1.png","koko2.png","mirai.png","karen.png","ema.png","maika.png","school_room.png","airport.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"]
+imglist = ["title.png","mio1.png","mio2.png","mio3.png","aine1.png","aine2.png","koko0.png","koko1.png","koko2.png","koko3.png","koko4.png","koko5.png","koko6.png","koko7.png","koko8.png","koko9.png","koko10.png","koko11.png","koko12.png","koko13.png","koko14.png","koko15.png","koko16.png","mirai.png","karen.png","ema.png","maika.png","school_room.png","airport.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png","15.png"]
 //imglist = ["title.png","yeki.png","ymiti.png","yokujo.png","ynakaniwa.png","tosho.png","kaidan.png","yekimae.png","ymati.png","koki.png","akoen.png","yhome.png","ykoen.png","nakaniwa.png","kyositu.png","nene.png","gako.png","home.png","shuzinko.png","miya.png"]
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
 //bgmlist = ["op.mp3"]
@@ -418,7 +418,7 @@ window.onload = function() {
       //引数リスト
       //選択肢１　遷移先１　選択肢２　遷移先２
       //最初は選択肢のあるシーンを作成しています。
-      _currentScene.SetChoiceScene(["▶︎ ゲームスタート",scene1,"▶︎ 説明",aboutscene]);
+      _currentScene.SetChoiceScene(["▶︎ ゲームスタート",scene1,"▶︎ 説明",aboutscene,"▶︎ デバック用",dbscene]);
 
 
   }
