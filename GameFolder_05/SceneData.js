@@ -20,6 +20,7 @@ aboutscene =
 'SetNextSceneName':'aboutscene1'
 }
 
+//１　猫猫
 aboutscene1 =
 {
 'DeleteCharactor':"",
@@ -52,7 +53,7 @@ aboutscene1 =
 
 'SetNextSceneName':'aboutscene2'
 }
-
+//１　猫猫
 aboutscene2 =
 {
 'DeleteCharactor':"",
@@ -118,11 +119,9 @@ aboutscene2 =
 '',
 '後宮で生まれる乳幼児の連続死。',
 '先代の側室の呪いだと言われたそれは猫猫にとって怪奇でもなんでもなかった。',
-
-
-
-
 ],
+
+//２　二人の妃
 'SetNextSceneName':'aboutscene3'
 }
 
@@ -202,10 +201,9 @@ aboutscene3 =
 '（なにか、書き物はないか）',
 'と、考えながら。',
 'よって、通り過ぎる人物に目もくれなかった。',
-
-
-
 ],
+
+//３　壬氏
 'SetNextSceneName':'aboutscene4'
 }
 
@@ -292,7 +290,7 @@ aboutscene4 = {
   'SetNextSceneName':'titlescene_back'
 }
 
-
+//４　天女の微笑
 scene1 = {
   'DeleteCharactor':"",
   'DeleteBG':"",
