@@ -2,6 +2,11 @@
 <table>
 <thead>
 <tr>
+<td>シーン名</td>
+<td>next</td>
+<td>進度</td>
+</tr>
+<tr>
 <td>Scene01</td>
 <td>02</td>
 <td>デバッグ中</td>
