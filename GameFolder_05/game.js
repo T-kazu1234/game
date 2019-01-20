@@ -45,6 +45,17 @@ PlayBGM(args){
       backImage.y = 0;
       bgLayer.addChild(backImage);
   }
+  
+  //背景画像をシーンに設定する(フェードインver)
+  SetBackGroundImage_fadeIN(args){
+      let backImage  = new Sprite(320,180);
+      backImage.image = game.assets[args];
+      backImage.x = 0;
+      backImage.y = 0;
+      backImage.opacity = 0;
+      backImage.tl.fadeIn(10);
+      bgLayer.addChild(backImage);
+  }
 
   //左側のキャラクターをシーンに設定する
   SetCharactorLeft(args){
@@ -100,7 +111,7 @@ PlayBGM(args){
         whosay.width = 300;
         whosay.height = 120;
         whosay.opacity = 0;
-        whosay.tl.fadeIn(15);
+        whosay.tl.fadeIn(0);
 
         textLayer.addChild(whosay);
 
@@ -116,7 +127,7 @@ PlayBGM(args){
         text.height = 120;
 
         text.opacity = 0;
-        text.tl.fadeIn(15);
+        text.tl.fadeIn(0);
 
         textLayer.addChild(text);
 
@@ -127,7 +138,7 @@ PlayBGM(args){
         nextlabel.y     = 280;
         nextlabel.x = 270;
         nextlabel.opacity = 0;
-        nextlabel.tl.fadeIn(20);
+        nextlabel.tl.fadeIn(0);
         textLayer.addChild(nextlabel);
 
         //戻るボタン
@@ -137,7 +148,7 @@ PlayBGM(args){
         backLabel.y     = 280;
         backLabel.x = 0;
         backLabel.opacity = 0;
-        backLabel.tl.fadeIn(20);
+        backLabel.tl.fadeIn(0);
         textLayer.addChild(backLabel);
 
 
@@ -355,51 +366,10 @@ function getNextSceneName(){
 /*
 imglist = [
 "./image/Character/mio1.png",
-"./image/Character/mio2.png",
-"./image/Character/mio3.png",
-"./image/Character/aine1.png",
-"./image/Character/aine2.png",
-"./image/Character/koko0.png",
-"./image/Character/koko1.png",
-"./image/Character/koko2.png",
-"./image/Character/koko3.png",
-"./image/Character/koko4.png",
-"./image/Character/koko5.png",
-"./image/Character/koko6.png",
-"./image/Character/koko7.png",
-"./image/Character/koko8.png",
-"./image/Character/koko9.png",
-"./image/Character/koko10.png",
-"./image/Character/koko11.png",
-"./image/Character/koko12.png",
-"./image/Character/koko13.png",
-"./image/Character/koko14.png",
-"./image/Character/koko15.png",
-"./image/Character/koko16.png",
-"./image/Character/mirai.png",
-"./image/Character/karen.png",
-"./image/Character/ema.png",
-"./image/Character/maika.png",
 "./image/BackGround/title.png",
-"./image/BackGround/school_room.png",
-"./image/BackGround/airport.png",
-"./image/BackGround/1.png",
-"./image/BackGround/2.png",
-"./image/BackGround/3.png",
-"./image/BackGround/4.png",
-"./image/BackGround/5.png",
-"./image/BackGround/6.png",
-"./image/BackGround/7.png",
-"./image/BackGround/8.png",
-"./image/BackGround/9.png",
-"./image/BackGround/10.png",
-"./image/BackGround/11.png",
-"./image/BackGround/12.png",
-"./image/BackGround/13.png",
-"./image/BackGround/14.png",
-"./image/BackGround/15.png"
 ]
 */
+
 imglist = [
 "mio1.png",
 "mio2.png",
@@ -427,26 +397,13 @@ imglist = [
 "karen.png",
 "ema.png",
 "maika.png",
-"title.png",
-"school_room.png",
-"airport.png",
-"1.png",
-"2.png",
-"3.png",
-"4.png",
-"5.png",
-"6.png",
-"7.png",
-"8.png",
-"9.png",
-"10.png",
-"11.png",
-"12.png",
-"13.png",
-"14.png",
-"15.png"
+"BackGround_00_00.jpg",
+"BackGround_01_00.png",
+"BackGround_01_01.jpg",
+"BackGround_02_00.jpg",
+"BackGround_03_00.jpg",
 ]
-//imglist = ["title.png","yeki.png","ymiti.png","yokujo.png","ynakaniwa.png","tosho.png","kaidan.png","yekimae.png","ymati.png","koki.png","akoen.png","yhome.png","ykoen.png","nakaniwa.png","kyositu.png","nene.png","gako.png","home.png","shuzinko.png","miya.png"]
+
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
 //bgmlist = ["op.mp3"]
 
@@ -506,7 +463,7 @@ window.onload = function() {
 //////////////////////////////////////////////////////////////////////////
 
       /*これが最初のシーンです */
-      _currentScene.SetBackGroundImage("title.png");
+      _currentScene.SetBackGroundImage("BackGround_00_00.jpg");
       //引数リスト
       //選択肢１　遷移先１　選択肢２　遷移先２
       //最初は選択肢のあるシーンを作成しています。
