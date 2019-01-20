@@ -403,6 +403,7 @@ imglist = [
 "BackGround_01_01.jpg",
 "BackGround_02_00.jpg",
 "BackGround_03_00.jpg",
+"BackGround_04_00.png",
 ]
 
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
