@@ -638,6 +638,178 @@ scene68 = {
   'SetText': ['みお',
               'ゲーム感覚でドラマチックに…。'
               ],
+  'SetNextSceneName':'scene69'
+}
+
+scene69 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '16.png',
+  'SetText': ['イメージ　あいね',
+              '失礼しま〜す。'
+              ],
+  'SetNextSceneName':'scene70'
+}
+
+scene70 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '17.png',
+  'SetText': ['あいね',
+              'あっ…。'
+              ],
+  'SetNextSceneName':'scene71'
+}
+
+scene71 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '18.png',
+  'SetText': ['',
+              '(中庭)'
+              ],
+  'SetNextSceneName':'scene72'
+}
+
+scene72 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '19.png',
+  'SetText': ['',
+              '(レッスンルーム)'
+              ],
+  'SetNextSceneName':'scene73'
+}
+
+scene73 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '20.png',
+  'SetText': ['あいね',
+              'あっ…。'
+              ],
+  'SetNextSceneName':'scene74'
+}
+
+scene74 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '21.png',
+  'SetText': ['あいね',
+              'ん…。'
+              ],
+  'SetNextSceneName':'scene75'
+}
+
+scene75 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '22.png',
+  'SetText': ['みお',
+              'あいね　私と　フレンズになりましょう。'
+              ],
+  'SetNextSceneName':'scene76_2'
+}
+
+scene76 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '23.png',
+  'SetText': ['あいね',
+              'わ〜っ…　うん！！'
+              ],
+  'SetNextSceneName':'scene77'
+}
+
+scene76_2 = {
+  'SetText': ['',
+              '(ちなみに、薔薇の花言葉はその本数によって異なり、12本は「私と付き合ってください」である)'
+              ],
+  'SetNextSceneName':'scene76'
+}
+
+scene77 = {
+  'SetChoiceScene': [" ▶︎ うん！　これよ！！","scene0"," ▶︎ 意味をはき違えているような…","scene78"],
+}
+
+scene78 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '5.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetText': ['みお',
+              'いや…　これって　ドラマチックの意味をはき違えているような…'
+              ],
+  'SetNextSceneName':'scene79'
+}
+
+scene79 = {
+  'SetCharactorLeft': 'koko12.png',
+  'SetText': ['ココ',
+              'う〜っ…　ココにも意地があるもん。',
+              'みおちゃんが満足する答えを　必ず見つけてみせるんだから！'
+              ],
+  'SetNextSceneName':'scene80'
+}
+
+scene80 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko13.png',
+  'SetText': ['ココ',
+              'う〜ん…。'
+              ],
+  'SetNextSceneName':'scene81'
+}
+
+scene81 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko14.png',
+  'SetText': ['ココ',
+              '◯△○'
+              ],
+  'SetNextSceneName':'scene82'
+}
+
+scene82 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko15.png',
+  'SetText': ['ココ',
+              '出た出た　出ました〜！'
+              ],
+  'SetNextSceneName':'scene83'
+}
+
+scene83 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko16.png',
+  'SetText': ['ココ',
+              '最高にドラマチックな告白ができるスポットを見つけたよ！'
+              ],
+  'SetNextSceneName':'scene84'
+}
+
+scene84 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '24.png',
+  'SetText': ['ココ',
+              'この観覧車でゴンドラが一番高くなったところで告白すると'
+              ],
+  'SetNextSceneName':'scene85'
+}
+
+scene85 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '25.png',
+  'SetText': ['ココ',
+              '二人はず〜っと　幸せになれるんだって。'
+              ],
+  'SetNextSceneName':'scene86'
+}
+
+scene86 = {
+  'SetChoiceScene': [" ▶︎ うん！　これよ！！","scene87"," ▶︎ いや…　これって男女の恋愛じゃ…","scene0"],
+}
+
+scene87 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '26.png',
+  'SetText': ['みお',
+              'うん！　これよ！！'
+              ],
   'SetNextSceneName':'scene0'
 }
 
@@ -647,7 +819,7 @@ dbscene = {
   'SetText': ['',
               'それなりに飛びます。'
               ],
-  'SetNextSceneName':'scene63'
+  'SetNextSceneName':'scene80'
 }
 
 scene0 = {
