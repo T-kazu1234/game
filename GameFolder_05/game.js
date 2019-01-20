@@ -372,6 +372,7 @@ imglist = [
 
 imglist = [
 "Charactor01_01.png",
+"Charactor02_01.jpg",
 "mio1.png",
 "mio2.png",
 "mio3.png",
@@ -404,6 +405,7 @@ imglist = [
 "BackGround_02_00.jpg",
 "BackGround_03_00.jpg",
 "BackGround_04_00.png",
+"BackGround_05_00.png",
 ]
 
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
