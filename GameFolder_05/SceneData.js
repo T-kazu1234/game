@@ -403,7 +403,7 @@ scene9 = {
   'SetText': ['',
 'よって、通り過ぎる人物に目もくれなかった。'
 ],
-  'SetNextSceneName':'scene10'
+  'SetNextSceneName':'scene0'
 }
 
 scene10 = {
