@@ -35,8 +35,6 @@ aboutscene1 =
 '（露天の串焼きが食べたいなあ）'+
 '　　　　　　　　　　　　　　　　　　　'
 ],
-
-
 'SetNextSceneName':'aboutscene2'
 }
 //１　猫猫
@@ -111,8 +109,8 @@ aboutscene3 =
 //１　猫猫
 aboutscene4 = {
 'SetBackGroundImage':"BackGround_03_00.jpg",//後宮カースト
-//  'DeleteCharactor':"",
-//  'SetCharactorLeft': 'aine1.png',
+'DeleteCharactor':"",
+//'SetCharactorLeft':"Charactor01_01.png",
 //  'SetCharactorRight': 'mio1.png',
   'SetText': ['', 
 //***区切り********************************************************
@@ -122,6 +120,56 @@ aboutscene4 = {
 'まあ、牡丹のような豊満な肉体や、　'+
 '満月のような白い肌でも持っていれば　'+
 'まだ、下妃の位につける可能性もあったかもしれないが、',
+],
+  'SetNextSceneName':'scene5'
+}
+
+scene1 = {
+'DeleteCharactor':"",
+//'SetCharactorRight': 'mio1.png',
+'SetBackGroundImage':"BackGround_01_00.png",//背景単色_黒
+'SetText': ['',
+'『？？？？』　　　　　　　　　　　　　'+
+'（露天の串焼きが食べたいなあ）'+
+'　　　　　　　　　　　　　　　　　　　'
+],
+'SetNextSceneName':'aboutscene2'
+}
+
+scene2 = {
+  'SetCharactorRight': 'ema.png',
+  'SetCharactorLeft': 'maika.png',
+  'SetText': ['あいね',
+              'ダンスとお祭りが大好きな舞花ちゃんと一つ上の先輩で　私たちを元気に引っ張ってくれるエマちゃん。',
+              '凸凹だけどすっごく仲よしな２人はついにフレンズになった。',
+              ],
+  'SetNextSceneName':'scene3'
+}
+
+scene3 = {
+  'DeleteCharactor':"",
+  'SetText': ['あいね',
+              'アイドルは　カードも友達　ファンも友達。',
+              '目指せ　友達100万人！'
+              ],
+  'SetNextSceneName':'scene4'
+}
+
+scene4 = {
+  'SetCharactorRight': 'ema.png',
+  'DeleteBG':"",
+  'SetBackGroundImage': 'school_room.png',
+  'SetText': ['日向エマ',
+              'プリティー！'
+              ],
+  'SetNextSceneName':'scene5'
+}
+
+scene5 = {
+'SetBackGroundImage':"BackGround_03_00.jpg",//後宮カースト
+'DeleteCharactor':"",
+'SetCharactorLeft':"Charactor01_01.png",
+'SetText': ['',
 //***区切り********************************************************
 '猫猫の持つのはそばかすの浮いた健康的な肌と枯れ枝のような手足くらいである。',
 //***区切り********************************************************
@@ -301,60 +349,10 @@ aboutscene4 = {
 '壬氏はさわり心地のある布に記憶をたどらせた。',
 '「寵妃の願いとあらば、必ずや見つけねばならぬな」',
 '天女の笑みに、宝探しをする子どもの無邪気さが加わった。'
-],
-  'SetNextSceneName':'titlescene_back'
-}
-
-//４　天女の微笑
-scene1 = {
-  'DeleteCharactor':"",
-  'DeleteBG':"",
-  'SetBackGroundImage': '1.png',
-  'SetText': ['友希あいね',
-                  'これまでの『アイカツフレンズ！』。',
-                  '私　友希あいね。',
-                  'スターハーモニー学園に通う中学２年生。',
-                  '学園のトップアイドル　湊みおちゃんと出会ってアイドル科に転入したんだ。'
-              ],
-  'SetNextSceneName':'scene2'
-}
-
-scene2 = {
-  'SetCharactorRight': 'ema.png',
-  'SetCharactorLeft': 'maika.png',
-  'SetText': ['あいね',
-              'ダンスとお祭りが大好きな舞花ちゃんと一つ上の先輩で　私たちを元気に引っ張ってくれるエマちゃん。',
-              '凸凹だけどすっごく仲よしな２人はついにフレンズになった。',
-              ],
-  'SetNextSceneName':'scene3'
-}
-
-scene3 = {
-  'DeleteCharactor':"",
-  'SetText': ['あいね',
-              'アイドルは　カードも友達　ファンも友達。',
-              '目指せ　友達100万人！'
-              ],
-  'SetNextSceneName':'scene4'
-}
-
-scene4 = {
-  'SetCharactorRight': 'ema.png',
-  'DeleteBG':"",
-  'SetBackGroundImage': 'school_room.png',
-  'SetText': ['日向エマ',
-              'プリティー！'
-              ],
-  'SetNextSceneName':'scene5'
-}
-
-scene5 = {
-  'SetCharactorLeft': 'maika.png',
-  'SetText': ['蝶乃舞花',
-              'セクシー！'
               ],
   'SetNextSceneName':'scene6'
 }
+
 
 scene6 = {
   'DeleteCharactor':"",

@@ -371,6 +371,7 @@ imglist = [
 */
 
 imglist = [
+"Charactor01_01.png",
 "mio1.png",
 "mio2.png",
 "mio3.png",
