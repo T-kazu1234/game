@@ -1,7 +1,7 @@
 titlescene = {
   'DeleteBG':"",
   'DeleteCharactor':"",
-  'SetBackGroundImage':"./image/BackGround/title.png",
+  'SetBackGroundImage':"title.png",//./image/BackGround/に変更する（今はバグるので諦める）
   'SetChoiceScene': [" ▶︎ 始める","scene1"," ▶︎ 説明","aboutscene"],
 }
 
@@ -13,7 +13,12 @@ titlescene_back = {
 aboutscene =
 {
 'DeleteCharactor':"",
-'SetText': ['', 'とりあえずは登場人物の紹介をしましょう。'],
+'SetText': ['',
+'（露天の串焼きが食べたいなあ）',
+' 曇天<<ドンテン>>を見上げて猫猫<<マオマオ>>は溜息をついた。',
+'周りは自分が今まで見た中で最も美しくきらびやかな世界、そして瘴気<<ショウキ>>蠢<<ウゴメ>>く濁<<ニゴ>>った澱<<オリ>>の中だった。',
+ ],
+
 'SetNextSceneName':'aboutscene1'
 }
 

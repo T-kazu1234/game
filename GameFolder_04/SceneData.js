@@ -1,7 +1,7 @@
 titlescene = {
   'DeleteBG':"",
   'DeleteCharactor':"",
-  'SetBackGroundImage':"./image/BackGround/title.png",
+  'SetBackGroundImage':"title.png",
   'SetChoiceScene': [" ▶︎ 始める","scene1"," ▶︎ 説明","aboutscene"],
 }
 
@@ -20,7 +20,7 @@ aboutscene =
 aboutscene1 =
 {
 'DeleteCharactor':"",
-'SetCharactorRight': './image/Character/mio1.png',
+'SetCharactorRight': 'mio1.png',
 'SetText': ['', 'この娘は湊みお。ピュアパレットのピュアじゃない方です。'],
 'SetNextSceneName':'aboutscene2'
 }
@@ -28,7 +28,7 @@ aboutscene1 =
 aboutscene2 =
 {
 'DeleteCharactor':"",
-'SetCharactorLeft': './image/Character/aine1.png',
+'SetCharactorLeft': 'aine1.png',
 'SetText': ['', 'この娘が友希あいねちゃん。ピュアパレットのピュアな方です。',
                 'かわいいですね。(かわいいです)',
                 'ちなみにこの写真は二人がフレンズを組んで 一度解散し、再結成した後のみおちゃんの電話の呼び出し画面の画像です。',
@@ -41,7 +41,7 @@ aboutscene2 =
 aboutscene3 =
 {
 'DeleteCharactor':"",
-'SetCharactorLeft': './image/Character/koko0.png',
+'SetCharactorLeft': 'koko0.png',
 'SetText': ['', 'ついでに、アイカツ！ナビのココちゃん。　アイカツ！モバイルに「ハロー、ココちゃん！」　と呼びかけると出てきてくれるAIです。',
                 '要はアイカツフレンズ!世界のSiriといったところでしょうか。',
                 'AIのくせに一人しかいないらしく、忙しい時は呼んでも出でこなかったり、舌を噛んだり、自分にわからないことは人任せにして電話を勝手にかけるくらいの高性能AIです。'
@@ -51,8 +51,8 @@ aboutscene3 =
 
 aboutscene4 = {
   'DeleteCharactor':"",
-  'SetCharactorLeft': './image/Character/aine1.png',
-  'SetCharactorRight': './image/Character/mio1.png',
+  'SetCharactorLeft': 'aine1.png',
+  'SetCharactorRight': 'mio1.png',
   'SetText': ['', 'このゲームはあいねちゃんとみおちゃんがフレンズ(要はユニット)を組むまでのお話です。',
                   'みおちゃんとなって選択肢を選んでいき、あいねちゃんとフレンズを組みましょう。',
                   'アニメ本編が正解ルートなので間違ったりするとすぐ終わっちゃったりします。',
@@ -76,8 +76,8 @@ scene1 = {
 }
 
 scene2 = {
-  'SetCharactorRight': './image/Character/ema.png',
-  'SetCharactorLeft': './image/Character/maika.png',
+  'SetCharactorRight': 'ema.png',
+  'SetCharactorLeft': 'maika.png',
   'SetText': ['あいね',
               'ダンスとお祭りが大好きな舞花ちゃんと一つ上の先輩で　私たちを元気に引っ張ってくれるエマちゃん。',
               '凸凹だけどすっごく仲よしな２人はついにフレンズになった。',
@@ -95,7 +95,7 @@ scene3 = {
 }
 
 scene4 = {
-  'SetCharactorRight': './image/Character/ema.png',
+  'SetCharactorRight': 'ema.png',
   'DeleteBG':"",
   'SetBackGroundImage': 'school_room.png',
   'SetText': ['日向エマ',
@@ -105,7 +105,7 @@ scene4 = {
 }
 
 scene5 = {
-  'SetCharactorLeft': './image/Character/maika.png',
+  'SetCharactorLeft': 'maika.png',
   'SetText': ['蝶乃舞花',
               'セクシー！'
               ],
@@ -124,8 +124,8 @@ scene6 = {
 
 scene7 = {
   'DeleteBG':"",
-  'SetCharactorLeft': './image/Character/aine2.png',
-  'SetCharactorRight': './image/Character/ema.png',
+  'SetCharactorLeft': 'aine2.png',
+  'SetCharactorRight': 'ema.png',
   'SetBackGroundImage': 'school_room.png',
   'SetText': ['あいね',
               'うわ～！かっこいい！！'
@@ -135,7 +135,7 @@ scene7 = {
 
 scene8 = {
   'DeleteCharactorl':"",
-  'SetCharactorRight': './image/Character/mio2.png',
+  'SetCharactorRight': 'mio2.png',
   'SetText': ['湊みお',
               'ハニーキャット…２人にぴったりなフレンズ名ね。'
               ],
@@ -151,7 +151,7 @@ scene9 = {
 
 scene10 = {
   'DeleteCharactorl':"",
-  'SetCharactorRight': './image/Character/ema.png',
+  'SetCharactorRight': 'ema.png',
   'SetText': ['エマ',
               'でしょでしょ。フレンズ組もうってなったら２人で盛り上がっちゃって。コンセプトとか一から作り上げてくのってワクワクするよね。'
               ],
@@ -160,7 +160,7 @@ scene10 = {
 
 scene11 = {
   'DeleteCharactorf':"",
-  'SetCharactorLeft': './image/Character/maika.png',
+  'SetCharactorLeft': 'maika.png',
   'SetText': ['舞花',
               'あのキメポーズはちょっと恥ずいんですけど…'
               ],
@@ -190,7 +190,7 @@ scene14 = {
 
 scene15 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/aine2.png',
+  'SetCharactorLeft': 'aine2.png',
   'SetText': ['あいね',
               '二人ともすっごく楽しそう。フレンズっていいな〜。'
               ],
@@ -199,7 +199,7 @@ scene15 = {
 
 scene16 = {
   'DeleteCharactorf':"",
-  'SetCharactorRight': './image/Character/mio2.png',
+  'SetCharactorRight': 'mio2.png',
   'SetText': ['みお',
               '……………'
               ],
@@ -212,7 +212,7 @@ scene17 = {
 
 scene18 = {
   'DeleteCharactor':"",
-  'SetCharactorRight': './image/Character/mio3.png',
+  'SetCharactorRight': 'mio3.png',
   'SetText': ['みお',
               '……………'
               ],
@@ -231,7 +231,7 @@ scene19 = {
 }
 
 scene20 = {
-  'SetCharactorRight': './image/Character/mio2.png',
+  'SetCharactorRight': 'mio2.png',
   'SetText': ['みお',
               'フレンズを組むのは、やっぱりあいねしかいない。まずは…'
               ],
@@ -255,7 +255,7 @@ scene22 = {
 scene23 = {
   'DeleteBG':"",
   'SetBackGroundImage': '5.png',
-  'SetCharactorRight': './image/Character/mio2.png',
+  'SetCharactorRight': 'mio2.png',
   'SetText': ['みお',
               'フゥ…。',
               '古今東西あらゆる占いで私とあいねの相性はバッチリだってわかったし…。',
@@ -300,8 +300,8 @@ scene28 = {
 }
 
 scene29 = {
-  'SetCharactorRight': './image/Character/mirai.png',
-  'SetCharactorLeft': './image/Character/karen.png',
+  'SetCharactorRight': 'mirai.png',
+  'SetCharactorLeft': 'karen.png',
   'DeleteBG':"",
   'SetBackGroundImage': 'school_room.png',
   'SetText': ['みお',
@@ -322,7 +322,7 @@ scene30 = {
 }
 
 scene31 = {
-  'SetCharactorRight': './image/Character/karen.png',
+  'SetCharactorRight': 'karen.png',
   'DeleteBG':"",
   'SetBackGroundImage': 'airport.png',
   'SetText': ['みお',
@@ -332,7 +332,7 @@ scene31 = {
 }
 
 scene32 = {
-  'SetCharactorLeft': './image/Character/mirai.png',
+  'SetCharactorLeft': 'mirai.png',
   'SetText': ['ミライ',
               'カレン！',
               'ハァ…ハァ…ハァ…。'
@@ -387,7 +387,7 @@ scene38 = {
   'DeleteCharactor':"",
   'DeleteBG':"",
   'SetBackGroundImage': '5.png',
-  'SetCharactorRight': './image/Character/mio2.png',
+  'SetCharactorRight': 'mio2.png',
   'SetText': ['みお',
               'ドラマチックな告白か…。',
               'う〜ん…　考えてみると難しい。',
@@ -409,7 +409,7 @@ scene40 = {
 }
 
 scene41 = {
-  'SetCharactorLeft': './image/Character/koko1.png',
+  'SetCharactorLeft': 'koko1.png',
   'SetText': ['ココ',
               'ココだよ。'
               ],
@@ -429,7 +429,7 @@ scene43 = {
 
 scene44 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko2.png',
+  'SetCharactorLeft': 'koko2.png',
   'SetText': ['ココ',
               'ココろえ…'
               ],
@@ -438,7 +438,7 @@ scene44 = {
 
 scene45 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko3.png',
+  'SetCharactorLeft': 'koko3.png',
   'SetText': ['ココ',
               'え～っ！？ドラマチックな告白？'
               ],
@@ -447,7 +447,7 @@ scene45 = {
 
 scene46 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko4.png',
+  'SetCharactorLeft': 'koko4.png',
   'SetText': ['ココ',
               'そ…それって恋愛について知りたいってことだよね？'
               ],
@@ -456,7 +456,7 @@ scene46 = {
 
 scene47 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko5.png',
+  'SetCharactorLeft': 'koko5.png',
   'SetText': ['ココ',
               'さすがみおちゃん大人だ！'
               ],
@@ -476,7 +476,7 @@ scene49 = {
 
 scene50 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko6.png',
+  'SetCharactorLeft': 'koko6.png',
   'SetText': ['ココ',
               'あっ…'
               ],
@@ -485,7 +485,7 @@ scene50 = {
 
 scene51 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko7.png',
+  'SetCharactorLeft': 'koko7.png',
   'SetText': ['ココ',
               'そういうことか。'
               ],
@@ -494,7 +494,7 @@ scene51 = {
 
 scene52 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko1.png',
+  'SetCharactorLeft': 'koko1.png',
   'SetText': ['ココ',
               'ドラマチックな告白で検索。'
               ],
@@ -503,7 +503,7 @@ scene52 = {
 
 scene53 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko8.png',
+  'SetCharactorLeft': 'koko8.png',
   'SetText': ['ココ',
               'あっ。'
               ],
@@ -512,7 +512,7 @@ scene53 = {
 
 scene54 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko1.png',
+  'SetCharactorLeft': 'koko1.png',
   'SetText': ['ココ',
               'こんな結果が出たよ。'
               ],
@@ -588,8 +588,8 @@ scene62 = {
 scene63 = {
   'DeleteBG':"",
   'SetBackGroundImage': '5.png',
-  'SetCharactorRight': './image/Character/mio2.png',
-  'SetCharactorLeft': './image/Character/koko1.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetCharactorLeft': 'koko1.png',
   'SetText': ['みお',
               'いや…　ないわね。'
               ],
@@ -598,7 +598,7 @@ scene63 = {
 
 scene64 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko9.png',
+  'SetCharactorLeft': 'koko9.png',
   'SetText': ['ココ',
               'そっか。'
               ],
@@ -607,7 +607,7 @@ scene64 = {
 
 scene65 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko10.png',
+  'SetCharactorLeft': 'koko10.png',
   'SetText': ['ココ',
               'だったら…。'
               ],
@@ -616,7 +616,7 @@ scene65 = {
 
 scene66 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko11.png',
+  'SetCharactorLeft': 'koko11.png',
   'SetText': ['ココ',
               'う〜ん…。'
               ],
@@ -625,7 +625,7 @@ scene66 = {
 
 scene67 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko8.png',
+  'SetCharactorLeft': 'koko8.png',
   'SetText': ['ココ',
               '(ピコン)'
               ],
@@ -634,7 +634,7 @@ scene67 = {
 
 scene68 = {
   'DeleteCharactorl':"",
-  'SetCharactorLeft': './image/Character/koko1.png',
+  'SetCharactorLeft': 'koko1.png',
   'SetText': ['みお',
               'ゲーム感覚でドラマチックに…。'
               ],
