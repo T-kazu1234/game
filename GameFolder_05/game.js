@@ -29,12 +29,32 @@ class CurrentScene{
   }
 
 
-PlayBGM(args){
-  game.bgm.stop();
-  game.bgm = Sound.load(args);
-  game.bgm.volume = 0.3;
-  game.bgm.play();
-  game.bgm.loop = true;
+    PlayBGM(args) {
+        console.log("youtube再生");
+        //////////////////////////////////////////////////////////////////////////
+        //  youtube再生
+        //////////////////////////////////////////////////////////////////////////
+        let YOUTUBE_ID = bgmlist[args];//'QqYsu2SshyQ';
+        /*
+        let video = new Entity()
+            video.visible = true;
+            video.opacity = 0.5;
+            video._element = document.createElement('div')
+            video.x = 100 //width  //動画設X置座標
+            video.y = 100 //height //動画設置Y座標
+            video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/' + YOUTUBE_ID + '?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="50" height="50" frameborder="0" id="player"></iframe>'
+        */
+        videoLayer.addChild(video); // # 動画をシーンに追加
+        //game.rootScene.addChild(video);
+        //////////////////////////////////////////////////////////////////////////
+
+/*
+    game.bgm.stop();
+    game.bgm = Sound.load(args);
+    game.bgm.volume = 0.3;
+    game.bgm.play();
+    game.bgm.loop = true;
+*/
 }
 
   //背景画像をシーンに設定する
@@ -408,7 +428,11 @@ imglist = [
 "BackGround_05_00.png",
 ]
 
-//bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
+bgmlist = [
+"QqYsu2SshyQ",
+"-tKVN2mAKRI",
+"XLL68BLBLZk",
+]
 //bgmlist = ["op.mp3"]
 
 
@@ -429,7 +453,7 @@ window.onload = function() {
   game.fps = 16;
   //使用する画像をプリロードする(配列を渡せばOK)
   game.preload(imglist);
-  //game.preload(bgmlist);
+//game.preload(bgmlist);
 
   //game.bgm = Sound.load('op.mp3');
 
@@ -443,6 +467,17 @@ window.onload = function() {
 
 
       //レイヤーで管理する
+
+      videoLayer = new Group();
+      let video = new Entity()
+          video.visible = true;
+          video.opacity = 0.5;
+          video._element = document.createElement('div')
+          video.x = 100 //width  //動画設X置座標
+          video.y = 100 //height //動画設置Y座標
+          video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/' + YOUTUBE_ID + '?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="50" height="50" frameborder="0" id="player"></iframe>'
+      game.rootScene.addChild(videoLayer);
+
       bgLayer = new Group();
       game.rootScene.addChild(bgLayer);
 
@@ -452,19 +487,8 @@ window.onload = function() {
       textLayer = new Group();
       game.rootScene.addChild(textLayer);
 
-//////////////////////////////////////////////////////////////////////////
-//  youtube再生
-//////////////////////////////////////////////////////////////////////////
-      YOUTUBE_ID = 'QqYsu2SshyQ';
-      video = new Entity()
-      video.visible =  true;
-      video.opacity =  0.1;
-      video._element = document.createElement('div')
-      video.x = 10 //width  //動画設X置座標
-      video.y = 10 //height //動画設置Y座標
-      video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/'+YOUTUBE_ID+'?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="10" height="10" frameborder="0" id="player"></iframe>'
-      game.rootScene.addChild(video); // # 動画をシーンに追加
-//////////////////////////////////////////////////////////////////////////
+
+
 
       /*これが最初のシーンです */
       _currentScene.SetBackGroundImage("BackGround_00_00.jpg");
