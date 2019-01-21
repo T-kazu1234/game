@@ -287,7 +287,7 @@ scene18A = {
 }
 
 scene19A = {
-  'SetChoiceScene': [" ▶︎玉葉さまと梨花さま","scene12"," ▶︎まだ、半年と三か月","scene13"," ▶三人も亡くなった","scene8"],
+  'SetChoiceScene': [" ▶︎玉葉さまと梨花さま","scene12"," ▶︎まだ、半年と三か月","scene13"," ▶三人も亡くなった","scene14"],
 }
 
 
