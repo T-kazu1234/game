@@ -30,22 +30,30 @@ class CurrentScene{
 
 
     PlayBGM(args) {
-        console.log("youtube再生");
+    
+
         //////////////////////////////////////////////////////////////////////////
         //  youtube再生
         //////////////////////////////////////////////////////////////////////////
-        let YOUTUBE_ID = bgmlist[args];//'QqYsu2SshyQ';
-        /*
-        let video = new Entity()
+        let YOUTUBE_ID = [args];
+        //console.log(i);
+       
+        //if (YOUTUBE_ID == "XLL68BLBLZk") {
+            let video = new Entity()
+            console.log("YOUTUBE_ID = " + YOUTUBE_ID);
             video.visible = true;
             video.opacity = 0.5;
+            video.x = 10 //width  //動画設X置座標
+            video.y = 10 //height //動画設置Y座標
             video._element = document.createElement('div')
-            video.x = 100 //width  //動画設X置座標
-            video.y = 100 //height //動画設置Y座標
-            video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/' + YOUTUBE_ID + '?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="50" height="50" frameborder="0" id="player"></iframe>'
-        */
-        videoLayer.addChild(video); // # 動画をシーンに追加
-        //game.rootScene.addChild(video);
+            video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/' + YOUTUBE_ID + '?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="180" height="180" frameborder="0" id="player"></iframe>'
+            game.rootScene.addChild(video);
+        //};
+
+       
+
+        //videoLayer.addChild(video); // # 動画をシーンに追加
+        
         //////////////////////////////////////////////////////////////////////////
 
 /*
@@ -63,6 +71,7 @@ class CurrentScene{
       backImage.image = game.assets[args];
       backImage.x = 0;
       backImage.y = 0;
+      //console.log('game.assets[args] = ' + game.assets[args])
       bgLayer.addChild(backImage);
   }
   
@@ -453,7 +462,7 @@ window.onload = function() {
   game.fps = 16;
   //使用する画像をプリロードする(配列を渡せばOK)
   game.preload(imglist);
-//game.preload(bgmlist);
+  //game.preload(bgmlist);
 
   //game.bgm = Sound.load('op.mp3');
 
@@ -468,15 +477,7 @@ window.onload = function() {
 
       //レイヤーで管理する
 
-      videoLayer = new Group();
-      let video = new Entity()
-          video.visible = true;
-          video.opacity = 0.5;
-          video._element = document.createElement('div')
-          video.x = 100 //width  //動画設X置座標
-          video.y = 100 //height //動画設置Y座標
-          video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/' + YOUTUBE_ID + '?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="50" height="50" frameborder="0" id="player"></iframe>'
-      game.rootScene.addChild(videoLayer);
+
 
       bgLayer = new Group();
       game.rootScene.addChild(bgLayer);

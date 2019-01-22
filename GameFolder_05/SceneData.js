@@ -48,10 +48,13 @@ aboutscene1 =
 ],
 'SetNextSceneName':'aboutscene2'
 }
+console.log(aboutscene1);
+
 //１　猫猫
 aboutscene2 =
 {
-'SetBackGroundImage_fadeIN':"BackGround_01_01.jpg",//曇天
+    'SetBackGroundImage_fadeIN': "BackGround_01_01.jpg",//曇天
+    'PlayBGM': "-tKVN2mAKRI",
 'SetText': ['',
 //***区切り********************************************************
 '曇天を見上げて猫猫｜マオマオ｜は溜息をついた。',
@@ -67,6 +70,7 @@ aboutscene2 =
 ],
 'SetNextSceneName':'aboutscene3'
 }
+
 
 //１　猫猫
 aboutscene3 =
