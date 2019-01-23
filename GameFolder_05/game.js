@@ -29,40 +29,42 @@ class CurrentScene{
   }
 
 
-    PlayBGM(args) {
-    
 
-        //////////////////////////////////////////////////////////////////////////
-        //  youtube再生
-        //////////////////////////////////////////////////////////////////////////
+    //onpreload版PlayBGM(args)
+    /*
+     PlayBGM(args) {
+               game.bgm.stop();
+               game.bgm = Sound.load(args);
+               game.bgm.volume = 0.3;
+               game.bgm.play();
+               game.bgm.loop = true;
+               }
+    */
+
+
+    //////////////////////////////////////////////////////////////////////////
+    //  youtube再生
+    //////////////////////////////////////////////////////////////////////////
+    PlayBGM(args) {
         let YOUTUBE_ID = [args];
-        //console.log(i);
-       
-        //if (YOUTUBE_ID == "XLL68BLBLZk") {
-            let video = new Entity()
             console.log("YOUTUBE_ID = " + YOUTUBE_ID);
+
+        //console.log(i);
+            //if (YOUTUBE_ID == "XLL68BLBLZk") {
+
+        let video = new Entity()
             video.visible = true;
             video.opacity = 0.5;
             video.x = 10 //width  //動画設X置座標
             video.y = 10 //height //動画設置Y座標
             video._element = document.createElement('div')
             video._element.innerHTML = '<iframe src="https://www.youtube.com/embed/' + YOUTUBE_ID + '?enablejsapi=1&controls=0&showinfo=0&autoplay=0&rel=0&vq=small"  width="180" height="180" frameborder="0" id="player"></iframe>'
-            game.rootScene.addChild(video);
-        //};
-
-       
-
+        game.rootScene.addChild(video);
         //videoLayer.addChild(video); // # 動画をシーンに追加
-        
-        //////////////////////////////////////////////////////////////////////////
+        //};
+   //////////////////////////////////////////////////////////////////////////
 
-/*
-    game.bgm.stop();
-    game.bgm = Sound.load(args);
-    game.bgm.volume = 0.3;
-    game.bgm.play();
-    game.bgm.loop = true;
-*/
+
 }
 
   //背景画像をシーンに設定する
@@ -437,12 +439,16 @@ imglist = [
 "BackGround_05_00.png",
 ]
 
+//
 bgmlist = [
 "QqYsu2SshyQ",
 "-tKVN2mAKRI",
 "XLL68BLBLZk",
 ]
-//bgmlist = ["op.mp3"]
+//
+
+//
+//bgmlist = ["book_sound.mp3"]
 
 
 // シーンを生成する
@@ -462,17 +468,17 @@ window.onload = function() {
   game.fps = 16;
   //使用する画像をプリロードする(配列を渡せばOK)
   game.preload(imglist);
-  //game.preload(bgmlist);
+//game.preload(bgmlist);
 
-  //game.bgm = Sound.load('op.mp3');
+//game.bgm = Sound.load('book_sound.mp3');
 
   //ここで初期化処理が始まる
   game.onload = function() {
 
 
-      //game.bgm.volume = 0.3;
-      //game.bgm.play();
-      //game.bgm.loop = true;
+ //   game.bgm.volume = 0.3;
+ //   game.bgm.play();
+ //   game.bgm.loop = true;
 
 
       //レイヤーで管理する
