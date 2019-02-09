@@ -1164,7 +1164,50 @@ scene125 = {
 }
 
 scene126 = {
-  'SetChoiceScene': [" ▶︎ それでいい","scene0"," ▶︎ 殺してでも　うばいとる","scene114"," ▶︎ 普通に奪い取る","scene127"],
+  'SetChoiceScene': [" ▶︎ それでいい","scene0"," ▶︎ 殺してでも　うばいとる","scene126_1"," ▶︎ 普通に奪い取る","scene127"],
+}
+
+scene126_1 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'mio4.png',
+  'SetCharactorRight':'nako.png',
+  'SetText': ['みお',
+              'あいねは渡さない！',
+              ],
+  'SetNextSceneName':'scene126_2'
+}
+
+scene126_2 = {
+  'SetText': ['なこ',
+              'えっ？',
+              ],
+  'SetNextSceneName':'scene126_3'
+}
+
+scene126_3 = {
+  'DeleteCharactorl':"",
+  'SetCharactorRight':'aine2.png',
+  'SetText': ['あいね',
+              'みおちゃん？どうしてここに？',
+              ],
+  'SetNextSceneName':'scene126_4'
+}
+
+scene126_4 = {
+  'SetText': ['みお',
+              'どいてあいねそいつ殺せない',
+              ],
+  'SetNextSceneName':'scene126_5'
+}
+
+scene126_5 = {
+  'DeleteCharactor':"",
+  'SetCharactorRight':'mio4.png',
+  'SetCharactorRight':'mio4.png',
+  'SetText': ['みお',
+              'どいてあいねそいつ殺せない',
+              ],
+  'SetNextSceneName':'scene126_5'
 }
 
 scene127 = {
@@ -1317,7 +1360,8 @@ scene143 = {
 
 scene144 = {
   'SetText': ['みお',
-              'そうよ…　あいねのためにデザインしたの。'
+              'そうよ…',
+              'あいねのためにデザインしたの。'
               ],
   'SetNextSceneName':'scene145'
 }
@@ -1406,7 +1450,7 @@ dbscene = {
   'SetText': ['',
               'それなりに飛びます。'
               ],
-  'SetNextSceneName':'scene131'
+  'SetNextSceneName':'scene124'
 }
 
 scene0 = {
