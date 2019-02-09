@@ -404,6 +404,7 @@ imglist = [
 imglist = [
 "Charactor01_01.png",
 "Charactor02_01.jpg",
+"think_item_00.png",
 "mio1.png",
 "mio2.png",
 "mio3.png",
@@ -437,6 +438,7 @@ imglist = [
 "BackGround_03_00.jpg",
 "BackGround_04_00.png",
 "BackGround_05_00.png",
+"BackGround_06_00.png"
 ]
 
 //
