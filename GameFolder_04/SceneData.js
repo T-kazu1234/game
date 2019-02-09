@@ -51,12 +51,22 @@ aboutscene3 =
 
 aboutscene4 = {
   'DeleteCharactor':"",
+  'SetCharactorRight': 'nako.png',
+  'SetText': ['', 'あと、海老原なこちゃん。「名」古屋でアイカツしている女の「子」です。',
+                  '名古屋らしくエビフライが好物で、頭と苗字にも海老が付いています。　わかりやすいですね。(なんかそういうデュエリストいたような…)'
+                ],
+  'SetNextSceneName':'aboutscene5'
+}
+
+aboutscene5 = {
+  'DeleteCharactor':"",
   'SetCharactorLeft': 'aine1.png',
   'SetCharactorRight': 'mio1.png',
   'SetText': ['', 'このゲームはあいねちゃんとみおちゃんがフレンズ(要はユニット)を組むまでのお話です。',
                   'みおちゃんとなって選択肢を選んでいき、あいねちゃんとフレンズを組みましょう。',
                   'アニメ本編が正解ルートなので間違ったりするとすぐ終わっちゃったりします。',
-                  '終わらない場合もありますが、どれぐらい正しかったか%表示します。頑張って100%クリアを目指しましょう。第11話「告白はドラマチック！」本編通り進めばOKです。'
+                  '終わらない場合もありますが、どれぐらい正しかったか%表示します。頑張って100%クリアを目指しましょう。第11話「告白はドラマチック！」本編通り進めばOKです。',
+                  'パーセント表示はあくまで予定です。なくなる恐れがあります。'
                 ],
   'SetNextSceneName':'titlescene_back'
 }
@@ -207,7 +217,14 @@ scene16 = {
 }
 
 scene17 = {
-  'SetChoiceScene': [" ▶︎ ……………","scene18"," ▶︎ 「あいね！                                                        私達もフレンズを組みましょう！」","scene0"],
+  'SetChoiceScene': [" ▶︎ ……………","scene18"," ▶︎ あいね！私達もフレンズを組みましょう！","scene18_b"],
+}
+
+scene18_b = {
+  'SetText': ['みお',
+              'あいね！私達もフレンズを組みましょう！'
+              ],
+  'SetNextSceneName':'scene154'
 }
 
 scene18 = {
@@ -266,7 +283,21 @@ scene23 = {
 }
 
 scene24 = {
-  'SetChoiceScene': [" ▶︎ ドラマチックな展開のフレンズ結成ね。","scene25"," ▶︎ 今すぐあいねに電話をかけましょう。","scene0"],
+  'SetChoiceScene': [" ▶︎ ドラマチックな展開のフレンズ結成ね。","scene25"," ▶︎ 今すぐあいねに電話をかけましょう。","scene25_1"],
+}
+
+scene25_1 = {
+  'SetText': ['あいね',
+              'もしもし。みおちゃん？'
+              ],
+  'SetNextSceneName':'scene25_2'
+}
+
+scene25_2 = {
+  'SetText': ['みお',
+              'あいね。私とフレンズになって。'
+              ],
+  'SetNextSceneName':'scene154'
 }
 
 scene25 = {
@@ -303,7 +334,7 @@ scene29 = {
   'SetCharactorRight': 'mirai.png',
   'SetCharactorLeft': 'karen.png',
   'DeleteBG':"",
-  'SetBackGroundImage': 'school_room.png',
+  'SetBackGroundImage': '27.png',
   'SetText': ['みお',
               'スターハーモニー学園に入ってトップアイドルに駆け上がったカレンさんとミライさん。',
               '二人は出会ってすぐに意気投合したのだけど　フレンズ結成にはあと一歩踏み込めないでいた。'
@@ -757,7 +788,7 @@ scene81 = {
   'DeleteCharactorl':"",
   'SetCharactorLeft': 'koko14.png',
   'SetText': ['ココ',
-              '◯△○'
+              '°△°'
               ],
   'SetNextSceneName':'scene82'
 }
@@ -810,6 +841,562 @@ scene87 = {
   'SetText': ['みお',
               'うん！　これよ！！'
               ],
+  'SetNextSceneName':'scene88'
+}
+
+scene88 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '27.png',
+  'SetText': ['',
+              '後日'
+              ],
+  'SetNextSceneName':'scene89'
+}
+
+scene89 = {
+'SetCharactorLeft': 'aine2.png',
+'SetCharactorRight': 'mio2.png',
+  'SetText': ['あいね',
+              'うわ〜っ　うれしい！',
+              'みおちゃんと　遊びにいけるなんて楽しみだな。'
+              ],
+  'SetNextSceneName':'scene90'
+}
+
+scene90 = {
+  'SetText': ['みお',
+              '今度の土曜　休みが取れたから　久しぶりに　あいねと…。'
+              ],
+  'SetNextSceneName':'scene91'
+}
+
+scene91 = {
+  'SetText': ['あいね',
+              '今度の土曜…。'
+              ],
+  'SetNextSceneName':'scene92'
+}
+
+scene92 = {
+  'SetText': ['みお',
+              'もしかして　何か用事があった？'
+              ],
+  'SetNextSceneName':'scene93'
+}
+
+scene93 = {
+  'SetText': ['あいね',
+              'うん…　ブランド選びのときに　友達になった　なこちゃんがこっちに来るから　会おうって約束したの。'
+              ],
+  'SetNextSceneName':'scene94'
+}
+
+scene94 = {
+  'SetText': ['みお',
+              'なこちゃんって　名古屋で　アイカツしてる子ね？'
+              ],
+  'SetNextSceneName':'scene95'
+}
+
+scene95 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '28.png',
+  'SetText': ['あいね',
+              'うん！　友達になってから　ずっと　やり取りしてたんだ。'
+              ],
+  'SetNextSceneName':'scene96'
+}
+
+scene96 = {
+  'SetText': ['みお',
+              'あいねと会って相談がしたい…。'
+              ],
+  'SetNextSceneName':'scene97'
+}
+
+scene97 = {
+  'SetText': ['あいね',
+              'うん　何だろうね？'
+              ],
+  'SetNextSceneName':'scene98'
+}
+
+scene98 = {
+'DeleteBG':"",
+'SetBackGroundImage': '27.png',
+'SetCharactorLeft': 'aine2.png',
+'SetCharactorRight': 'mio2.png',
+  'SetText': ['みお',
+              'あっ…。'
+              ],
+  'SetNextSceneName':'scene99'
+}
+
+scene99 = {
+'DeleteBG':"",
+'SetBackGroundImage': '29.png',
+'SetCharactorLeft': 'aine3.png',
+  'SetText': ['みお',
+              '(相談って　まさか…)'
+              ],
+  'SetNextSceneName':'scene100'
+}
+
+scene100 = {
+  'DeleteCharactorl':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '27.png',
+  'SetText': ['あいね',
+              'そうだ。　なこちゃんと私たち三人で遊びにいこうよ。'
+              ],
+  'SetNextSceneName':'scene101'
+}
+
+scene101 = {
+  'SetChoiceScene': [" ▶︎ そうね。","scene87"," ▶︎ あいねを誑かすなんて許せない","scene0"," ▶︎ 相談があるなら二人の方がいいでしょう","scene102"],
+}
+
+scene102 = {
+  'SetText': ['みお',
+              'ううん。',
+              '相談があるなら　二人の方がいいでしょう？'
+              ],
+  'SetNextSceneName':'scene103'
+}
+
+scene103 = {
+  'DeleteBG':"",
+  'DeleteCharactorf':"",
+  'SetBackGroundImage': '3.png',
+  'SetText': ['',
+              '土曜日'
+              ],
+  'SetNextSceneName':'scene104'
+}
+
+scene104 = {
+  'SetChoiceScene': [" ▶︎ (今日は計画を練りましょう)","scene0"," ▶︎ (今日は二人をストーキングね)","scene105"],
+}
+
+scene105 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '30.png',
+  'SetText': ['',
+              '駅前'
+              ],
+  'SetNextSceneName':'scene106'
+}
+
+scene106 = {
+  'SetCharactorRight': 'nako.png',
+  'SetText': ['海老原なこ',
+              'わぁ。'
+              ],
+  'SetNextSceneName':'scene107'
+}
+
+scene107 = {
+  'SetCharactorLeft': 'aine2.png',
+  'SetText': ['あいね',
+              'お〜い！なこちゃん！'
+              ],
+  'SetNextSceneName':'scene108'
+}
+
+scene108 = {
+  'SetText': ['なこ',
+              'あいねちゃん！',
+              '久しぶり！ウフフ。'
+              ],
+  'SetNextSceneName':'scene109'
+}
+
+scene109 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '31.png',
+  'SetText': ['みお',
+              '(わざわざ　こっちに来てまで　相談したい事ってあいねとフレンズを組みたいって事なんじゃ…)',
+              'あいね…。'
+              ],
+  'SetNextSceneName':'scene110'
+}
+
+scene110 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '32.png',
+  'SetText': ['なこ',
+              'あいねちゃんちのカフェか。',
+              '一度　来てみたかったんだよね。'
+              ],
+  'SetNextSceneName':'scene111'
+}
+
+scene111 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '33.png',
+  'SetText': ['山下公園',
+              'その後も街を巡る二人。'
+              ],
+  'SetNextSceneName':'scene112'
+}
+
+scene112 = {
+  'SetText': ['みお',
+              '(ちょっと距離が出来てきたわね…)'
+              ],
+  'SetNextSceneName':'scene113'
+}
+
+scene113 = {
+  'SetChoiceScene': [" ▶︎ もっと詰め寄りましょう","scene0"," ▶︎ 持ってきた望遠鏡を使いましょう","scene114"],
+}
+
+scene114 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '34.png',
+  'SetText': ['みお',
+              'これって…。'
+              ],
+  'SetNextSceneName':'scene115'
+}
+
+scene115 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '35.png',
+  'SetText': ['みお',
+              'フレンズ結成の流れにしか見えないんだけど。'
+              ],
+  'SetNextSceneName':'scene116'
+}
+
+scene116 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '36.png',
+  'SetText': ['赤レンガ倉庫',
+              '(それっぽく加工していますが、実際の赤レンガ倉庫からは観覧車は見えません。)'
+              ],
+  'SetNextSceneName':'scene117'
+}
+
+scene117 = {
+  'SetCharactorLeft': 'aine2.png',
+  'SetCharactorRight': 'nako.png',
+  'SetText': ['なこ',
+              'うわ〜っ…。',
+              '綺麗…。'
+              ],
+  'SetNextSceneName':'scene118'
+}
+
+scene118 = {
+  'SetText': ['あいね',
+              'でしょう？',
+              'なこちゃんにもこの景色を見せたかったんだ。'
+              ],
+  'SetNextSceneName':'scene119'
+}
+
+scene119 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'mio2.png',
+  'SetText': ['みお',
+              'ここって…。',
+              '(ココちゃんが言ってた観覧車…)',
+              '(あいねとなこちゃんもそれを知ってて…)'
+              ],
+  'SetNextSceneName':'scene120'
+}
+
+scene120 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft': 'aine2.png',
+  'SetCharactorRight': 'nako.png',
+  'SetText': ['なこ',
+              'それでね、あいねちゃんに相談なんだけど。'
+              ],
+  'SetNextSceneName':'scene121'
+}
+
+scene121 = {
+  'SetText': ['あいね',
+              'うん。'
+              ],
+  'SetNextSceneName':'scene122'
+}
+
+scene122 = {
+  'SetText': ['なこ',
+              '名古屋と東京で離れていてもフレンズになれるかな？'
+              ],
+  'SetNextSceneName':'scene123'
+}
+
+scene123 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'mio2.png',
+  'SetText': ['みお',
+              'あっ…。'
+              ],
+  'SetNextSceneName':'scene124'
+}
+
+scene124 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft': 'aine2.png',
+  'SetCharactorRight': 'nako.png',
+  'SetText': ['あいね',
+              'うん！　気持ちがつながっていればきっとなれるよ。'
+              ],
+  'SetNextSceneName':'scene125'
+}
+
+scene125 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'mio2.png',
+  'SetText': ['みお',
+              '…。',
+              '(本当に…それでいいの？)',
+              ],
+  'SetNextSceneName':'scene126'
+}
+
+scene126 = {
+  'SetChoiceScene': [" ▶︎ それでいい","scene0"," ▶︎ 殺してでも　うばいとる","scene114"," ▶︎ 普通に奪い取る","scene127"],
+}
+
+scene127 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '37.png',
+  'SetText': ['みお',
+              '(私のフレンズはあいねしかいない。)',
+              '(この気持ちに嘘はつけない！)'
+              ],
+  'SetNextSceneName':'scene128'
+}
+
+scene128 = {
+  'SetText': ['あいね',
+              'えっ？　み…みおちゃん？'
+              ],
+  'SetNextSceneName':'scene129'
+}
+
+scene129 = {
+  'SetText': ['なこ',
+              'えっ？'
+              ],
+  'SetNextSceneName':'scene130'
+}
+
+scene130 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '38.png',
+  'SetText': ['みお',
+              '来て…　あいね！'
+              ],
+  'SetNextSceneName':'scene131'
+}
+
+scene131 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '39.png',
+  'SetText': ['あいね',
+              'えっ？え〜！？'
+              ],
+  'SetNextSceneName':'scene132'
+}
+
+scene132 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetCharactorLeft': 'nako.png',
+  'SetBackGroundImage': '36.png',
+  'SetText': ['なこ',
+              '…？'
+              ],
+  'SetNextSceneName':'scene133'
+}
+
+scene133 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetCharactorLeft': 'aine2.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetBackGroundImage': '40.png',
+  'SetText': ['あいね',
+              'みおちゃんどうしてここに？'
+              ],
+  'SetNextSceneName':'scene134'
+}
+
+scene134 = {
+  'SetText': ['みお',
+              'あいねにどうしても伝えたいことがあるの。'
+              ],
+  'SetNextSceneName':'scene135_a'
+}
+
+scene135_a = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '43.png',
+  'SetText': ['観覧車',
+              ''
+              ],
+  'SetNextSceneName':'scene135'
+}
+
+scene135 = {
+  'DeleteBG':"",
+  'SetCharactorLeft': 'aine2.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetBackGroundImage': '41.png',
+  'SetText': ['あいね',
+              'ねぇねぇ　伝えたいことって何？何？何？'
+              ],
+  'SetNextSceneName':'scene136'
+}
+
+scene136 = {
+  'SetText': ['みお',
+              '…！',
+              '(勢いで連れて来ちゃったけど、観覧車ってこんなに遅いの？)',
+              '(一番上までどれくらいかかるのよ…)'
+              ],
+  'SetNextSceneName':'scene137'
+}
+
+scene137 = {
+  'SetText': ['あいね',
+              '早く聞かせてよ〜！みおちゃん！'
+              ],
+  'SetNextSceneName':'scene138'
+}
+
+scene138 = {
+  'SetChoiceScene': [" ▶︎ もうちょっと待って","scene139"," ▶︎ ドラマチックとかどうでもいい！","scene0"],
+}
+
+scene139 = {
+  'SetText': ['みお',
+              'も…もうちょっと待って。'
+              ],
+  'SetNextSceneName':'scene140'
+}
+
+scene140 = {
+  'SetText': ['あいね',
+              'え〜！もったいつけられると余計気になるよ〜！',
+              '教えて教えてー！'
+              ],
+  'SetNextSceneName':'scene141'
+}
+
+scene141 = {
+  'SetText': ['みお',
+              'ちょっ…　あっ！'
+              ],
+  'SetNextSceneName':'scene142'
+}
+
+scene142 = {
+  'SetText': ['あいね',
+              'アイカツカード…？',
+              'これってみおちゃんがデザインしたドレスだよね？'
+              ],
+  'SetNextSceneName':'scene143'
+}
+
+scene143 = {
+  'SetChoiceScene': [" ▶︎ …","scene0"," ▶︎ そうよ…","scene144"],
+}
+
+scene144 = {
+  'SetText': ['みお',
+              'そうよ…　あいねのためにデザインしたの。'
+              ],
+  'SetNextSceneName':'scene145'
+}
+
+scene145 = {
+  'SetText': ['あいね',
+              '私のため？'
+              ],
+  'SetNextSceneName':'scene146'
+}
+
+scene146 = {
+  'SetChoiceScene': [" ▶︎ …","scene0"," ▶︎ ドラマチックとかどうでもいい！","scene147"],
+}
+
+scene147 = {
+  'SetText': ['みお',
+              'あ〜！もう！　こうなったらドラマチックとかどうでもいい！'
+              ],
+  'SetNextSceneName':'scene148'
+}
+
+scene148 = {
+  'SetText': ['あいね',
+              'みおちゃん　立つと危ないよ！'
+              ],
+  'SetNextSceneName':'scene149'
+}
+
+scene149 = {
+  'SetText': ['みお',
+              'あいね…。',
+              '私とフレンズになって。'
+              ],
+  'SetNextSceneName':'scene150'
+}
+
+scene150 = {
+  'SetText': ['あいね',
+              'え…'
+              ],
+  'SetNextSceneName':'scene151'
+}
+
+scene151 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '42.png',
+  'SetText': ['汽笛',
+              'ボー'
+              ],
+  'SetNextSceneName':'scene152'
+}
+
+scene152 = {
+  'DeleteBG':"",
+  'SetCharactorLeft': 'aine2.png',
+  'SetCharactorRight': 'mio2.png',
+  'SetBackGroundImage': '41.png',
+  'SetText': ['あいね',
+              '…'
+              ],
+  'SetNextSceneName':'scene153'
+}
+
+scene153 = {
+  'SetText': ['みお',
+              '(そっか…)',
+              '(そうよね。あいねはなこちゃんと…)'
+              ],
+  'SetNextSceneName':'scene154'
+}
+
+scene154 = {
+  'SetText': ['あいね',
+              'うわ〜っ！嬉しい！',
+              'ありがとう！みおちゃん！',
+              '私もみおちゃんとフレンズになりたいってすっごくすっごく思ってた！'
+              ],
   'SetNextSceneName':'scene0'
 }
 
@@ -819,7 +1406,7 @@ dbscene = {
   'SetText': ['',
               'それなりに飛びます。'
               ],
-  'SetNextSceneName':'scene80'
+  'SetNextSceneName':'scene131'
 }
 
 scene0 = {
