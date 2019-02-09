@@ -312,7 +312,7 @@ AddPlayerStatusFlag:["下女達の会話を聞く",!0],
 '「そうよね、でなければ三人も亡くなられるわけないわ」'
 ],
 
-  'SetNextSceneName':'scene7'
+  'SetNextSceneName':'scene8'
 }
 
 scene18 = {SelectMethodHasTrue:["下女達の会話を聞く ==true","scene18A","scene18B"]},
@@ -454,7 +454,7 @@ epsode1clear_scene = {
      'SetNextSceneName':'scene9'
 }
 
-
+/*
 scene9 = {
 'SetBackGroundImage_fadeIN':"BackGround_05_00.png",
 'DeleteCharactor':"",
@@ -463,6 +463,7 @@ scene9 = {
 ],
   'SetNextSceneName':'scene0'
 }
+*/
 
 scene10 = {
   'SetBackGroundImage':"BackGround_01_00.png",
