@@ -448,7 +448,135 @@ scene41 = {
 }
 
 scene42 = {
-  'SetChoiceScene': [" ▶︎ フレンズの誘い方を教えて。","scene0"," ▶︎ ドラマチックな告白について教えて。","scene43"," ▶︎ あいねのアイカツモバイルを盗聴して。","scene0"],
+  'SetChoiceScene': [" ▶︎ フレンズの誘い方を教えて。","scene0"," ▶︎ ドラマチックな告白について教えて。","scene43"," ▶︎ あいねのアイカツモバイルを盗聴して。","scene42_1"],
+}
+
+scene42_1 = {
+  'SetText': ['みお',
+              'あいねのアイカツモバイルを盗聴して。'
+              ],
+  'SetNextSceneName':'scene42_2'
+}
+
+scene42_2 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko2.png',
+  'SetText': ['ココ',
+              'ココろえ…'
+              ],
+  'SetNextSceneName':'scene42_3'
+}
+
+scene42_3 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko17.png',
+  'SetText': ['ココ',
+              'え～っ！？アイカツモバイルを盗聴！？あいねちゃんの！？どうして！？'
+              ],
+  'SetNextSceneName':'scene42_4'
+}
+
+scene42_4 = {
+  'SetText': ['みお',
+              'あいねとフレンズになるためのドラマチックな告白を成功させるためよ。'
+              ],
+  'SetNextSceneName':'scene42_5'
+}
+
+scene42_5 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko18.png',
+  'SetText': ['ココ',
+              'う〜ん、それでどうして盗聴になるのかなぁ？'
+              ],
+  'SetNextSceneName':'scene42_6'
+}
+
+scene42_6 = {
+  'SetText': ['みお',
+              'あいねの趣味、生活を完璧に理解してあいねが喜ぶ完璧なエスコートをするためよ。'
+              ],
+  'SetNextSceneName':'scene42_7'
+}
+
+scene42_7 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko19.png',
+  'SetText': ['ココ',
+              'えぇ…',
+              '悪いけど、それはココが協力できることじゃないよ。'
+              ],
+  'SetNextSceneName':'scene42_7_2'
+}
+
+scene42_7_2 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko20.png',
+  'SetText': ['ココ',
+              'ごめんなさい！'
+              ],
+  'SetNextSceneName':'scene42_8'
+}
+
+scene42_8 = {
+  'SetText': ['みお',
+              'う〜ん、それじゃあ、盗聴機を仕込むしかないわね…どうやったらいいかな？'
+              ],
+  'SetNextSceneName':'scene42_9'
+}
+
+scene42_9 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft': 'koko1.png',
+  'SetText': ['ココ',
+              '…お友達どうしでアクセサリーを持つのが流行ってるみたいだよ。',
+              '２つがそろうと１つになるデザインが人気みたいだね。'
+              ],
+  'SetNextSceneName':'scene42_10'
+}
+
+scene42_10 = {
+  'SetText': ['みお',
+              'なるほど、それに仕込めば…',
+              '早速製作に取り掛かりましょう。'
+              ],
+  'SetNextSceneName':'scene42_11'
+}
+
+scene42_11 = {
+  'SetText': ['ココ',
+              '…関係ないけど、ペットが迷子になった時のための首輪につけられる小さなGPS発信機っていうのもあるみたいだね。',
+              'それがあれば、ココにも場所が表示できるよ。'
+              ],
+  'SetNextSceneName':'scene42_12'
+}
+
+scene42_12 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '44.png',
+  'SetText': ['ココ',
+              'こんな風に。'
+              ],
+  'SetNextSceneName':'scene42_13'
+}
+
+scene42_13 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '26.png',
+  'SetText': ['みお',
+              'うん！　これよ！！'
+              ],
+  'SetNextSceneName':'scene42_14'
+}
+
+scene42_14 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '45.png',
+  'SetText': ['',
+              '後日、アクセサリーを渡すことに成功したみおちゃんは、それからしばらくして幸せなフレンズ生活をおくったのであった…。'
+              ],
+  'SetNextSceneName':'titlescene_back'
 }
 
 scene43 = {
@@ -1196,18 +1324,9 @@ scene126_3 = {
 scene126_4 = {
   'SetText': ['みお',
               'どいてあいねそいつ殺せない',
+              'あいねとフレンズになるのは私なんだから！'
               ],
-  'SetNextSceneName':'scene126_5'
-}
-
-scene126_5 = {
-  'DeleteCharactor':"",
-  'SetCharactorRight':'mio4.png',
-  'SetCharactorRight':'mio4.png',
-  'SetText': ['みお',
-              'どいてあいねそいつ殺せない',
-              ],
-  'SetNextSceneName':'scene126_5'
+  'SetNextSceneName':'scene154'
 }
 
 scene127 = {
@@ -1450,7 +1569,7 @@ dbscene = {
   'SetText': ['',
               'それなりに飛びます。'
               ],
-  'SetNextSceneName':'scene124'
+  'SetNextSceneName':'scene116'
 }
 
 scene0 = {
