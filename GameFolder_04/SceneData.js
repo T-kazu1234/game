@@ -66,11 +66,31 @@ aboutscene5 = {
                   'みおちゃんとなって選択肢を選んでいき、あいねちゃんとフレンズを組みましょう。',
                   'アニメ本編が正解ルートなので間違ったりするとすぐ終わっちゃったりします。',
                   '終わらない場合もありますが、どれぐらい正しかったか%表示します。頑張って100%クリアを目指しましょう。第11話「告白はドラマチック！」本編通り進めばOKです。',
-                  'パーセント表示はあくまで予定です。なくなる恐れがあります。'
+                  'パーセント表示はあくまで予定です。なくなる恐れがあります。',
+                  '本編中にも解説入れますか？'
                 ],
+  'SetNextSceneName':'aboutscene6'
+}
+
+aboutscene6 = {
+    'SetChoiceScene': [" ▶︎ はい","aboutscene7"," ▶︎ いいえ","aboutscene8"],
+}
+
+aboutscene7 ={
+  AddPlayerStatusFlag:["解説を希望",!0],
+  'SetText': ['',
+              '本編中にも解説が入ります。'
+              ],
   'SetNextSceneName':'titlescene_back'
 }
 
+aboutscene8 ={
+  AddPlayerStatusFlag:["解説を拒否",0],
+  'SetText': ['',
+              '本編中には解説が入りません。'
+              ],
+  'SetNextSceneName':'titlescene_back'
+}
 
 scene1 = {
   'DeleteCharactor':"",
@@ -221,6 +241,7 @@ scene17 = {
 }
 
 scene18_b = {
+  AddPlayerStatusFlag:["即決",!0],
   'SetText': ['みお',
               'あいね！私達もフレンズを組みましょう！'
               ],
@@ -233,7 +254,11 @@ scene18 = {
   'SetText': ['みお',
               '……………'
               ],
-  'SetNextSceneName':'scene19'
+  'SetNextSceneName':'scene19_0'
+}
+
+scene19_0 = {
+    SelectMethodHasTrue:["解説を希望 ==true","scene19","scene19_2"]
 }
 
 scene19 = {
@@ -243,6 +268,16 @@ scene19 = {
   'SetText': ['',
               'その晩　みおの自室',
               '(明らかに晩じゃないけど画像がないからしゃあない。)'
+              ],
+  'SetNextSceneName':'scene20'
+}
+
+scene19_2 = {
+  'DeleteCharactor':"",
+  'DeleteBG':"",
+  'SetBackGroundImage': '3.png',
+  'SetText': ['',
+              'その晩　みおの自室'
               ],
   'SetNextSceneName':'scene20'
 }
@@ -294,6 +329,7 @@ scene25_1 = {
 }
 
 scene25_2 = {
+  AddPlayerStatusFlag:["即決",!0],
   'SetText': ['みお',
               'あいね。私とフレンズになって。'
               ],
@@ -320,6 +356,7 @@ scene27 = {
 }
 
 scene28 = {
+  AddPlayerStatusFlag:["ラブミーティア結成を復習",!0],
   'DeleteCharactor':"",
   'DeleteBG':"",
   'SetBackGroundImage': '6.png',
@@ -452,20 +489,16 @@ scene42 = {
 }
 
 scene42_1 = {
+  AddPlayerStatusFlag:["盗聴を決意",!0],
   'SetText': ['みお',
               'あいねのアイカツモバイルを盗聴して。'
               ],
-  'SetNextSceneName':'scene42_2'
+  'SetNextSceneName':'scene44'
 }
 
 scene42_2 = {
-  'DeleteCharactorl':"",
-  'SetCharactorLeft': 'koko2.png',
-  'SetText': ['ココ',
-              'ココろえ…'
-              ],
-  'SetNextSceneName':'scene42_3'
-}
+  SelectMethodHasTrue:["盗聴を決意 ==true","scene42_3","scene45"]
+},
 
 scene42_3 = {
   'DeleteCharactorl':"",
@@ -478,7 +511,7 @@ scene42_3 = {
 
 scene42_4 = {
   'SetText': ['みお',
-              'あいねとフレンズになるためのドラマチックな告白を成功させるためよ。'
+              'あいねとフレンズになるためのドラマチックな告白を成功させるのに必要なの。'
               ],
   'SetNextSceneName':'scene42_5'
 }
@@ -487,7 +520,7 @@ scene42_5 = {
   'DeleteCharactorl':"",
   'SetCharactorLeft': 'koko18.png',
   'SetText': ['ココ',
-              'う〜ん、それでどうして盗聴になるのかなぁ？'
+              'う〜ん、それでどうして盗聴が必要になるのかなぁ？'
               ],
   'SetNextSceneName':'scene42_6'
 }
@@ -520,7 +553,7 @@ scene42_7_2 = {
 
 scene42_8 = {
   'SetText': ['みお',
-              'う〜ん、それじゃあ、盗聴機を仕込むしかないわね…どうやったらいいかな？'
+              'う〜ん、それじゃあ、盗聴機を仕込むしかないわね…何かいい方法は…'
               ],
   'SetNextSceneName':'scene42_9'
 }
@@ -558,17 +591,12 @@ scene42_12 = {
   'SetText': ['ココ',
               'こんな風に。'
               ],
-  'SetNextSceneName':'scene42_13'
+  'SetNextSceneName':'scene87'
 }
 
 scene42_13 = {
-  'DeleteBG':"",
-  'SetBackGroundImage': '26.png',
-  'SetText': ['みお',
-              'うん！　これよ！！'
-              ],
-  'SetNextSceneName':'scene42_14'
-}
+    SelectMethodHasTrue:["盗聴を決意 ==true","scene42_14","scene88"]
+  },
 
 scene42_14 = {
   'DeleteBG':"",
@@ -592,7 +620,7 @@ scene44 = {
   'SetText': ['ココ',
               'ココろえ…'
               ],
-  'SetNextSceneName':'scene45'
+  'SetNextSceneName':'scene42_2'
 }
 
 scene45 = {
@@ -861,7 +889,7 @@ scene75 = {
   'SetText': ['みお',
               'あいね　私と　フレンズになりましょう。'
               ],
-  'SetNextSceneName':'scene76_2'
+  'SetNextSceneName':'scene76_1'
 }
 
 scene76 = {
@@ -871,6 +899,10 @@ scene76 = {
               'わ〜っ…　うん！！'
               ],
   'SetNextSceneName':'scene77'
+}
+
+scene76_1 = {
+    SelectMethodHasTrue:["解説を希望 ==true","scene76_2","scene76"]
 }
 
 scene76_2 = {
@@ -969,7 +1001,7 @@ scene87 = {
   'SetText': ['みお',
               'うん！　これよ！！'
               ],
-  'SetNextSceneName':'scene88'
+  'SetNextSceneName':'scene42_13'
 }
 
 scene88 = {
@@ -1201,10 +1233,23 @@ scene115 = {
 }
 
 scene116 = {
+  SelectMethodHasTrue:["解説を希望 ==true","scene116_1","scene116_2"]
+},
+
+scene116_1 = {
   'DeleteBG':"",
   'SetBackGroundImage': '36.png',
   'SetText': ['赤レンガ倉庫',
               '(それっぽく加工していますが、実際の赤レンガ倉庫からは観覧車は見えません。)'
+              ],
+  'SetNextSceneName':'scene117'
+}
+
+scene116_2 = {
+  'DeleteBG':"",
+  'SetBackGroundImage': '36.png',
+  'SetText': ['',
+              '赤レンガ倉庫'
               ],
   'SetNextSceneName':'scene117'
 }
@@ -1296,6 +1341,7 @@ scene126 = {
 }
 
 scene126_1 = {
+  AddPlayerStatusFlag:["包丁を装備",!0],
   'DeleteCharactor':"",
   'SetCharactorLeft':'mio4.png',
   'SetCharactorRight':'nako.png',
@@ -1522,12 +1568,16 @@ scene150 = {
   'SetText': ['あいね',
               'え…'
               ],
-  'SetNextSceneName':'scene151'
+  'SetNextSceneName':'scene150_2'
 }
 
-scene151 = {
+scene150_2 = {
   'DeleteBG':"",
   'DeleteCharactor':"",
+  SelectMethodHasTrue:["ラブミーティア結成を復習 ==true","scene151","scene152"]
+},
+
+scene151 = {
   'SetBackGroundImage': '42.png',
   'SetText': ['汽笛',
               'ボー'
@@ -1560,7 +1610,274 @@ scene154 = {
               'ありがとう！みおちゃん！',
               '私もみおちゃんとフレンズになりたいってすっごくすっごく思ってた！'
               ],
-  'SetNextSceneName':'scene0'
+  'SetNextSceneName':'scene155_0'
+}
+
+scene155_0 = {
+  SelectMethodHasTrue:["包丁を装備 ==true","scene157","scene155_1"]
+},
+
+scene155_1 = {
+  SelectMethodHasTrue:["即決 ==true","scene174","scene155"]
+},
+
+scene155 = {
+  'SetText': ['みお',
+              'あいね…'
+              ],
+  'SetNextSceneName':'scene156'
+}
+
+scene156 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '46.png',
+  'SetText': ['(ココ)',
+              '(この観覧車でゴンドラが一番高くなったところで告白すると二人はず〜っと　幸せになれるんだって。)'
+              ],
+  'SetNextSceneName':'scene157'
+}
+
+scene157 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetCharactorRight': 'nako.png',
+  'SetCharactorLeft':'aine2.png',
+  'SetBackGroundImage': '36.png',
+  'SetText': ['なこ',
+              'フレンズ結成おめでとう！あいねちゃん。'
+              ],
+  'SetNextSceneName':'scene158'
+}
+
+scene158 = {
+  'SetText': ['あいね',
+              'うん！ありがとう。'
+              ],
+  'SetNextSceneName':'scene159'
+}
+
+scene159 = {
+  'SetText': ['なこ',
+              'ほんとよかったね、あいねちゃんみおちゃんとフレンズになる為にすごく頑張ってたもんね。'
+              ],
+  'SetNextSceneName':'scene160'
+}
+
+scene160 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft':'mio2.png',
+  'SetText': ['みお',
+              'え。'
+              ],
+  'SetNextSceneName':'scene161'
+}
+
+scene161 = {
+  'SetText': ['なこ',
+              '目指せ　ランニング100万キロ！とか。'
+              ],
+  'SetNextSceneName':'scene162'
+}
+
+scene162 = {
+  'DeleteCharactorl':"",
+  'SetCharactorLeft':'aine2.png',
+  'SetText': ['あいね',
+              'わ〜っ　わ〜っ　わ〜っ！',
+              'それ　みおちゃんに言っちゃだめ！'
+              ],
+  'SetNextSceneName':'scene163'
+}
+
+scene163 = {
+  'DeleteCharactorf':"",
+  'SetCharactorRight':'mio2.png',
+  'SetText': ['みお',
+              '100万キロって地球何十周分よ？'
+              ],
+  'SetNextSceneName':'scene164'
+}
+
+scene164 = {
+  SelectMethodHasTrue:["解説を希望 ==true","scene165","scene166"]
+},
+
+scene165 = {
+  'SetText': ['',
+              '(25周分です。多分。)'
+              ],
+  'SetNextSceneName':'scene166'
+}
+
+scene166 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'mio2.png',
+  'SetCharactorRight':'nako.png',
+  'SetText': ['みお',
+              'ごめんね。なこちちゃんもあいねとフレンズを…。'
+              ],
+  'SetNextSceneName':'scene167'
+}
+
+scene167 = {
+  'SetText': ['着信音',
+              '(ピロリ)'
+              ],
+  'SetNextSceneName':'scene167_2'
+}
+
+scene167_2 = {
+  'SetText': ['なこ',
+              'あっ仕事終わったからこれから会おう。',
+              'よ〜し！　あいねちゃんのおかげで勇気出たし、私もフレンズ組もうって申し込んでみるよ。',
+              'また遊ぼうね、あいねちゃん！'
+              ],
+  'SetNextSceneName':'scene168'
+}
+
+scene168 = {
+  SelectMethodHasTrue:["解説を希望 ==true","scene169","scene170"]
+}
+
+scene169 = {
+  'SetText': ['',
+              '(個人的にここであいねちゃんにしか話しかけてないのがツボ。)',
+              '(というか、フレンズを組んで活動するようになっても、ファンからあいねちゃんの名前が呼ばれることはあってもみおちゃんが呼ばれることはほぼない…)',
+              '(学園のトップアイドルなのに、それでいいのか…でもそんなみおちゃんが好き。)'
+              ],
+  'SetNextSceneName':'scene170'
+}
+
+scene170 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'mio2.png',
+  'SetCharactorRight':'aine2.png',
+  'SetText': ['みお',
+              'えっと…　どういうこと？'
+              ],
+  'SetNextSceneName':'scene171'
+}
+
+scene171 = {
+  'SetText': ['あいね',
+              'なこちゃん　この間イベントで知り合った子とすっごく仲良くなって　そのことフレンズを組みたいって思ってたんだけど',
+              'なこちゃんは中学を卒業するまで名古屋にいるつもりだから　遠距離フレンズがうまくいくか不安だった見たい。'
+              ],
+  'SetNextSceneName':'scene172'
+}
+
+scene172 = {
+  'SetText': ['みお',
+              '…',
+              'そういうことか。'
+              ],
+  'SetNextSceneName':'scene173'
+}
+
+scene173 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '47.png',
+  'SetText': ['パシフィコ横浜',
+              '(フレンズ結成お披露目ライブ)'
+              ],
+  'SetNextSceneName':'scene174'
+}
+
+scene174 = {
+  'DeleteBG':"",
+  'SetCharactorRight':'mio2.png',
+  'SetCharactorLeft':'aine2.png',
+  'SetBackGroundImage': '48.png',
+  'SetText': ['みお',
+              'ここからだよ。'
+              ],
+  'SetNextSceneName':'scene175'
+}
+
+scene175 = {
+  'SetText': ['あいね',
+              'うん。'
+              ],
+  'SetNextSceneName':'scene176'
+}
+
+scene176 = {
+  'SetText': ['みお',
+              'ここから、私たちのアイカツの、新しい一歩がスタートする。'
+              ],
+  'SetNextSceneName':'scene177'
+}
+
+scene177 = {
+  'SetText': ['あいね',
+              'なんか緊張する…。でも…',
+              'みおちゃんとフレンズを組めばきっとすごいことが起きるってすっごくドキドキしてるんだ。'
+              ],
+  'SetNextSceneName':'scene178'
+}
+
+scene178 = {
+  SelectMethodHasTrue:["ラブミーティア結成を復習 ==true","scene179","scene180"]
+},
+
+scene179 = {
+  'SetChoiceScene': [" ▶︎ ええ。","scene182"," ▶︎ 私もそう思う。","scene183"," ▶︎ うん　知ってた。","scene181"],
+}
+
+scene180 = {
+  'SetChoiceScene': [" ▶︎ ええ。","scene182"," ▶︎ 私もそう思う。","scene183"," ▶︎ ワイトもそう思います。","scene184"],
+}
+
+scene181 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '50.png',
+  'SetText': ['みお',
+              'うん　知ってた。'
+              ],
+  'SetNextSceneName':'scene185'
+}
+
+scene182 = {
+  'SetText': ['みお',
+              'ええ。'
+              ],
+  'SetNextSceneName':'scene185'
+}
+
+scene183 = {
+  'SetText': ['みお',
+              '私もそう思う。'
+              ],
+  'SetNextSceneName':'scene185'
+}
+
+scene184 = {
+  'DeleteCharactor':"",
+  'SetCharactorRight':'Skull Servant.png',
+  'SetText': ['ワイト',
+              'ワイトもそう思います。'
+              ],
+  'SetNextSceneName':'scene185'
+}
+
+scene185 = {
+  'DeleteBG':"",
+  'DeleteCharactor':"",
+  'SetBackGroundImage': '49.png',
+  'SetText': ['二人',
+              '私たち　ピュアパレットです！'
+              ],
+  'SetNextSceneName':'scene186'
+}
+
+scene186 = {
+  'SetText': ['',
+              'クリア'
+              ],
+  'SetNextSceneName':'titlescene_back'
 }
 
 dbscene = {
@@ -1569,7 +1886,7 @@ dbscene = {
   'SetText': ['',
               'それなりに飛びます。'
               ],
-  'SetNextSceneName':'scene116'
+  'SetNextSceneName':'scene115'
 }
 
 scene0 = {
