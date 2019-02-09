@@ -40,7 +40,7 @@ aboutscene1 =
 'DeleteCharactor':"",
 //'SetCharactorRight': 'mio1.png',
 'SetBackGroundImage': "BackGround_01_00.png",//背景単色_黒
-'PlayBGM': "XLL68BLBLZk",
+//'PlayBGM': "XLL68BLBLZk",
 'SetText': ['？？？？',
 //***区切り********************************************************
 '（露天の串焼きが食べたいなあ）',
@@ -54,7 +54,7 @@ console.log(aboutscene1);
 aboutscene2 =
 {
     'SetBackGroundImage_fadeIN': "BackGround_01_01.jpg",//曇天
-    'PlayBGM': "-tKVN2mAKRI",
+//    'PlayBGM': "-tKVN2mAKRI",
 'SetText': ['',
 //***区切り********************************************************
 '曇天を見上げて猫猫｜マオマオ｜は溜息をついた。',
@@ -282,13 +282,13 @@ scene5 = {
 }
 */
 
-/*
-scene7 = {
+///*
+scene8 = {
   'SetChoiceScene': [" ▶︎近頃の噂話について思いを馳せる","scene18"," ▶︎汁物をすすりながら猫猫は耳を傾ける。","scene8"],
 }
-*/
+//*/
 
-scene8 = {
+scene9 = {
 AddPlayerStatusFlag:["下女達の会話を聞く",!0],
 'DeleteCharactor':"",
 'SetText': ['『下女Ａ』',
