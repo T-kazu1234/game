@@ -1618,7 +1618,7 @@ scene155_0 = {
 },
 
 scene155_1 = {
-  SelectMethodHasTrue:["即決 ==true","scene174","scene155"]
+  SelectMethodHasTrue:["即決 ==true","scene173","scene155"]
 },
 
 scene155 = {
