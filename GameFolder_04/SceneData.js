@@ -1370,9 +1370,175 @@ scene126_3 = {
 scene126_4 = {
   'SetText': ['みお',
               'どいてあいねそいつ殺せない',
-              'あいねとフレンズになるのは私なんだから！'
+              'あいねとフレンズになるのは私…！',
+              'そのためには邪魔なその女を殺すしかないのよ！'
               ],
-  'SetNextSceneName':'scene154'
+  'SetNextSceneName':'scene126_5'
+}
+
+scene126_5 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'The Wandering Doomed.png',
+  'SetCharactorRight':'mio4.png',
+  'SetText': ['さまよえる亡者',
+              '亡者はそうは思いません。'
+              ],
+  'SetNextSceneName':'scene126_6'
+}
+
+scene126_6 = {
+  'DeleteCharactor':"",
+  'SetCharactorRight':'The Wandering Doomed.png',
+  'SetCharactorLeft':'power.png',
+  'SetText': ['かばん',
+              'そうですよ。力では何も解決しません。'
+              ],
+  'SetNextSceneName':'scene126_7'
+}
+
+scene126_7 = {
+  'DeleteCharactorf':"",
+    'SetCharactorRight':'aine2.png',
+  'SetText': ['あいね',
+              'かばんちゃん！亡者も！',
+              'あれ。今日はサーバルちゃんはいないの？'
+              ],
+  'SetNextSceneName':'scene126_7_2'
+}
+
+scene126_7_2 = {
+  'SetText': ['かばん',
+              'サーバルちゃんには今野菜を切ってもらってます。',
+              'それよりも。'
+              ],
+  'SetNextSceneName':'scene126_8'
+}
+
+scene126_8 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'The Wandering Doomed.png',
+  'SetCharactorRight':'mio4.png',
+  'SetText': ['みお',
+              'さああいね！'
+              ],
+  'SetNextSceneName':'scene126_8_2'
+}
+
+scene126_8_2 = {
+  'DeleteCharactor':"",
+  'SetCharactorRight':'The Wandering Doomed.png',
+  'SetCharactorLeft':'power.png',
+  'SetText': ['かばん',
+              '聞こえないみたいですね…。',
+              ],
+  'SetNextSceneName':'scene126_9'
+}
+
+scene126_9 = {
+  'SetText': ['亡者',
+              '…。',
+              ],
+  'SetNextSceneName':'scene126_10'
+}
+
+scene126_10 = {
+  'SetText': ['かばん',
+              '…。ここはあいねさんに説得してもらうしかないですね。',
+              'ただ、あのままでは危険なので、僕がなんとかしておきますね。'
+              ],
+  'SetNextSceneName':'scene126_11'
+}
+
+scene126_11 = {
+  'DeleteCharactor':"",
+  'SetCharactorRight':'mio4.png',
+  'SetCharactorLeft':'power2.png',
+  'SetText': ['かばん',
+              '(ｸﾝｯ)'
+              ],
+  'SetNextSceneName':'scene126_12'
+}
+
+scene126_12 = {
+  'DeleteCharactorf':"",
+  'SetCharactorRight':'mio6.png',
+  'SetText': ['包丁',
+              '(ﾒｷｮ)'
+              ],
+  'SetNextSceneName':'scene126_13'
+}
+
+scene126_13 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'power.png',
+  'SetCharactorRight':'mio2.png',
+  'SetText': ['みお',
+              'あっ…包丁が…。'
+              ],
+  'SetNextSceneName':'scene126_14'
+}
+
+scene126_14 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'mio2.png',
+  'SetCharactorRight':'aine2.png',
+  'SetText': ['あいね',
+              'みおちゃん。'
+              ],
+  'SetNextSceneName':'scene126_15'
+}
+
+scene126_15 = {
+  'SetText': ['みお',
+              'あいね…。'
+              ],
+  'SetNextSceneName':'scene126_16'
+}
+
+scene126_16 = {
+  'SetText': ['あいね',
+              'さっきの話　本当？'
+              ],
+  'SetNextSceneName':'scene126_17'
+}
+
+scene126_17 = {
+  'SetText': ['みお',
+              'えっ？'
+              ],
+  'SetNextSceneName':'scene126_18'
+}
+
+scene126_18 = {
+  'SetText': ['あいね',
+              '私とみおちゃんがフレンズになるって言ってた。'
+              ],
+  'SetNextSceneName':'scene126_19'
+}
+
+scene126_19 = {
+  'SetText': ['みお',
+              '…。',
+              '…うん。',
+              '私、あいねとフレンズになりたい。',
+              'フレンズ組むのは、あいねしかいないの…。'
+              ],
+  'SetNextSceneName':'scene126_20'
+}
+
+scene126_20 = {
+  'SetText': ['あいね',
+              '嬉しい…。',
+              '私も、みおちゃんとフレンズを組みたいってすっごくすっごく思ってた。'
+              ],
+  'SetNextSceneName':'scene126_21'
+}
+
+scene126_21 = {
+  'SetText': ['みお',
+              'あいね…。'
+              ],
+  'SetNextSceneName':'scene157'
 }
 
 scene127 = {
@@ -1870,14 +2036,84 @@ scene185 = {
   'SetText': ['二人',
               '私たち　ピュアパレットです！'
               ],
-  'SetNextSceneName':'scene186'
+  'SetNextSceneName':'scene186_0'
 }
 
+scene186_0 = {
+  SelectMethodHasTrue:["包丁を装備 ==true","scene187","scene186"]
+},
+
 scene186 = {
+  'DeleteCharactor':"",
   'SetText': ['',
               'クリア'
               ],
   'SetNextSceneName':'titlescene_back'
+}
+
+scene187 = {
+  'SetCharactorLeft': 'power.png',
+  'SetText': ['かばん',
+              '素敵なライブだったね。'
+              ],
+  'SetNextSceneName':'scene188'
+}
+
+scene188 = {
+  'SetCharactorRight':'Skull Servant.png',
+  'SetText': ['ワイト',
+              'ワイトもそう思います。'
+              ],
+  'SetNextSceneName':'scene189'
+}
+
+scene189 = {
+  'DeleteCharactorl':"",
+  'SetText': ['かばん',
+              'もう大丈夫かな。'
+              ],
+  'SetNextSceneName':'scene190'
+}
+
+scene190 = {
+  'DeleteCharactorf':"",
+  'SetCharactorLeft':'power2.png',
+  'SetText': ['かばん',
+              '(ｸﾝｯ)'
+              ],
+  'SetNextSceneName':'scene191'
+}
+
+scene191 = {
+  'DeleteCharactor':"",
+  'SetCharactorLeft':'power.png',
+  'SetCharactorRight':'serval.png',
+  'SetText': ['サーバルキャット',
+              'うみゃ？　かばんちゃん、今何したの？'
+              ],
+  'SetNextSceneName':'scene193'
+}
+
+scene193 = {
+  'SetText': ['かばん',
+              '包丁を元に戻したんだよ。',
+              '道具は正しく使ってこそだからね。'
+              ],
+  'SetNextSceneName':'scene194'
+}
+
+scene194 = {
+  'SetText': ['サーバル',
+              'うみゃ〜…よくわかんないけど、かばんちゃん、やっぱりすごいね！'
+              ],
+  'SetNextSceneName':'scene195'
+}
+
+scene195 = {
+  'SetText': ['かばん',
+              'えへへ…。'
+              ],
+  'SetNextSceneName':'scene186'
 }
 
 dbscene = {
@@ -1886,7 +2122,7 @@ dbscene = {
   'SetText': ['',
               'それなりに飛びます。'
               ],
-  'SetNextSceneName':'scene115'
+  'SetNextSceneName':'scene110'
 }
 
 scene0 = {
