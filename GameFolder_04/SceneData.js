@@ -1391,7 +1391,7 @@ scene126_6 = {
   'SetCharactorRight':'The Wandering Doomed.png',
   'SetCharactorLeft':'power.png',
   'SetText': ['かばん',
-              'そうですよ。力では何も解決しません。'
+              'そうですよ。力だけでは何も解決しないです。'
               ],
   'SetNextSceneName':'scene126_7'
 }
@@ -1400,8 +1400,8 @@ scene126_7 = {
   'DeleteCharactorf':"",
     'SetCharactorRight':'aine2.png',
   'SetText': ['あいね',
-              'かばんちゃん！亡者も！',
-              'あれ。今日はサーバルちゃんはいないの？'
+              'かばんちゃん！亡者さんも！',
+              'あれ。今日はサーバルちゃんは一緒じゃないの？'
               ],
   'SetNextSceneName':'scene126_7_2'
 }
@@ -1429,7 +1429,7 @@ scene126_8_2 = {
   'SetCharactorRight':'The Wandering Doomed.png',
   'SetCharactorLeft':'power.png',
   'SetText': ['かばん',
-              '聞こえないみたいですね…。',
+              '聞こえてないみたいですね…。',
               ],
   'SetNextSceneName':'scene126_9'
 }
