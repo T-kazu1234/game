@@ -254,25 +254,10 @@ scene18 = {
   'SetText': ['みお',
               '……………'
               ],
-  'SetNextSceneName':'scene19_0'
-}
-
-scene19_0 = {
-    SelectMethodHasTrue:["解説を希望 ==true","scene19","scene19_2"]
+  'SetNextSceneName':'scene19'
 }
 
 scene19 = {
-  'DeleteCharactor':"",
-  'DeleteBG':"",
-  'SetBackGroundImage': '3.png',
-  'SetText': ['',
-              'その晩　みおの自室',
-              '(明らかに晩じゃないけど画像がないからしゃあない。)'
-              ],
-  'SetNextSceneName':'scene20'
-}
-
-scene19_2 = {
   'DeleteCharactor':"",
   'DeleteBG':"",
   'SetBackGroundImage': '3.png',
