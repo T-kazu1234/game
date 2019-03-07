@@ -44,12 +44,26 @@ aboutscene3 =
 'SetCharactorLeft': 'koko0.png',
 'SetText': ['', 'ついでに、アイカツ！ナビのココちゃん。　アイカツ！モバイルに「ハロー、ココちゃん！」　と呼びかけると出てきてくれるAIです。',
                 '要はアイカツフレンズ!世界のSiriといったところでしょうか。',
-                'AIのくせに一人しかいないらしく、忙しい時は呼んでも出でこなかったり、舌を噛んだり、自分にわからないことは人任せにして電話を勝手にかけるくらいの高性能AIです。'
+                'AIのくせに一人しかいないらしく、忙しい時は呼んでも出でこなかったり、舌を噛んだり、自分にわからないことは人任せにして電話を勝手にかけるくらいの高性能AIです。',
+                'ホントに一人しかいないのか…？'
+              ],
+'SetNextSceneName':'aboutscene3_2'
+}
+
+aboutscene3_2 =
+{
+'DeleteBG':"",
+'DeleteCharactor':"",
+'SetBackGroundImage':"51.png",
+'SetText': ['', 'ヒェッ…',
+                'ちなみにこの回でかなりのポンコツだった事が露呈した。'
               ],
 'SetNextSceneName':'aboutscene4'
 }
 
 aboutscene4 = {
+  'DeleteBG':"",
+  'SetBackGroundImage':"title.png",
   'DeleteCharactor':"",
   'SetCharactorRight': 'nako.png',
   'SetText': ['', 'あと、海老原なこちゃん。「名」古屋でアイカツしている女の「子」です。',
