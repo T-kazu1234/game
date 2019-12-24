@@ -79,6 +79,7 @@ $(function(){
       )
         .then(res => res.json())
         .then(result => {
+console.log(result);
           var game = enchant.Core.instance;
           game.scene_datas = result;
         },);
