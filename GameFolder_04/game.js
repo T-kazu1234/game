@@ -353,7 +353,7 @@ function getNextSceneName(){
 //////////////////////////////////////
 // 各種設定等
 //////////////////////////////////////
-imglist = ["title.png","Skull Servant.png","The Wandering Doomed.png","power.png","power2.png","serval.png","mio1.png","mio2.png","mio3.png","mio4.png","mio5.png","mio6.png","aine1.png","aine2.png","aine3.png","nako.png","koko0.png","koko1.png","koko2.png","koko3.png","koko4.png","koko5.png","koko6.png","koko7.png","koko8.png","koko9.png","koko10.png","koko11.png","koko12.png","koko13.png","koko14.png","koko15.png","koko16.png","koko17.png","koko18.png","koko19.png","koko20.png","mirai.png","karen.png","ema.png","maika.png","school_room.png","airport.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png","22.png","23.png","24.png","25.png","26.png","27.png","28.png","29.png","30.png","31.png","32.png","33.png","34.png","35.png","36.png","37.png","38.png","39.png","40.png","41.png","42.png","43.png","44.png","45.png","46.png","47.png","48.png","49.png","50.png","51.png"]
+imglist = ['https://livedoor.blogimg.jp/negigasuki/imgs/5/f/5fb15b7d.gif',"Skull Servant.png","The Wandering Doomed.png","power.png","power2.png","serval.png","mio1.png","mio2.png","mio3.png","mio4.png","mio5.png","mio6.png","aine1.png","aine2.png","aine3.png","nako.png","koko0.png","koko1.png","koko2.png","koko3.png","koko4.png","koko5.png","koko6.png","koko7.png","koko8.png","koko9.png","koko10.png","koko11.png","koko12.png","koko13.png","koko14.png","koko15.png","koko16.png","koko17.png","koko18.png","koko19.png","koko20.png","mirai.png","karen.png","ema.png","maika.png","school_room.png","airport.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png","22.png","23.png","24.png","25.png","26.png","27.png","28.png","29.png","30.png","31.png","32.png","33.png","34.png","35.png","36.png","37.png","38.png","39.png","40.png","41.png","42.png","43.png","44.png","45.png","46.png","47.png","48.png","49.png","50.png","51.png"]
 //imglist = ["title.png","yeki.png","ymiti.png","yokujo.png","ynakaniwa.png","tosho.png","kaidan.png","yekimae.png","ymati.png","koki.png","akoen.png","yhome.png","ykoen.png","nakaniwa.png","kyositu.png","nene.png","gako.png","home.png","shuzinko.png","miya.png"]
 //bgmlist = ["やばいシーン.mp3","家.mp3","ホップ.mp3","明るい街.mp3","バッドエンド.mp3","可愛い.mp3","ノーマルエンドに最適.mp3","op.mp3"]
 //bgmlist = ["op.mp3"]
@@ -414,7 +414,7 @@ window.onload = function() {
 //////////////////////////////////////////////////////////////////////////
 
       /*これが最初のシーンです */
-      _currentScene.SetBackGroundImage("title.png");
+      _currentScene.SetBackGroundImage('https://livedoor.blogimg.jp/negigasuki/imgs/5/f/5fb15b7d.gif');
       //引数リスト
       //選択肢１　遷移先１　選択肢２　遷移先２
       //最初は選択肢のあるシーンを作成しています。
