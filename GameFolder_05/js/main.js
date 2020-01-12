@@ -4,7 +4,7 @@ switch (GitHub_type) {
 case "referee":
 var GAS = [
 "https://script.google.com/macros/s/AKfycbzcY3aEn2ovKGtc9HA87smGV34KDo52qHVGTq395_9iqVylKPSg/exec",//画像
-"https://script.google.com/macros/s/AKfycbykP5rFHcjf_Sd-u0u5_iRoqUlHNl_A02IyjsECYOeaO_Vn00Ap/exec"//シーン
+"https://script.google.com/macros/s/AKfycbx4BEBNm-C5JYu8_BrY0C-1iyW7sQyCUZina90o2Nmln-McWNlR/exec"//シーン
 ];
 break;
 case "Share":
