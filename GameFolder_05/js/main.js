@@ -166,9 +166,9 @@ function Load(width,height,DATAS){
       return;
       if(Pause){
         console.log("BGM_pause");
-        game.assets["sound/プライド.wav"].pause();
-        game.assets["sound/永遠の灯.wav"].pause();
-        game.assets["sound/偶然、必然。.wav"].pause();
+        //game.assets["sound/プライド.wav"].pause();
+        //game.assets["sound/永遠の灯.wav"].pause();
+        //game.assets["sound/偶然、必然。.wav"].pause();
       }
       return;
     }
