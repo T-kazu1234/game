@@ -12,7 +12,7 @@ function onYouTubeIframeAPIReady() {
           {
              width: 640, // プレーヤーの幅
             height: 390, // プレーヤーの高さ
-              videoId: '-tKVN2mAKRI' // YouTubeのID
+              videoId: 'DefDzfdHjwo' // YouTubeのID
         }
      );
   }
@@ -20,7 +20,7 @@ function onYouTubeIframeAPIReady() {
 
 /*
 //3.各ボタンに処理を追加
-//  各ボタンをクリックしたときの処理を追加します。 
+//  各ボタンをクリックしたときの処理を追加します。
 */
 $(function() {
     // 再生
@@ -72,8 +72,8 @@ $(function() {
 
 //domを読み込んだら自動再生
 window.onload = function() {
- 
+
     // 実行したい処理を書く
     //再生ボタンをクリック
-    document.getElementById("play").click(); 
+    document.getElementById("play").click();
 }

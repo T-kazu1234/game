@@ -3,22 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <title>Webサイトのタイトルが入ります</title>
+<link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/sample.js"></script>
 <body>
-Hello world!
+<!-- Hello world!-->
 <!-- YouTube Player APIを使って色々やってみる -->
 <!-- https://www.tam-tam.co.jp/tipsnote/javascript/post6217.html -->
-<div id="sample"></div>
-
-<button id="play">再生</button>
-<button id="pause">一時停止</button>
-<button id="prev">1分前へ</button>
-<button id="next">1分先へ</button>
-<button id="volup">音量アップ</button>
-<button id="voldown">音量ダウン</button>
-<button id="mute">ミュート</button>
-
+<table>
+	<tbody>
+		<tr>
+			<td>
+        <div id="sample"></div>
+      </td>
+		</tr>
+		<tr>
+			<td>
+        曲の選択:
+        <select name="MusicFile">
+          <option value="-tKVN2mAKRI">打上花火</option>
+          <option value="DefDzfdHjwo">ShinyDays</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <input type="submit" value="◀この曲を表示する">
+      </td>
+		</tr>
+		<tr>
+			<td>
+        <!--class="btn-square"-->
+        <button class="btn-MusicPlay" id="play" >再生</button>
+        <button id="pause">一時停止</button>
+        <button id="prev">1分前へ</button>
+        <button id="next">1分先へ</button>
+        <button id="volup">音量アップ</button>
+        <button id="voldown">音量ダウン</button>
+        <button id="mute">ミュート</button>
+      </td>
+		</tr>
+	</tbody>
+</table>
 </body>
 </html>
