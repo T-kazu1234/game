@@ -12,7 +12,12 @@ function onYouTubeIframeAPIReady() {
           {
              width: 640, // プレーヤーの幅
             height: 390, // プレーヤーの高さ
-              videoId: 'DefDzfdHjwo' // YouTubeのID
+              videoId: 'DefDzfdHjwo', // YouTubeのID
+              //パラメータの設定
+              playerVars: {
+                 rel: 0 ,//再生終了後に関連動画を表示するかどうか設定
+                 autoplay: 1 //自動再生するかどうか設定
+              }
         }
      );
   }
