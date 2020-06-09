@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub */ \"./src/js/sub.js\");\n// sub.jsファイルを読み込む\n\n\n// sub.jsに定義されたJavaScriptを実行する\nObject(_sub__WEBPACK_IMPORTED_MODULE_0__[\"hello\"])();\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub */ \"./src/js/sub.js\");\n/* harmony import */ var _sub2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sub2 */ \"./src/js/sub2.js\");\n// sub.jsファイルを読み込む\n// sub2.jsファイルを読み込む\n\n\n// sub.jsに定義されたJavaScriptを実行する\nObject(_sub__WEBPACK_IMPORTED_MODULE_0__[\"hello\"])();\n\n// sub2.jsに定義されたJavaScriptを実行する\nObject(_sub2__WEBPACK_IMPORTED_MODULE_1__[\"hello2\"])();\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -107,6 +107,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hello\", function() { return hello; });\nfunction hello() {\n  alert(\"helloメソッドが実行された。\");\n}\n\n\n//# sourceURL=webpack:///./src/js/sub.js?");
+
+/***/ }),
+
+/***/ "./src/js/sub2.js":
+/*!************************!*\
+  !*** ./src/js/sub2.js ***!
+  \************************/
+/*! exports provided: hello2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hello2\", function() { return hello2; });\nfunction hello2() {\n  alert(\"hello2メソッドが実行された。\");\n}\n\n\n//# sourceURL=webpack:///./src/js/sub2.js?");
 
 /***/ })
 
