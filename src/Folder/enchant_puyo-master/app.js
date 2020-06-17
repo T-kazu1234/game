@@ -12,7 +12,7 @@ enchant();
     function gameLoad(width,height){                            
     // Game オブジェクトを作成する
     //var game = new Core(CELL_SIZE * 10, CELL_SIZE * 19);
-    var game = new Core(width, height);     
+    var game = new Core(height,width );     
     // ゲームのFPS
     game.fps = 15;
 
