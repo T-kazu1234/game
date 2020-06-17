@@ -1,8 +1,8 @@
-var CELL_SIZE = 16;  //マスのサイズ
-var COL_COUNT = 6;   //横のマス数
-var ROW_COUNT = 12;  //縦のマス数
+let CELL_SIZE = 16;  //マスのサイズ
+let COL_COUNT = 6;   //横のマス数
+let ROW_COUNT = 12;  //縦のマス数
 
-var context = null;
+let context = null;
 
 // enchant.js を使う前に必要な処理。
 enchant();
@@ -11,8 +11,8 @@ enchant();
     //関数 gameLoad(幅,高さ)
     function gameLoad(width,height){                            
     // Game オブジェクトを作成する
-    //var game = new Core(CELL_SIZE * 10, CELL_SIZE * 19);
-    var game = new Core(height,width );     
+    let game = new Core(CELL_SIZE * 10, CELL_SIZE * 19);
+    //let game = new Core(height,width );     
     // ゲームのFPS
     game.fps = 15;
 
@@ -29,13 +29,13 @@ enchant();
 
     
         //バーチャルパッドの作成
-        var UP =  38,
+        let UP =  38,
             LEFT =  37,
             RIGHT = 39,
             DOWN = 40,
             SPACE = 32,
             ENTER = 13;
-       var
+       let
         pad = new Pad();
         pad.x = 0;
         pad.y = game.height-100;

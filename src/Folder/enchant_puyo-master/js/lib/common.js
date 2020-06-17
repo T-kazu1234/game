@@ -153,9 +153,9 @@
     //ゲーム内の画面サイズ
 
     
-    var gameWidth = width;
+    var gameWidth = 375;
 
-    var gameHeight = height;
+    var gameHeight = 812;
     
     
 
