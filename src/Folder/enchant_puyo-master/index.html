@@ -5,6 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="js/lib/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="enchant.js"></script>
     <script type="text/javascript" src="js/lib/nineleap.enchant.js"></script>
     <script type="text/javascript" src="js/lib/ui.enchant.js"></script>
@@ -15,6 +16,7 @@
     <script type="text/javascript" src="js/GameMap.js"></script>
     <script type="text/javascript" src="js/RensaAnimation.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="js/lib/common.js"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -24,7 +26,9 @@
     
 </head>
 <body>
-    
+    <div id="base" style="overflow:hidden;position:relative;">
+        <div id="enchant-stage">
+        </div>
 </body>
 </html>
 

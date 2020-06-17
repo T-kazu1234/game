@@ -41,7 +41,6 @@ class GameController {
     if (!this.acceptKeybordEvent()) {
       return;
     }
-
     if (keyCode == KEY_CODE.LEFT) {
       //左キー
       this.context().dropingPuyoPair.moveLeft();

@@ -7,11 +7,12 @@ var context = null;
 // enchant.js を使う前に必要な処理。
 enchant();
 
-window.onload = function () {
-
+//window.onload = function () {
+    //関数 gameLoad(幅,高さ)
+    function gameLoad(width,height){                            
     // Game オブジェクトを作成する
-    var game = new Core(CELL_SIZE * 10, CELL_SIZE * 13);
-
+    //var game = new Core(CELL_SIZE * 10, CELL_SIZE * 19);
+    var game = new Core(width, height);     
     // ゲームのFPS
     game.fps = 15;
 
@@ -26,25 +27,44 @@ window.onload = function () {
     // ロードが完了したら、ゲームの処理を実行していく
     game.onload = function () {
 
+    
+        //バーチャルパッドの作成
+        var UP =  38,
+            LEFT =  37,
+            RIGHT = 39,
+            DOWN = 40,
+            SPACE = 32,
+            ENTER = 13;
+       var
+        pad = new Pad();
+        pad.x = 0;
+        pad.y = game.height-100;
+        pad.addEventListener('enterframe', function(e) {
+            //if (game.input.left) this.dropingPuyoPair.moveLeft();
+            if (game.input.left) this.x -= 10;
+            if (game.input.right)this.x += 10;
+            if (game.input.up)   this.y -= 10;
+            if (game.input.down) this.y += 10;
+        });
+        game.rootScene.addChild(pad);
+        console.log('pad.x = ' + pad.x);
+        console.log('pad.y = ' + pad.y);
+        //console.log(game(width,height));
+        //game.rootScene.addChild(stage);
+        game.rootScene.backgroundColor = 'rgb(0, 0, 0)';
+
+
+
         //コンテキストクラスの作成
         context = new GameContext(game);
-        context.controller = new GameController();
+        console.log(context);
+        context.controller = new GameController(pad);
         context.map = new GameMap();
 
         game.scale = 1;
 
         // マップの作成
         game.rootScene.addChild(GameMap.createEnchantMap());
-        
-        //バーチャルパッドの作成
-        var 
-        pad = new Pad();
-        pad.x = 0;
-        pad.y = 100;
-        game.rootScene.addChild(pad);
-        console.log('pad.y = ' + pad.y);
-        //game.rootScene.addChild(stage);
-        //game.rootScene.backgroundColor = 'rgb(182, 255, 255)';
 
         // フレームが描画される前の処理 
         game.addEventListener("enterframe", enterFrame);

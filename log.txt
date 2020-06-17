@@ -1,0 +1,48 @@
+[[90m04:14:33[39m] Using gulpfile D:\System\Programming\github\Repositories\game\gulpfile.js
+[[90m04:14:33[39m] Starting 'default'...
+[[90m04:14:33[39m] Version: webpack 4.42.1
+Built at: 2020/03/27 4:14:33
+    Asset      Size  Chunks             Chunk Names
+bundle.js  4.65 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[[90m04:14:33[39m] Finished 'default' after 155 ms
+[[90m04:17:05[39m] Using gulpfile D:\System\Programming\github\Repositories\game\gulpfile.js
+[[90m04:17:05[39m] Starting 'default'...
+[[90m04:17:05[39m] Version: webpack 4.42.1
+Built at: 2020/03/27 4:17:05
+    Asset      Size  Chunks             Chunk Names
+bundle.js  4.65 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[[90m04:17:05[39m] Finished 'default' after 152 ms
+[[90m05:33:06[39m] Using gulpfile D:\System\Programming\github\Repositories\game\gulpfile.js
+[[90m05:33:06[39m] Starting 'default'...
+[[90m05:33:06[39m] Version: webpack 4.42.1
+Built at: 2020/03/27 5:33:06
+    Asset      Size  Chunks             Chunk Names
+bundle.js  4.65 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[[90m05:33:06[39m] Finished 'default' after 197 ms
+[[90m06:50:24[39m] Using gulpfile D:\System\Programming\github\Repositories\game\gulpfile.js
+[[90m06:50:24[39m] Starting 'default'...
+[[90m06:50:25[39m] Version: webpack 4.42.1
+Built at: 2020/03/31 6:50:25
+    Asset      Size  Chunks             Chunk Names
+bundle.js  4.65 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[[90m06:50:25[39m] Finished 'default' after 692 ms
+[[90m20:47:19[39m] Using gulpfile D:\System\Programming\github\Repositories\game\gulpfile.js
+[[90m20:47:19[39m] Starting 'default'...
+[[90m20:47:19[39m] Version: webpack 4.42.1
+Built at: 2020/04/01 20:47:19
+    Asset      Size  Chunks             Chunk Names
+bundle.js  5.44 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[[90m20:47:19[39m] Finished 'default' after 223 ms
+[[90m20:12:24[39m] Using gulpfile D:\System\Programming\github\Repositories\game\gulpfile.js
+[[90m20:12:24[39m] Starting 'default'...
+[[90m20:12:25[39m] Version: webpack 4.42.1
+Built at: 2020/06/03 20:12:25
+    Asset      Size  Chunks             Chunk Names
+bundle.js  5.44 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+[[90m20:12:25[39m] Finished 'default' after 1.01 s
