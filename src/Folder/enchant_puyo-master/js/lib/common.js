@@ -152,10 +152,11 @@
 
     //ゲーム内の画面サイズ
 
-    var gameWidth = 480;
+    
+    var gameWidth = width;
 
-    var gameHeight = 320;
-
+    var gameHeight = height;
+    
     
 
     //回転時の処理

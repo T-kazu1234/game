@@ -211,7 +211,7 @@
     //ゲームを実行する
 
     gameLoad(gameWidth,gameHeight);
-
+console.log(gameWidth,gameHeight);
 
 
     //初回時のスクリーン設定

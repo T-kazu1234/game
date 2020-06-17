@@ -49,7 +49,7 @@ enchant();
         game.rootScene.addChild(pad);
         console.log('pad.x = ' + pad.x);
         console.log('pad.y = ' + pad.y);
-        //console.log(game(width,height));
+        console.log(game.width,game.height);
         //game.rootScene.addChild(stage);
         game.rootScene.backgroundColor = 'rgb(0, 0, 0)';
 
