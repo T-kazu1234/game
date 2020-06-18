@@ -130,6 +130,7 @@ class GameContext {
 
   /**
    * ゲームオーバ画面を表示する、Sceneを追加
+   * 
    */
   pushGameOverScene() {
 

@@ -21,41 +21,69 @@ enchant();
         "images/puyopuyo2.png", 
         "images/map0.png",
         "images/gameover.png",
-        "images/pad.png"
+        "images/pad.png",
+        "images/Button.png"
         );
 
     // ロードが完了したら、ゲームの処理を実行していく
     game.onload = function () {
 
     
-        //バーチャルパッドの作成
-        let UP =  38,
-            LEFT =  37,
-            RIGHT = 39,
-            DOWN = 40,
-            SPACE = 32,
-            ENTER = 13;
-       let
+        
+        //keyvalueを定数指定
+        const UP =  38,
+              LEFT =  37,
+              RIGHT = 39,
+              DOWN = 40,
+              SPACE = 32,
+              ENTER = 13;
+
+       /**
+        * バーチャルパッドの作成
+        *  [images/pad.png]
+        */
         pad = new Pad();
         pad.x = 0;
         pad.y = game.height-100;
+        pad.scale = 3;
         pad.addEventListener('enterframe', function(e) {
             //if (game.input.left) this.dropingPuyoPair.moveLeft();
-            if (game.input.left) pad.frame = 5 , pad.rotation = 270 ;
-            if (game.input.right)pad.frame = 5 , pad.rotation = 90 ;
-            if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ;
-            if (game.input.down) pad.frame = 5 , pad.rotation = 180 ;
+            if (game.input.left) 
+                pad.frame = 5 , 
+                pad.rotation = 270 ;//,GameContext.currnt(),Puyo.setPosition().PuyoPair.moveLeft();
+        
+
+            if (game.input.right)pad.frame = 5 , pad.rotation = 90 ;//, PuyoPair.moveright();
+            if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ;//, PuyoPair.moveup();
+            if (game.input.down) pad.frame = 5 , pad.rotation = 180 ;//, PuyoPair.movedown();
         });
         game.rootScene.addChild(pad);
         console.log('pad.x = ' + pad.x);
         console.log('pad.y = ' + pad.y);
         console.log(game.width,game.height);
         //game.rootScene.addChild(stage);
-        game.rootScene.backgroundColor = 'rgb(0, 0, 0)';
+        game.rootScene.backgroundColor = 'rgb(0, 0, 255)';
+
+        /**
+         * Buttonの作成
+         * [images/Button.png]
+         */
+        var button = new Button("Press me");
+            button.x = 100;
+            button.y = game.height-100;
+            //button.addEventListener("touchstart", function(){ ... })
+            game.rootScene.addChild(button);
+    
+            var button_light = new Button("Press me", "light");
+            game.rootScene.addChild(button);
+    
+            var button_blue = new Button("Press me", "blue");
+            game.rootScene.addChild(button);
 
 
 
         //コンテキストクラスの作成
+        //　context.controller を GameControllerクラスにpadの引数を渡し新規作成
         context = new GameContext(game);
         console.log(context);
         context.controller = new GameController(pad);

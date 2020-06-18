@@ -158,12 +158,12 @@ function gameLoad(width,height){                            //関数 gameLoad(�
                 pad.rotation = 90 ,
                 this.ax += 0.5;
             }
-            /*
+            
             if (!game.input.right){ 
                 pad.frame = 0 , 
                 pad.rotation = 0;
             }
-            */
+            
 
             if (this.ax > 0) this.scaleX = 1;
             if (this.ax < 0) this.scaleX = -1;
