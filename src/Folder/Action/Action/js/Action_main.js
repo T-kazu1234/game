@@ -143,8 +143,28 @@ function gameLoad(width,height){                            //関数 gameLoad(�
                 }
             }
             this.ax = 0;
-            if (game.input.left) this.ax -= 0.5;
-            if (game.input.right) this.ax += 0.5;
+            
+            if (game.input.left){ 
+                pad.frame = 5 , 
+                pad.rotation = 270 ,
+                this.ax -= 0.5;
+            }
+            if (!game.input.left){ 
+                pad.frame = 0 , 
+                pad.rotation = 0;
+            } 
+            if (game.input.right) {
+                pad.frame = 5 , 
+                pad.rotation = 90 ,
+                this.ax += 0.5;
+            }
+            /*
+            if (!game.input.right){ 
+                pad.frame = 0 , 
+                pad.rotation = 0;
+            }
+            */
+
             if (this.ax > 0) this.scaleX = 1;
             if (this.ax < 0) this.scaleX = -1;
             if (this.ax != 0) {

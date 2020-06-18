@@ -41,10 +41,10 @@ enchant();
         pad.y = game.height-100;
         pad.addEventListener('enterframe', function(e) {
             //if (game.input.left) this.dropingPuyoPair.moveLeft();
-            if (game.input.left) this.x -= 10;
-            if (game.input.right)this.x += 10;
-            if (game.input.up)   this.y -= 10;
-            if (game.input.down) this.y += 10;
+            if (game.input.left) pad.frame = 5 , pad.rotation = 270 ;
+            if (game.input.right)pad.frame = 5 , pad.rotation = 90 ;
+            if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ;
+            if (game.input.down) pad.frame = 5 , pad.rotation = 180 ;
         });
         game.rootScene.addChild(pad);
         console.log('pad.x = ' + pad.x);
