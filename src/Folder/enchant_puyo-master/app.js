@@ -11,7 +11,8 @@ enchant();
     //関数 gameLoad(幅,高さ)
     function gameLoad(width,height){                            
     // Game オブジェクトを作成する
-    let game = new Core(CELL_SIZE * 10, CELL_SIZE * 19);
+    let game = new Core(375,812);     
+    //let game = new Core(CELL_SIZE * 10, CELL_SIZE * 19);
     //let game = new Core(height,width );     
     // ゲームのFPS
     game.fps = 15;
