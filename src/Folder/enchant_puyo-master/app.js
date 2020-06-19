@@ -6,7 +6,7 @@ let context = null;
 
 // enchant.js を使う前に必要な処理。
 enchant();
-
+console.clear();
 //window.onload = function () {
     //関数 gameLoad(幅,高さ)
     function gameLoad(width,height){                            
@@ -46,19 +46,24 @@ enchant();
         pad = new Pad();
         pad.x = 50;
         pad.y = game.height - 200;
-        pad.scaleX = 2;
-        pad.scaleY = 2;
+        //pad.scaleX = 2;//pad　幅　　の倍率
+        //pad.scaleY = 2;//pad　高さ　の倍率
         pad.addEventListener('enterframe', function(e) {
             //if (game.input.left) this.dropingPuyoPair.moveLeft();
-            if (game.input.left) 
-                pad.frame = 5 , 
-                pad.rotation = 270 ;//,GameContext.currnt(),Puyo.setPosition().PuyoPair.moveLeft();
-        
-
-            if (game.input.right)pad.frame = 5 , pad.rotation = 90 ;//, PuyoPair.moveright();
-            if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ;//, PuyoPair.moveup();
-            if (game.input.down) pad.frame = 5 , pad.rotation = 180 ;//, PuyoPair.movedown();
+            //console.clear();
+            //console.log("game.input.right=",game.input.right);
+            //console.log("game.input.left=",game.input.left);        
+            //論理演算子 or [||] and [&&]
+            //boolean true　false 型　true if (boolean)
+            //「方向キー」上下左右がどれも「押されていない」場合、パッドフレーム0セット
+            if(!game.input.up&&!game.input.down&&!game.input.left&&!game.input.right)pad.frame = 0;
+            if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ;//上が「押されている」場合,padを90度回転
+            if (game.input.down) pad.frame = 5 , pad.rotation = 180 ;//下が「押されている」場合,padを90度回転
+            if (game.input.left) pad.frame = 5 , pad.rotation = 270 ;//左が「押されている」場合,padを270度回転
+            if (game.input.right)pad.frame = 5 , pad.rotation = 90 ;//右が「押されている」場合,padを90度回転
         });
+
+        
         game.rootScene.addChild(pad);
         console.log('pad.x = ' + pad.x);
         console.log('pad.y = ' + pad.y);
