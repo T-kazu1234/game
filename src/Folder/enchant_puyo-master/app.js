@@ -44,9 +44,10 @@ enchant();
         *  [images/pad.png]
         */
         pad = new Pad();
-        pad.x = 0;
-        pad.y = game.height-100;
-        pad.scale = 3;
+        pad.x = 50;
+        pad.y = game.height - 200;
+        pad.scaleX = 2;
+        pad.scaleY = 2;
         pad.addEventListener('enterframe', function(e) {
             //if (game.input.left) this.dropingPuyoPair.moveLeft();
             if (game.input.left) 
@@ -70,8 +71,8 @@ enchant();
          * [images/Button.png]
          */
         var button = new Button("Press me");
-            button.x = 100;
-            button.y = game.height-100;
+            button.x = 200;
+            button.y = game.height-200;
             //button.addEventListener("touchstart", function(){ ... })
             game.rootScene.addChild(button);
     

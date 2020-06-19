@@ -5,7 +5,7 @@ var KEY_CODE = {
   DOWN: 40,
   SPACE: 32,
   ENTER: 13
-}
+};
 
 /**
  * コントローラクラス
