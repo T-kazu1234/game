@@ -8,6 +8,8 @@ class Puyo {
     this.sprite.image = game.assets["images/puyopuyo2.png"];
     this.sprite.x = 0;
     this.sprite.y = 0;
+    this.sprite.scaleX = 2;//スプライトの　幅　　を3倍に
+    this.sprite.scaleY = 2;//スプライトの　高さ　を3倍に
     this.sprite.frame = 0;
     this.isAnimate = false;
   }
@@ -15,8 +17,8 @@ class Puyo {
   //行・列インデックスの設定
   setPosition(row, col) {
     let xyPos = GameContext.currnt().map.getXY(row, col);
-    this.sprite.x = xyPos.x;
-    this.sprite.y = xyPos.y;
+    this.sprite.x = xyPos.x * this.sprite.scaleX;//spriteの幅　に倍率を掛ける
+    this.sprite.y = xyPos.y * this.sprite.scaleY;//spriteの高さに倍率を掛ける
   }
 
   //アニメーションしながら[ぷよ]を移動する

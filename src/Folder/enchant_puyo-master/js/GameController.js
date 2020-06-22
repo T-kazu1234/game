@@ -23,6 +23,7 @@ class GameController {
 
   /** コンテキストクラスの取得 */
   context() {
+    console.log(this.context);
     return GameContext.currnt();
   }
 
@@ -66,9 +67,10 @@ class GameController {
   /** イベントハンドラの初期化 */
   setupEventHandler() {
     //KeyDown
-    // /alert(this.context());
+    //alert(this.context());
     this.context().game.addEventListener("keydown", (e) => {
-      this.handleKeyEvent(e.keyCode);
+    this.handleKeyEvent(e.keyCode);
+    //console.log(`keypress:${e}`);
     });
   }
 
@@ -83,3 +85,4 @@ class GameController {
   }
 
 }
+
