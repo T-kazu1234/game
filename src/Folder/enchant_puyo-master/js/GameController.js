@@ -24,6 +24,8 @@ class GameController {
     this.isGameInputLeft = false;
     this.isGameInputLeft = false;
     this.isGameInputRight = false;
+    this.isButtonInputA = false;
+    this.isButtonInputB = false;
   }
 
   /** コンテキストクラスの取得 */
@@ -91,6 +93,14 @@ class GameController {
     //バーチャルパッドの右が押された時
     if(this.isGameInputRight){
       this.context().dropingPuyoPair.moveRight();
+      }
+          //回転ボタンが押された時
+    if(this.isButtonInputA){
+      this.context().dropingPuyoPair.rotation();
+      }
+          //バーチャルパッド2の下が押された時
+    if(this.isButtonInputB){
+      this.context().dropingPuyoPair.moveBottomLast();
       }
 }
 

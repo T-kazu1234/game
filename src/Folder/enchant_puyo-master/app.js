@@ -35,7 +35,7 @@ enchant();
         //console.log('pad.x = ' + pad.x);
         //console.log('pad.y = ' + pad.y);      
         pad = new Pad();
-        pad.x = 50;
+        pad.x = 0;
         pad.y = game.height - 200;
         pad.addEventListener('enterframe', function(e) {    
             //論理演算子 or [||] and [&&]
@@ -66,22 +66,37 @@ enchant();
         //console.log("pad=",pad);
        // console.log(padinput);
 
-        /**
+
+       /**
          * Buttonの作成
          * [images/Button.png]
          */
-        var button = new Button("Press me");
-            button.x = 200;
+        
+        var button = new Button("　回転　","blue");
+            button.x = 300;
             button.y = game.height-200;
-            //button.addEventListener("touchstart", function(){ ... })
+            button.addEventListener("touchstart", function(){
+                var buttoninputA = new GameController();
+                if(button.pressd)isButtonInputA = button.pressd;
+                buttoninputB.padinput();
+            });
             game.rootScene.addChild(button);
     
-            var button_light = new Button("Press me", "light");
-            game.rootScene.addChild(button);
-    
+            var button_light = new Button("　決定　", "light");
+                button_light.x = 250;
+                button_light.y = game.height-150;
+                button_light.addEventListener("touchstart", function(){
+                    var buttoninputB = new GameController();
+                    if(button.pressd)isButtonInputB = button.pressd;
+                    buttoninputB.padinput();
+                });
+
+                
+            game.rootScene.addChild(button_light);
+    /*
             var button_blue = new Button("Press me", "blue");
             game.rootScene.addChild(button);
-
+        */
 
 
         //コンテキストクラスの作成
