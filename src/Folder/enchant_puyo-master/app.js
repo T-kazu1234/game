@@ -12,12 +12,12 @@ enchant();
     // Game オブジェクトを作成する
     let game = new Core(375,812);     
     // ゲームのFPS
-    game.fps = 15;
+    game.fps = 10;
 
     // 必要なファイルを相対パスで引数に指定する。 ファイルはすべて、ゲームが始まる前にロードされる。
     game.preload(
         "images/puyopuyo2.png", 
-        "images/map0.png",
+        "images/map0_aft.png",
         "images/gameover.png",
         "images/pad.png",
         "images/Button.png"
@@ -42,22 +42,29 @@ enchant();
             //boolean true　false 型　true if (boolean)
             //[images/CommentImage/PadControl.gif]
             //「方向キー」上下左右がどれも「押されていない」場合、パッドフレーム0セット
-            if(!game.input.up&&!game.input.down&&!game.input.left&&!game.input.right)pad.frame = 0;
-            if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ;//上が「押されている」場合,padを0度回転
+            console.log(game.input.up);
+            //GameControllerClassからインスタンスpadinputを生成
+            var padinput = new GameController();
+                if(!game.input.up&&!game.input.down&&!game.input.left&&!game.input.right)pad.frame = 0;
+                if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ,console.log("パッドの上が押された");//上が「押されている」場合,padを0度回転
+                    padinput.isGameInputUp = game.input.up;//インスタンスのisGameInputUP(ブール値：初期false)に対し、padのgame.input.upをセット
+                if (game.input.down) pad.frame = 5 , pad.rotation = 180 ,console.log("パッドの下が押された");//下が「押されている」場合,padを180度回転
+                    padinput.isGameInputDown = game.input.down;
+                if (game.input.left) pad.frame = 5 , pad.rotation = 270 ,console.log("パッドの左が押された");//左が「押されている」場合,padを270度回転
+                    padinput.isGameInputLeft = game.input.left;
+                if (game.input.right)pad.frame = 5 , pad.rotation = 90 ,console.log("パッドの右が押された");//右が「押されている」場合,padを90度回転
+                    padinput.isGameInputRight = game.input.right;
             
-            /*
-            padinputインスタンスを作成し、動作確認→エラーとなったNG
-            Padinput = new GameController()
-            console.log("Padinput=",Padinput);    
-            */
-           
-            if (game.input.down) pad.frame = 5 , pad.rotation = 180 ;//下が「押されている」場合,padを180度回転
-            if (game.input.left) pad.frame = 5 , pad.rotation = 270 ;//左が「押されている」場合,padを270度回転
-            if (game.input.right)pad.frame = 5 , pad.rotation = 90 ;//右が「押されている」場合,padを90度回転
+                    padinput.padinput();//インスタンスのMethod(padinput)を呼ぶ（上手く呼べたらpadinput内のconsole.logが反応)
+                                        //結果：反応したがぷよの移動処理はされなかった→GameControllerのcontext()が取得できていないためと思われる。
+                                        //できた
+                    console.log("padinput.isGameInputUp=",padinput.isGameInputUp);
+        
         });
         game.rootScene.addChild(pad);
         game.rootScene.backgroundColor = 'rgb(0, 0, 0)';
         //console.log("pad=",pad);
+       // console.log(padinput);
 
         /**
          * Buttonの作成

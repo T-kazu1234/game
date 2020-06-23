@@ -19,6 +19,11 @@ class GameController {
     this.isStart = false;
     this.direction = 0;
     this.setupEventHandler();
+    this.isGameInputUp = false;
+    this.isGameInputDown = false;
+    this.isGameInputLeft = false;
+    this.isGameInputLeft = false;
+    this.isGameInputRight = false;
   }
 
   /** コンテキストクラスの取得 */
@@ -63,6 +68,31 @@ class GameController {
       this.context().fixDrop();
     }
   }
+
+  /**
+   * バーチャルパッドの処理
+   * 
+   */
+  padinput(){
+    //バーチャルパッドの上が押された時
+    if(this.isGameInputUp){
+      this.context().dropingPuyoPair.moveTop();
+      console.log("padinputが呼ばれinputupがTrueの判定がされた");
+      console.log(this.context());
+    }
+    //バーチャルパッドの下が押された時
+    if(this.isGameInputDown){
+      this.context().dropingPuyoPair.moveBottom();
+      }
+    //バーチャルパッドの左が押された時
+    if(this.isGameInputLeft){
+      this.context().dropingPuyoPair.moveLeft();
+      }
+    //バーチャルパッドの右が押された時
+    if(this.isGameInputRight){
+      this.context().dropingPuyoPair.moveRight();
+      }
+}
 
   /** イベントハンドラの初期化 */
   setupEventHandler() {

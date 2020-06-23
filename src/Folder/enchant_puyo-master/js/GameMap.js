@@ -173,9 +173,9 @@ class GameMap {
   static createEnchantMap() {
 
     //var map = new Map(CELL_SIZE, CELL_SIZE);
-    var map = new Map(CELL_SIZE, 32);
-    map.image = GameContext.currnt().game.assets['images/map0.png'];
-  
+    var map = new Map(32, 32);
+    //map.image = GameContext.currnt().game.assets['images/map0.png'];
+    map.image = GameContext.currnt().game.assets['images/map0_aft.png'];
     var mapData = [
       [ 3, 5, 5 ,5 ,5 ,5, 5, 3, 5, 0 ], //1
       [ 3, 5, 5 ,5 ,5 ,5, 5, 3, 5, 0 ], //2
