@@ -102,6 +102,7 @@ class GameController {
           //バーチャルパッド2の下が押された時
     if(this.isButtonInputB){
       this.context().dropingPuyoPair.moveBottomLast();
+      this.context().fixDrop();
       }
 }
 
