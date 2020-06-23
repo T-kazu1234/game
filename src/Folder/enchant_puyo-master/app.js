@@ -77,8 +77,9 @@ enchant();
             button.y = game.height-200;
             button.addEventListener("touchstart", function(){
                 var buttoninputA = new GameController();
-                if(button.pressd)isButtonInputA = button.pressd;
-                buttoninputB.padinput();
+                if(button.pressd)buttoninputA.isButtonInputA = button.pressd;
+                console.log("[[[回転ボタン]]]]]=",buttoninputA.isButtonInputA);
+                buttoninputA.padinput();
             });
             game.rootScene.addChild(button);
     
@@ -87,7 +88,7 @@ enchant();
                 button_light.y = game.height-150;
                 button_light.addEventListener("touchstart", function(){
                     var buttoninputB = new GameController();
-                    if(button.pressd)isButtonInputB = button.pressd;
+                    if(button.pressd)buttoninputB.isButtonInputB = button.pressd;
                     buttoninputB.padinput();
                 });
 

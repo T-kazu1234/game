@@ -97,6 +97,7 @@ class GameController {
           //回転ボタンが押された時
     if(this.isButtonInputA){
       this.context().dropingPuyoPair.rotation();
+      console.log("回転ボタンが押された");
       }
           //バーチャルパッド2の下が押された時
     if(this.isButtonInputB){
