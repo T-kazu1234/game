@@ -19,13 +19,12 @@ class GameController {
     this.isStart = false;
     this.direction = 0;
     this.setupEventHandler();
-    this.isGameInputUp = false;
-    this.isGameInputDown = false;
-    this.isGameInputLeft = false;
-    this.isGameInputLeft = false;
-    this.isGameInputRight = false;
-    this.isButtonInputA = false;
-    this.isButtonInputB = false;
+    this.isGameInputUp = false;//上ボタン:バーチャルパッド入力
+    this.isGameInputDown = false;//下
+    this.isGameInputLeft = false;//左
+    this.isGameInputRight = false;//右
+    this.isButtonInputA = false;//ボタン１
+    this.isButtonInputB = false;//ボタン２
   }
 
   /** コンテキストクラスの取得 */

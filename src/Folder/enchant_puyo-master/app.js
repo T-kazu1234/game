@@ -22,9 +22,30 @@ enchant();
         "images/pad.png",
         "images/Button.png"
         );
+    
 
     // ロードが完了したら、ゲームの処理を実行していく
     game.onload = function () {
+
+        /**
+         * 時間経過毎にぷよを下に落とすためのタイマー
+        */
+       /*
+        game.addEventListener('enterframe',function(e){
+            let PuyoDropTimeCounter = 0;
+            for(var i = 0;  i < 100;  i++){
+            PuyoDropTimeCounter = i;
+            console.log("PuyoDropTimeCounter=",PuyoDropTimeCounter)
+            let TimeCounter = new GameController();
+            if(PuyoDropTimeCounter==99)
+                TimeCounter.isGameInputDown = true,
+                TimeCounter.padinput(),
+                PuyoDropTimeCounter=0;
+            };
+        });
+        */
+        
+
 
         /**
         * バーチャルパッドの作成
@@ -106,6 +127,20 @@ enchant();
         context.controller = new GameController();
         console.log("context.controller=",context.controller);
         context.map = new GameMap();
+
+        /**
+         * puyo.jsのぷよ座標をチェック
+         * Puyo()Classのconstructorはgameを引数にしている？
+         * constructor(game)
+         * consoleを入れるとassetsのundefined(未定義)でエラーになる
+    */
+   //*
+   game.addEventListener('enterframe',function(e){
+    //var puyoxy = new Puyo();
+    console.log("PuyoX=",context);
+    
+});
+//*/     
 
         game.scale = 1;
 
