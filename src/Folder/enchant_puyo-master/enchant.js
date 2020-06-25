@@ -5399,21 +5399,21 @@ if (window.Deferred) {
          *         return 42;
          *     })
          *     .next(function(n) {
-         *         console.log(n); // 42
+         *         //console.log(n); // 42
          *     })
          *     .next(function() {
          *         return core.load('img.png'); // wait loading
          *     })
          *     .next(function() {
          *         var img = core.assets['img.png'];
-         *         console.log(img instanceof enchant.Surface); // true
+         *         //console.log(img instanceof enchant.Surface); // true
          *         throw new Error('!!!');
          *     })
          *     .next(function() {
          *         // skip
          *     })
          *     .error(function(err) {
-         *          console.log(err.message); // !!!
+         *          //console.log(err.message); // !!!
          *     });
          *
          * @constructs
@@ -5519,7 +5519,7 @@ if (window.Deferred) {
      *         })
      *     ])
      *     .next(function(arg) {
-     *         console.log(arg); // [ 24, 42 ]
+     *         //console.log(arg); // [ 24, 42 ]
      *     });
      * // object
      * enchant.Deferred
@@ -5532,8 +5532,8 @@ if (window.Deferred) {
      *         })
      *     })
      *     .next(function(arg) {
-     *         console.log(arg.foo); // 24
-     *         console.log(arg.bar); // 42
+     *         //console.log(arg.foo); // 24
+     *         //console.log(arg.bar); // 42
      *     });
      *
      * @static

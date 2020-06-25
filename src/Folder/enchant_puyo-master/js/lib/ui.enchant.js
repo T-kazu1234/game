@@ -76,7 +76,7 @@ enchant.ui.Pad = enchant.Class.create(enchant.Sprite, {
         });
     },
     _detectInput: function(x, y) {
-        console.log("touch.x=",x,"touch.y=",y);
+        //console.log("touch.x=",x,"touch.y=",y);
         
         x -= this.width * 0.5;
         y -= this.height * 0.5;
@@ -84,7 +84,7 @@ enchant.ui.Pad = enchant.Class.create(enchant.Sprite, {
         if (x * x + y * y <= 10000 && x * x + y * y > 800) {    
         //["images/CommentImage/pad反応範囲.bmp"]    
         //if (x * x + y * y <= 2500 && x * x + y * y > 200) {
-        //console.log("ui.enchant x =",x,"ui.enchant y =",y,"ui.enchant x * x =",(x*x),"ui.enchant y * y =",(y*y));
+        ////console.log("ui.enchant x =",x,"ui.enchant y =",y,"ui.enchant x * x =",(x*x),"ui.enchant y * y =",(y*y));
             if (x < 0 && y < x * x * 0.1 && y > x * x * -0.1) {
                 input.left = true;
             }

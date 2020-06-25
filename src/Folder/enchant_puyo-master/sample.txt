@@ -106,7 +106,7 @@ window.onload = function () {
                 chain(field);			 // 連鎖処理
                 if (field[2][3] != -1) { // ゲームオーバー判定
                     game.stop();
-                    console.log("Game Over");
+                    //console.log("Game Over");
                 } else {
                     /* 操作ぷよを更新、シーンに追加 */
                     pair = createPair(game, map, field);

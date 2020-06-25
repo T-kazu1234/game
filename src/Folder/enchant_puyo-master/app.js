@@ -8,9 +8,13 @@ let context = null;
 enchant();
 //window.onload = function () {
     //関数 gameLoad(幅,高さ)
+    screen.width;
+    screen.height;
+    console.log(screen.width);
+    console.log(screen.height);
     function gameLoad(width,height){                            
     // Game オブジェクトを作成する
-    let game = new Core(375,812);     
+    let game = new Core(screen.width,screen.height);     
     // ゲームのFPS
     game.fps = 10;
 
@@ -35,7 +39,7 @@ enchant();
             let PuyoDropTimeCounter = 0;
             for(var i = 0;  i < 100;  i++){
             PuyoDropTimeCounter = i;
-            console.log("PuyoDropTimeCounter=",PuyoDropTimeCounter)
+            //console.log("PuyoDropTimeCounter=",PuyoDropTimeCounter)
             let TimeCounter = new GameController();
             if(PuyoDropTimeCounter==99)
                 TimeCounter.isGameInputDown = true,
@@ -53,8 +57,8 @@ enchant();
         */
         //pad.scaleX = 2;//pad　幅　　の倍率
         //pad.scaleY = 2;//pad　高さ　の倍率
-        //console.log('pad.x = ' + pad.x);
-        //console.log('pad.y = ' + pad.y);      
+        ////console.log('pad.x = ' + pad.x);
+        ////console.log('pad.y = ' + pad.y);      
         pad = new Pad();
         pad.x = 0;
         pad.y = game.height - 200;
@@ -63,29 +67,29 @@ enchant();
             //boolean true　false 型　true if (boolean)
             //[images/CommentImage/PadControl.gif]
             //「方向キー」上下左右がどれも「押されていない」場合、パッドフレーム0セット
-            console.log(game.input.up);
+            //console.log(game.input.up);
             //GameControllerClassからインスタンスpadinputを生成
             var padinput = new GameController();
                 if(!game.input.up&&!game.input.down&&!game.input.left&&!game.input.right)pad.frame = 0;
-                if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ,console.log("パッドの上が押された");//上が「押されている」場合,padを0度回転
+                if (game.input.up)   pad.frame = 5 , pad.rotation = 0 ,//console.log("パッドの上が押された");//上が「押されている」場合,padを0度回転
                     padinput.isGameInputUp = game.input.up;//インスタンスのisGameInputUP(ブール値：初期false)に対し、padのgame.input.upをセット
-                if (game.input.down) pad.frame = 5 , pad.rotation = 180 ,console.log("パッドの下が押された");//下が「押されている」場合,padを180度回転
+                if (game.input.down) pad.frame = 5 , pad.rotation = 180 ,//console.log("パッドの下が押された");//下が「押されている」場合,padを180度回転
                     padinput.isGameInputDown = game.input.down;
-                if (game.input.left) pad.frame = 5 , pad.rotation = 270 ,console.log("パッドの左が押された");//左が「押されている」場合,padを270度回転
+                if (game.input.left) pad.frame = 5 , pad.rotation = 270 ,//console.log("パッドの左が押された");//左が「押されている」場合,padを270度回転
                     padinput.isGameInputLeft = game.input.left;
-                if (game.input.right)pad.frame = 5 , pad.rotation = 90 ,console.log("パッドの右が押された");//右が「押されている」場合,padを90度回転
+                if (game.input.right)pad.frame = 5 , pad.rotation = 90 ,//console.log("パッドの右が押された");//右が「押されている」場合,padを90度回転
                     padinput.isGameInputRight = game.input.right;
             
-                    padinput.padinput();//インスタンスのMethod(padinput)を呼ぶ（上手く呼べたらpadinput内のconsole.logが反応)
+                    padinput.padinput();//インスタンスのMethod(padinput)を呼ぶ（上手く呼べたらpadinput内の//console.logが反応)
                                         //結果：反応したがぷよの移動処理はされなかった→GameControllerのcontext()が取得できていないためと思われる。
                                         //できた
-                    console.log("padinput.isGameInputUp=",padinput.isGameInputUp);
+                    //console.log("padinput.isGameInputUp=",padinput.isGameInputUp);
         
         });
         game.rootScene.addChild(pad);
         game.rootScene.backgroundColor = 'rgb(0, 0, 0)';
-        //console.log("pad=",pad);
-       // console.log(padinput);
+        ////console.log("pad=",pad);
+       // //console.log(padinput);
 
 
        /**
@@ -99,7 +103,7 @@ enchant();
             button.addEventListener("touchstart", function(){
                 var InputA = new GameController();
                     InputA.isButtonInputA = true;
-                        console.log(button.buttonpressd);
+                        //console.log(button.buttonpressd);
                     InputA.padinput();
             });
             game.rootScene.addChild(button);
@@ -125,7 +129,7 @@ enchant();
         //　context.controller を GameControllerクラスにpadの引数を渡し新規作成
         context = new GameContext(game);
         context.controller = new GameController();
-        console.log("context.controller=",context.controller);
+        //console.log("context.controller=",context.controller);
         context.map = new GameMap();
 
         /**
@@ -137,7 +141,7 @@ enchant();
    //*
    game.addEventListener('enterframe',function(e){
     //var puyoxy = new Puyo();
-    console.log("PuyoX=",context);
+    //console.log("PuyoX=",context);
     
 });
 //*/     

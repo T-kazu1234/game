@@ -29,7 +29,7 @@ class GameController {
 
   /** コンテキストクラスの取得 */
   context() {
-    console.log(this.context);
+    //console.log(this.context);
     return GameContext.currnt();
   }
 
@@ -78,8 +78,8 @@ class GameController {
     //バーチャルパッドの上が押された時
     if(this.isGameInputUp){
       this.context().dropingPuyoPair.moveTop();
-      console.log("padinputが呼ばれinputupがTrueの判定がされた");
-      console.log(this.context());
+      //console.log("padinputが呼ばれinputupがTrueの判定がされた");
+      //console.log(this.context());
     }
     //バーチャルパッドの下が押された時
     if(this.isGameInputDown){
@@ -96,7 +96,7 @@ class GameController {
           //回転ボタンが押された時
     if(this.isButtonInputA){
       this.context().dropingPuyoPair.rotation();
-      console.log("回転ボタンが押された");
+      //console.log("回転ボタンが押された");
       }
           //バーチャルパッド2の下が押された時
     if(this.isButtonInputB){
@@ -111,7 +111,7 @@ class GameController {
     //alert(this.context());
     this.context().game.addEventListener("keydown", (e) => {
     this.handleKeyEvent(e.keyCode);
-    //console.log(`keypress:${e}`);
+    ////console.log(`keypress:${e}`);
     });
   }
 
