@@ -1,4 +1,4 @@
-let CELL_SIZE = 16;  //マスのサイズ
+let CELL_SIZE = 32;  //マスのサイズ
 let COL_COUNT = 6;   //横のマス数
 let ROW_COUNT = 12;  //縦のマス数
 
