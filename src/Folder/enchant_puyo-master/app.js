@@ -18,7 +18,7 @@ window.onload = function () {
     if(screen.width>screen.height){let Width=screen.width,Height=screen.height;console.log("log1=",Width,Height);}
     else{let Width=screen.height,Height=screen.width;console.log("log2=",Width,Height);};
     
-    let game = new Core(828 , 1792);// Game オブジェクトを作成する
+    let game = new Core(screen.width , screen.height);// Game オブジェクトを作成する
     
     // ゲームのFPS
     game.fps = 10;
