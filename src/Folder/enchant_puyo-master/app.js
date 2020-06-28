@@ -8,7 +8,9 @@ enchant();
 window.onload = function () {
     //関数 gameLoad(幅,高さ)
 
-    //画面の幅・高さ
+    /**
+     * 画面の幅・高さ
+     
     screen.width;
     screen.height;
     console.log("screen.width",screen.width);
@@ -17,8 +19,8 @@ window.onload = function () {
     let Height=null;
     if(screen.width>screen.height){let Width=screen.width,Height=screen.height;console.log("log1=",Width,Height);}
     else{let Width=screen.height,Height=screen.width;console.log("log2=",Width,Height);};
-    
-    let game = new Core(screen.width , screen.height);// Game オブジェクトを作成する
+    */
+    let game = new Core(screen.height , screen.width);// Game オブジェクトを作成する
     
     // ゲームのFPS
     game.fps = 10;
