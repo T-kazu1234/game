@@ -13,14 +13,12 @@ window.onload = function () {
     screen.height;
     console.log("screen.width",screen.width);
     console.log("screen.height",screen.height);
-//    function gameLoad(GameWidth,GameHeight){                            
     let Width=null;
     let Height=null;
     if(screen.width>screen.height){let Width=screen.width,Height=screen.height;console.log("log1=",Width,Height);}
     else{let Width=screen.height,Height=screen.width;console.log("log2=",Width,Height);};
     
     let game = new Core(828 , 1792);// Game オブジェクトを作成する
-    console.log("log3=",game.Width,game.Height);
     
     // ゲームのFPS
     game.fps = 10;
@@ -132,7 +130,7 @@ window.onload = function () {
          * @param {boolean} InputA 回転ボタンが押されたかの判定
          */
         var button = new Button("　回転　","blue");
-            button.x = game.width-250;
+            button.x = game.width-200;
             button.y = game.height-200;
             button.addEventListener("touchstart", function(){
                  var InputA = new GameController();
@@ -143,7 +141,7 @@ window.onload = function () {
 
         var button_light = new Button("　決定　", "light");
             button_light.x = game.width-300;
-            button_light.y = game.height-150;
+            button_light.y = game.height-100;
             button_light.addEventListener("touchstart", function(){
                 var InputB = new GameController();
                 InputB.isButtonInputB = true;
