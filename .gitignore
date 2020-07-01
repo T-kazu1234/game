@@ -8,3 +8,5 @@ src/Folder/enchant_puyo-master/js/GamePad.js
 src/Folder/enchant_puyo-master/images/resize/puyopuyo2_bef.png
 src/Folder/enchant_puyo-master/images/CommentImage/puyotest.gif
 src/Folder/enchant_puyo-master/js/lib/app.js
+#サンプルフォルダ配下は無視する
+src/sample/
