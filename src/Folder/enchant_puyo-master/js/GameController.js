@@ -25,6 +25,7 @@ class GameController {
     this.isGameInputRight = false;//右
     this.isButtonInputA = false;//ボタン１
     this.isButtonInputB = false;//ボタン２
+    this.isTimerCount = false;//一定時間毎に落下フラグをオンに
   }
 
   /** コンテキストクラスの取得 */
@@ -42,6 +43,27 @@ class GameController {
     }
     return false;
   }
+
+/**
+ * 一定時間毎ぷよを一つ下へ移動
+ * @param {*} keyCode 
+ */
+  TimerCount()
+  {
+    if(this.isTimerCount)
+    {
+     this.context().dropingPuyoPair.moveBottom();      
+      /**
+       * 下へ移動できなければ位置確定して次のぷよを降らせる
+       * if(this.context.dropingPuyoPair.moveBottom()==false)
+       * this.context().fixDrop();      
+       * console.log("timercount箇所",this.context().dropingPuyoPair.moveBottom());
+      */
+     //処理が完了したらフラグを元に戻す
+     this.isTimerCount = false;
+    }
+  }
+
 
   /** キーボードイベントの処理 */
   handleKeyEvent(keyCode) {

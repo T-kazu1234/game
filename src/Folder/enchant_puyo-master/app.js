@@ -20,9 +20,10 @@ window.onload = function () {
     if(screen.width>screen.height){let Width=screen.width,Height=screen.height;console.log("log1=",Width,Height);}
     else{let Width=screen.height,Height=screen.width;console.log("log2=",Width,Height);};
     */
-    let game = new Core(screen.height , screen.width);// Game オブジェクトを作成する
+    //let game = new Core(screen.width,screen.height );// Game オブジェクトを作成する
+    let game = new Core(375,812);// Game オブジェクトを作成する
     console.log("screen.width",screen.width);
-    console.log("screen.height",screen.height);
+    
     
 
     // ゲームのFPS
@@ -42,38 +43,42 @@ window.onload = function () {
     game.onload = function () {
 
     
-        /**
-         * BGM ループ再生
-         *  
-        game.assets[""].play();    
-        */ 
-        // AudioElement を作成
+        /**  
+         * AudioElement を作成
+         * サウンドファイルまでの URL アドレスを指定
+         */
         var audio = new Audio();
-
-        // サウンドファイルまでの URL アドレスを指定
         audio.src = "sound/PuyoPuyo.mp3";
+        MusicPlay();
 
-        // 再生を開始する
-        audio.play();
+        function MusicPlay(){
+            audio.play();// 再生を開始する
+            console.log("MusicPlayを呼び出された");
+        };
+
+        function MusicStop(){
+            audio.pause();
+            audio.currentTime = 0;
+        };
 
 
     /**
     * 時間経過毎にぷよを下に落とすためのタイマー
     */
-    /*
+    ///*
            game.addEventListener('enterframe',function(e){
             let PuyoDropTimeCounter = 0;
-            for(var i = 0;  i < 100;  i++){
+            for(var i = 0;  i < 10000;  i++){
             PuyoDropTimeCounter = i;
-            //console.log("PuyoDropTimeCounter=",PuyoDropTimeCounter)
+            console.log("PuyoDropTimeCounter=",PuyoDropTimeCounter)
             let TimeCounter = new GameController();
-            if(PuyoDropTimeCounter==99)
-                TimeCounter.isGameInputDown = true,
-                TimeCounter.padinput(),
+            if(PuyoDropTimeCounter==9999)
+                TimeCounter.isTimerCount = true,
+                TimeCounter.TimerCount(),
                 PuyoDropTimeCounter=0;
             };
         });
-        */
+        //*/
 
         /**
         * バーチャルパッドの作成
@@ -97,6 +102,7 @@ window.onload = function () {
         */
             var padinput = new GameController();
                 // 上下左右が「どれも押されていない」場合、パッドフレーム0セット
+                //console.log("何も押されていない");
                 if(!game.input.up&&!game.input.down&&!game.input.left&&!game.input.right)pad.frame = 0;
                 /**上が「押されている」場合:
                 * Class(GameController)のInstance(padinput)のMethod(isGameInputUP(引数=ブール値：初期false)に対し、
@@ -106,11 +112,15 @@ window.onload = function () {
                     pad.frame = 5 , 
                     pad.rotation = 0,
                     padinput.isGameInputUp = game.input.up;
+                    //console.log("MusicPlayをコールした"),
+                    //MusicPlay();
                 //下
                 if (game.input.down) 
                     pad.frame = 5 , 
                     pad.rotation = 180,
                     padinput.isGameInputDown = game.input.down;
+                    //console.log("MusicStopをコールした"),
+                    //MusicStop();
                 //左
                 if (game.input.left) 
                     pad.frame = 5 , 
