@@ -1,4 +1,4 @@
-let CELL_SIZE = 64;  //マスのサイズ
+let CELL_SIZE = 32;  //マスのサイズ
 let COL_COUNT = 6;   //横のマス数
 let ROW_COUNT = 12;  //縦のマス数
 let context = null;
@@ -20,10 +20,10 @@ window.onload = function () {
     if(screen.width>screen.height){let Width=screen.width,Height=screen.height;console.log("log1=",Width,Height);}
     else{let Width=screen.height,Height=screen.width;console.log("log2=",Width,Height);};
     */
-    //let game = new Core(screen.width,screen.height );// Game オブジェクトを作成する
-    let game = new Core(375,812);// Game オブジェクトを作成する
-    console.log("screen.width",screen.width);
-    
+    let game = new Core(screen.width,screen.height );// Game オブジェクトを作成する
+    //let game = new Core(375,812);// Game オブジェクトを作成する
+    console.log("screen.width=",screen.width);
+    console.log("screen.height=",screen.height);
     
 
     // ゲームのFPS
@@ -46,7 +46,7 @@ window.onload = function () {
         /**  
          * AudioElement を作成
          * サウンドファイルまでの URL アドレスを指定
-         */
+        */
         var audio = new Audio();
         audio.src = "sound/PuyoPuyo.mp3";
         MusicPlay();
@@ -60,7 +60,7 @@ window.onload = function () {
             audio.pause();
             audio.currentTime = 0;
         };
-
+        //*/
 
     /**
     * 時間経過毎にぷよを下に落とすためのタイマー
@@ -78,7 +78,7 @@ window.onload = function () {
                 PuyoDropTimeCounter=0;
             };
         });
-        //*/
+    //*/
 
         /**
         * バーチャルパッドの作成
@@ -145,7 +145,7 @@ window.onload = function () {
          * @param {boolean} InputA 回転ボタンが押されたかの判定
          */
         var button = new Button("　回転　","blue");
-            button.x = game.width-200;
+            button.x = game.width-60;
             button.y = game.height-200;
             button.addEventListener("touchstart", function(){
                  var InputA = new GameController();
@@ -155,7 +155,7 @@ window.onload = function () {
             game.rootScene.addChild(button);
 
         var button_light = new Button("　決定　", "light");
-            button_light.x = game.width-300;
+            button_light.x = game.width-120;
             button_light.y = game.height-100;
             button_light.addEventListener("touchstart", function(){
                 var InputB = new GameController();
