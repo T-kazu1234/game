@@ -62,7 +62,7 @@ window.onload = function () {
         };
                     /**
                      * 時間経過毎にぷよを下に落とすためのタイマー
-                     */                            
+                                                
                     game.addEventListener('enterframe',function(e){
                         let PuyoDropTimeCounter = 0;
                         for(var i = 0;  i < 10000;  i++){
@@ -76,7 +76,7 @@ window.onload = function () {
                                 };
                                 
                             });
-    
+     */
 
         /**
         * バーチャルパッドの作成
