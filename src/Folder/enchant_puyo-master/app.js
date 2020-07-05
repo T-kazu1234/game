@@ -60,25 +60,23 @@ window.onload = function () {
             audio.pause();
             audio.currentTime = 0;
         };
-        //*/
-
-    /**
-    * 時間経過毎にぷよを下に落とすためのタイマー
-    */
-    ///*
-           game.addEventListener('enterframe',function(e){
-            let PuyoDropTimeCounter = 0;
-            for(var i = 0;  i < 10000;  i++){
-            PuyoDropTimeCounter = i;
-            console.log("PuyoDropTimeCounter=",PuyoDropTimeCounter)
-            let TimeCounter = new GameController();
-            if(PuyoDropTimeCounter==9999)
-                TimeCounter.isTimerCount = true,
-                TimeCounter.TimerCount(),
-                PuyoDropTimeCounter=0;
-            };
-        });
-    //*/
+                    /**
+                     * 時間経過毎にぷよを下に落とすためのタイマー
+                     */                            
+                    game.addEventListener('enterframe',function(e){
+                        let PuyoDropTimeCounter = 0;
+                        for(var i = 0;  i < 10000;  i++){
+                                PuyoDropTimeCounter = i;
+                                let TimeCounter = new GameController();
+                                if(PuyoDropTimeCounter==9999)
+                                    TimeCounter.isTimerCount = true,
+                                    TimeCounter.TimerCount(),
+                                    PuyoDropTimeCounter=0;
+                                    console.log("PuyoDropTimeCounter=",PuyoDropTimeCounter)
+                                };
+                                
+                            });
+    
 
         /**
         * バーチャルパッドの作成
@@ -103,7 +101,8 @@ window.onload = function () {
             var padinput = new GameController();
                 // 上下左右が「どれも押されていない」場合、パッドフレーム0セット
                 //console.log("何も押されていない");
-                if(!game.input.up&&!game.input.down&&!game.input.left&&!game.input.right)pad.frame = 0;
+                if(!game.input.up&&!game.input.down&&!game.input.left&&!game.input.right)
+                    pad.frame = 0;
                 /**上が「押されている」場合:
                 * Class(GameController)のInstance(padinput)のMethod(isGameInputUP(引数=ブール値：初期false)に対し、
                 * padのgame.input.upをセット
