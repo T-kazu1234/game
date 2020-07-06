@@ -20,7 +20,7 @@ window.onload = function () {
     if(screen.width>screen.height){let Width=screen.width,Height=screen.height;console.log("log1=",Width,Height);}
     else{let Width=screen.height,Height=screen.width;console.log("log2=",Width,Height);};
     */
-    let game = new Core(screen.width,screen.height );// Game オブジェクトを作成する
+    let game = new Core(window.screen.width,window.screen.height );// Game オブジェクトを作成する
     //let game = new Core(375,812);// Game オブジェクトを作成する
     console.log("screen.width=",screen.width);
     console.log("screen.height=",screen.height);
@@ -77,6 +77,16 @@ window.onload = function () {
                                 
                             });
      */
+        //ゲームスコアラベルを生成
+        let label = [];
+        label[1] = new Label();
+        label[1].moveTo(20 , game.height - 220);
+        label[1].on('enterframe',function()
+      {
+        label[1].text = "SCORE : ";
+      });
+        game.rootScene.addChild(label[1]);
+
 
         /**
         * バーチャルパッドの作成

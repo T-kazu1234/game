@@ -26,6 +26,7 @@ class RensaAnimation {
       if (removeCount > 0) {
         //再帰で繰り替えし
         loopFunc.call(this, cnt + 1);
+
       } else {
         //繰り返し終了
         GameContext.currnt().state = GAME_STATE.WAIT_NEXT;
