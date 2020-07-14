@@ -176,6 +176,8 @@ class GameMap {
     //var map = new Map(32, 32);
     //map.image = GameContext.currnt().game.assets['images/map0.png'];
     map.image = GameContext.currnt().game.assets['images/map0_aft.png'];
+    //map.x = 100;
+    //map.y = 100;
     var mapData = [
       [ 3, 5, 5 ,5 ,5 ,5, 5, 3, 5, 0 ], //1
       [ 3, 5, 5 ,5 ,5 ,5, 5, 3, 5, 0 ], //2
