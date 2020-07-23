@@ -46,55 +46,12 @@
 
     
 
-/*    
-
-    //enchantjs-stageの画面サイズを計算
-
-    var width = window.innerWidth;
-
-    var height = window.innerHeight;
-
-
-
-    //回転方向を幅と高さを比較して確認
-
-    var orientation = "";
-
-    if(width < height){
-
-      //縦
-
-      orientation = "portrait";
-
-      height = width;
-
-    }else{
-
-      //横
-
-      orientation = "landscape";
-
-      width = height;
-
-    }
-
-*/
 
     
 
     //div enchant-stageを取得
 
     var stage = $("#enchant-stage");
-
-
-
-/*
-
-    //スケールを計算
-
-    var scale = height / 320.0;
-
-*/
 
 
 
