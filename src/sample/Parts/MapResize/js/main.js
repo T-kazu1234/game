@@ -7,6 +7,8 @@ enchant();
  * @param Rectangle 【語源】ラテン語「まっすぐな角」の意　をEnchantクラス生成
  * @param initialize Rectangle初期化(x座標の値,y座標の値,幅,高さ)
   */
+var width=window.innerWeight,height=window.innerHeight;
+
 function gameLoad(width,height){                            
     //game = new コア(幅,高さ);
     game = new Core(width, height);                         
@@ -112,7 +114,15 @@ label.moveTo(20, 20);
 label.on('enterframe',function(){                                           
     label.text = "PlayTime:" + (game.frame / game.fps).toFixed(2);          
     });                                                                     
-game.rootScene.addChild(label);		  
+game.rootScene.addChild(label);		 
+
+var label2 = new Label();	                                                
+label2.moveTo(20, 40);                                                       
+label2.on('enterframe',function(){                                           
+    label2.text = "game.width:" + game.width + "game.height:" + game.height;          
+    });                                                                     
+game.rootScene.addChild(label2);		  
+
 
 
     };
