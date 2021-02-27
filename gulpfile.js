@@ -1,4 +1,5 @@
 // 必要プラグインの読み込み (var gulp = ~ でも可)
+
 const gulp = require("gulp");
 const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
@@ -12,3 +13,14 @@ gulp.task("default", () => {
   return webpackStream(webpackConfig, webpack)
     .pipe(gulp.dest("dist"));
 });
+
+/*
+const {src , dest } = require('gulp');
+
+function copyFiles(){
+  return src('./src/index.html');
+  .pipe(dest('./dist'));
+}
+
+exports.copyFiles = copyFiles;
+*/
