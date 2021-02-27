@@ -38,11 +38,9 @@ window.onload = function () {
         "images/Button.png",
         "sound/PuyoPuyo.mp3"
         );
-    
+
     // ロードが完了したら、ゲームの処理を実行していく
     game.onload = function () {
-
-    
         /**  
          * AudioElement を作成
          * サウンドファイルまでの URL アドレスを指定
