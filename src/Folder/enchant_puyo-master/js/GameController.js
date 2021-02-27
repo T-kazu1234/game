@@ -53,12 +53,12 @@ class GameController {
     if(this.isTimerCount)
     {
      this.context().dropingPuyoPair.moveBottom();      
-      /**
-       * 下へ移動できなければ位置確定して次のぷよを降らせる
-       * if(this.context.dropingPuyoPair.moveBottom()==false)
-       * this.context().fixDrop();      
-       * console.log("timercount箇所",this.context().dropingPuyoPair.moveBottom());
-      */
+      /*
+       // 下へ移動できなければ位置確定して次のぷよを降らせる
+        if(this.context.dropingPuyoPair.moveBottom()==false)
+        this.context().fixDrop();      
+        console.log("timercount箇所",this.context().dropingPuyoPair.moveBottom());
+      /**/
      //処理が完了したらフラグを元に戻す
      this.isTimerCount = false;
     }
