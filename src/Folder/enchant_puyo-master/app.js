@@ -35,7 +35,7 @@ window.onload = function () {
 
     // 必要なファイルを相対パスで引数に指定する。 ファイルはすべて、ゲームが始まる前にロードされる。
     game.preload(
-        "images/puyopuyo2.png", 
+        "images/resize/puyopuyo2_64.png", 
         "images/resize/map0_64.png",
         "images/gameover.png",
         "images/pad.png",
@@ -145,8 +145,9 @@ window.onload = function () {
                 //インスタンス(padinput)のMethod(padinput)を呼ぶ。上手く呼べたらpadinput内の//console.logが反応
                     padinput.padinput();
         });
-        game.rootScene.addChild(pad);
-        game.rootScene.backgroundColor = 'rgb(0, 0, 0)';
+        //game.rootScene.addChild(pad);
+        //game.rootScene.backgroundColor = 'rgb(0, 0, 0)';        
+
 
        /**
          * 回転ボタンの作成
@@ -163,7 +164,7 @@ window.onload = function () {
                     InputA.isButtonInputA = true;
                     InputA.padinput();
             });
-            game.rootScene.addChild(button);
+            //game.rootScene.addChild(button);
 
         var button_light = new Button("　決定　", "light",80,80);
             button_light.x = game.width-120;
@@ -173,7 +174,7 @@ window.onload = function () {
                 InputB.isButtonInputB = true;
                 InputB.padinput();
                 });                
-            game.rootScene.addChild(button_light);
+            //game.rootScene.addChild(button_light);
 
 
         //コンテキストクラスの作成
@@ -198,6 +199,11 @@ window.onload = function () {
 
         // マップの作成
         game.rootScene.addChild(GameMap.createEnchantMap());
+        game.rootScene.addChild(button);
+        game.rootScene.addChild(button_light);
+        game.rootScene.addChild(pad);
+
+        game.rootScene.backgroundColor = 'rgb(0, 0, 0)';        
 
         // フレームが描画される前の処理 
         game.addEventListener("enterframe", enterFrame);
