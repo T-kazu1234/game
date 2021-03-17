@@ -195,26 +195,28 @@ window.onload = function () {
 });
 
 label[2] = new Label();
-label[2].moveTo(20 , game.height - 320);
+label[2].moveTo(20 , game.height - 400);
 label[2].text = "screen.width=" + screen.width;
 label[2].color = "red";
+label[2].font = "30px monospace"; 
 
 label[3] = new Label();
-label[3].moveTo(20 , game.height - 300);
+label[3].moveTo(20 , game.height - 350);
 label[3].text = "screen.height=" + screen.height;
 label[3].color = "red";
+label[3].font = "30px monospace"; 
 
 label[4] = new Label();
-label[4].moveTo(20 , game.height - 280);
-label[4].text = "screen.width=" + screen.width;
+label[4].moveTo(20 , game.height - 300);
+label[4].text = "game.width=" + game.width;
 label[4].color = "red";
-
-
+label[4].font = "30px monospace"; 
 
 label[5] = new Label();
-label[5].moveTo(20 , game.height - 260);
+label[5].moveTo(20 , game.height - 250);
 label[5].text = "game.height=" + game.height;
 label[5].color = "red";
+label[5].font = "30px monospace"; 
 
 
 
