@@ -21,8 +21,8 @@ window.onload = function () {
     if(screen.width>screen.height){let Width=screen.width,Height=screen.height;console.log("log1=",Width,Height);}
     else{let Width=screen.height,Height=screen.width;console.log("log2=",Width,Height);};
     */
-    let game = new Core(window.screen.width,window.screen.height );// Game オブジェクトを作成する
-    //let game = new Core(375,812);// Game オブジェクトを作成する
+    //let game = new Core(window.screen.width,window.screen.height );// Game オブジェクトを作成する
+    let game = new Core(370,800);// Game オブジェクトを作成する
     console.log("screen.width=",screen.width);
     console.log("screen.height=",screen.height);
     //console.log("CELL_SIZE=",CELL_SIZE);
@@ -227,8 +227,8 @@ label[5].font = "30px monospace";
 
         console.log("screen.width=",screen.width);
         console.log("screen.height=",screen.height);
-        console.log("game.width=",game.width);
-        console.log("game.height=",game.height);
+        console.log("game.width=",game);
+        console.log("game.height=",game);
         
 
 
