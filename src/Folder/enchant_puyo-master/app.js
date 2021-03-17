@@ -1,5 +1,5 @@
 //let CELL_SIZE = screen.width / 10;
-let CELL_SIZE = 32;  //マスのサイズ
+let CELL_SIZE = 64;  //マスのサイズ
 let COL_COUNT = 6;   //横のマス数
 let ROW_COUNT = 12;  //縦のマス数
 let context = null;
@@ -36,7 +36,7 @@ window.onload = function () {
     // 必要なファイルを相対パスで引数に指定する。 ファイルはすべて、ゲームが始まる前にロードされる。
     game.preload(
         "images/puyopuyo2.png", 
-        "images/map0_aft.png",
+        "images/resize/map0_64.png",
         "images/gameover.png",
         "images/pad.png",
         "images/Button.png",
