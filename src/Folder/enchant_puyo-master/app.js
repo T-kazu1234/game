@@ -1,3 +1,4 @@
+//let CELL_SIZE = screen.width / 10;
 let CELL_SIZE = 32;  //マスのサイズ
 let COL_COUNT = 6;   //横のマス数
 let ROW_COUNT = 12;  //縦のマス数
@@ -24,7 +25,10 @@ window.onload = function () {
     //let game = new Core(375,812);// Game オブジェクトを作成する
     console.log("screen.width=",screen.width);
     console.log("screen.height=",screen.height);
+    //console.log("CELL_SIZE=",CELL_SIZE);
+    //let CELL_SIZE = screen.width / 10;
     
+
 
     // ゲームのFPS
     game.fps = 10;
@@ -50,7 +54,7 @@ window.onload = function () {
         MusicPlay();
 
         function MusicPlay(){
-            audio.play();// 再生を開始する
+            //audio.play();// 再生を開始する
             console.log("MusicPlayを呼び出された");
         };
 
@@ -151,7 +155,7 @@ window.onload = function () {
          * @param {Number} button.y 回転ボタンy座標
          * @param {boolean} InputA 回転ボタンが押されたかの判定
          */
-        var button = new Button("　回転　","blue");
+        var button = new Button("　回転　","blue",80,80);
             button.x = game.width-60;
             button.y = game.height-200;
             button.addEventListener("touchstart", function(){
@@ -161,7 +165,7 @@ window.onload = function () {
             });
             game.rootScene.addChild(button);
 
-        var button_light = new Button("　決定　", "light");
+        var button_light = new Button("　決定　", "light",80,80);
             button_light.x = game.width-120;
             button_light.y = game.height-100;
             button_light.addEventListener("touchstart", function(){

@@ -1110,7 +1110,8 @@ enchant.EventTarget = enchant.Class.create({
                 stage = enchant.Core.instance._element;
                 var evt;
                 document.addEventListener('keydown', function(e) {
-                    core.dispatchEvent(new enchant.Event('keydown'));
+                    //core.dispatchEvent(new enchant.Event('keydown')); //これをコメントアウトして
+                    core.dispatchEvent(e); //これを追加
                     if (enchant.ENV.PREVENT_DEFAULT_KEY_CODES.indexOf(e.keyCode) !== -1) {
                         e.preventDefault();
                         e.stopPropagation();
