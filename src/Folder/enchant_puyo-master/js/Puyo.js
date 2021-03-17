@@ -5,7 +5,7 @@ class Puyo {
    */
   constructor(game) {
     this.sprite = new Sprite(CELL_SIZE, CELL_SIZE);
-    this.sprite.image = game.assets["images/puyopuyo2.png"];
+    this.sprite.image = game.assets["images/resize/puyopuyo2_64.png"];
     this.sprite.x = 100;
     this.sprite.y = 100;
     //this.sprite.scaleX = 2;//スプライトの　幅　　を2倍に

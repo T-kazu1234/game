@@ -175,7 +175,7 @@ class GameMap {
     var map = new Map(CELL_SIZE, CELL_SIZE);
     //var map = new Map(32, 32);
     //map.image = GameContext.currnt().game.assets['images/map0.png'];
-    map.image = GameContext.currnt().game.assets['images/map0_aft.png'];
+    map.image = GameContext.currnt().game.assets['images/resize/map0_64.png'];
     //map.scaleX = 1.0;
     //map.scaleY = 1.0;
     
