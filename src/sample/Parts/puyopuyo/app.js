@@ -4,10 +4,33 @@ let COL_COUNT = 6;   //横のマス数
 let ROW_COUNT = 12;  //縦のマス数
 let context = null;
 
-// enchant.js を使う前に必要な処理。
+
 enchant();
-window.onload = function () {
-    let game = new Core(screen.width,screen.height);// Game オブジェクトを作成する
+
+/**
+ * gameLoad
+ * @param {*} width 幅
+ * @param {*} height 高さ
+ * @param Rectangle 【語源】ラテン語「まっすぐな角」の意　をEnchantクラス生成
+ * @param initialize Rectangle初期化(x座標の値,y座標の値,幅,高さ)
+ **/
+ function gameLoad(width,height){                            
+    console.log("width=",width);
+    console.log("height=",height);
+    
+  //game = new コア(幅,高さ);    
+    game = new Core(width, height);                         
+    var Rectangle = enchant.Class.create({                  
+        initialize: function(x, y, width, height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        }
+
+
+
+
     // ゲームのFPS
     game.fps = 10;
 
@@ -18,7 +41,7 @@ window.onload = function () {
         "images/gameover.png",
         "images/pad.png",
         "images/Button.png",
-        "sound/PuyoPuyo.mp3"
+     // "sound/PuyoPuyo.mp3"
         );
 
     // ロードが完了したら、ゲームの処理を実行していく
@@ -27,9 +50,12 @@ window.onload = function () {
          * AudioElement を作成
          * サウンドファイルまでの URL アドレスを指定
         */
+
+        /*
         var audio = new Audio();
         audio.src = "sound/PuyoPuyo.mp3";
         MusicPlay();
+        */
 
         function MusicPlay(){
             //audio.play();// 再生を開始する
@@ -267,4 +293,3 @@ function enterFrame() {
 function pushGameOverScene() {
 
 }
-
