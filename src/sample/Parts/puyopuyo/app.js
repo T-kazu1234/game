@@ -228,13 +228,7 @@ label[5].font = "30px monospace";
 //*/     
 
         game.scale = 1;
-
-        console.log("screen.width=",screen.width);
-        console.log("screen.height=",screen.height);
-        console.log("game.width=",game);
-        console.log("game.height=",game);
         
-
 
         // マップの作成
         game.rootScene.addChild(GameMap.createEnchantMap());

@@ -173,14 +173,13 @@ class GameMap {
   static createEnchantMap() {
 
     var map = new Map(CELL_SIZE, CELL_SIZE);
+    map.image = GameContext.currnt().game.assets['images/resize/map0_64.png'];
+    
     //var map = new Map(32, 32);
     //map.image = GameContext.currnt().game.assets['images/map0.png'];
-    map.image = GameContext.currnt().game.assets['images/resize/map0_64.png'];
     //map.scaleX = 1.0;
     //map.scaleY = 1.0;
-    
-    //map.x = 100;
-    //map.y = 100;
+
     var mapData = [
       [ 3, 5, 5 ,5 ,5 ,5, 5, 3, 5, 0 ], //1
       [ 3, 5, 5 ,5 ,5 ,5, 5, 3, 5, 0 ], //2
@@ -196,6 +195,20 @@ class GameMap {
       [ 3, 5, 5 ,5 ,5 ,5, 5, 3, 2, 2 ], //12
       [ 3, 3, 3 ,3 ,3 ,3, 3, 3, 2, 2 ], //13
     ];
+
+    //game.width/2：画面中央
+    //CELL_SIZE * mapData[0].length:マップの横幅
+
+    map.x = (game.width/2) - ((CELL_SIZE * mapData[0].length)/2);
+    map.y = 0;
+    //map.y = 100;
+    console.log('CELL_SIZE = ',CELL_SIZE);
+    console.log('mapData.length = ',mapData.length);
+    console.log('mapData[0].length',mapData[0].length);
+    console.log('game.width/2 = ',game.width/2);
+    console.log('(CELL_SIZE * mapData[0].length)/2 =',(CELL_SIZE * mapData[0].length)/2);
+
+    console.log('map.x = ',map.x);
 
     map.loadData(mapData);
     return map;

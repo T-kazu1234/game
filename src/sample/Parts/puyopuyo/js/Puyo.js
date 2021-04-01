@@ -19,6 +19,10 @@ class Puyo {
     let xyPos = GameContext.currnt().map.getXY(row, col);
     this.sprite.x = xyPos.x;// * this.sprite.scaleX;//spriteの幅　に倍率を掛ける
     this.sprite.y = xyPos.y;// * this.sprite.scaleY;//spriteの高さに倍率を掛ける
+    
+    //var xyPos.x = map.x;
+    //var xyPos.y = map.y;
+    console.log('xyPos.x = ' + xyPos.x,'xyPos.y = ' + xyPos.y)
   }
 
   //アニメーションしながら[ぷよ]を移動する

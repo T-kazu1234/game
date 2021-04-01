@@ -178,7 +178,8 @@ class GameMap {
     map.image = GameContext.currnt().game.assets['images/resize/map0_64.png'];
     //map.scaleX = 1.0;
     //map.scaleY = 1.0;
-    
+    map.x = 200;
+    console.log('map.x = ',map.x);
     //map.x = 100;
     //map.y = 100;
     var mapData = [

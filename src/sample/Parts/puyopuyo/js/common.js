@@ -10,12 +10,10 @@
 
 
 
-    //幅、高さのスケールを計算
-
+    /*/幅、高さのスケールを計算
     var scaleWidth  = window.innerWidth  / gameWidth;
-
     var scaleHeight = window.innerHeight / gameHeight;
-
+    */
     
 
     //スケールが小さい値を全体のスケールに設定
@@ -43,64 +41,17 @@
     var width = gameWidth * scale;
 
     var height = gameHeight * scale;
-
-    
-
-/*    
-
-    //enchantjs-stageの画面サイズを計算
-
-    var width = window.innerWidth;
-
-    var height = window.innerHeight;
-
-
-
-    //回転方向を幅と高さを比較して確認
-
-    var orientation = "";
-
-    if(width < height){
-
-      //縦
-
-      orientation = "portrait";
-
-      height = width;
-
-    }else{
-
-      //横
-
-      orientation = "landscape";
-
-      width = height;
-
-    }
-
-*/
-
     
 
     //div enchant-stageを取得
-
     var stage = $("#enchant-stage");
+    
+    //div enchant-stage配下のdiv（その配下にcanvasが格納されている）にスケールを設定
+    //div enchant-stage 
+    // |-div canvas ←scaleを設定
 
 
 
-/*
-
-    //スケールを計算
-
-    var scale = height / 320.0;
-
-*/
-
-
-
-    //div enchant-stage配下のdiv（その配下にcanvasが格納されている）に
-
-    //スケールを設定
 
     var transformKey = "-" + enchant.ENV.VENDOR_PREFIX + "-transform";
 
@@ -152,10 +103,10 @@
 
     //ゲーム内の画面サイズ
 
-    var gameWidth = 480;
-
-    var gameHeight = 320;
-
+    //var gameWidth = 480;
+    //var gameHeight = 320;
+    var gameWidth = window.innerWidth;
+    var gameHeight = window.innerHeight;
     
 
     //回転時の処理
