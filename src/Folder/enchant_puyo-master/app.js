@@ -175,13 +175,13 @@ window.onload = function () {
 label[2] = new Label();
 label[2].moveTo(20 , game.height - 400);
 label[2].text = "screen.width=" + screen.width;
-label[2].color = "red";
+label[2].color = "blue";
 label[2].font = "30px monospace"; 
 
 label[3] = new Label();
 label[3].moveTo(20 , game.height - 350);
 label[3].text = "screen.height=" + screen.height;
-label[3].color = "red";
+label[3].color = "blue";
 label[3].font = "30px monospace"; 
 
 label[4] = new Label();
