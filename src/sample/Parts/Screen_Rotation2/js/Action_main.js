@@ -25,5 +25,5 @@ document.addEventListener("DOMContentLoaded", function() {
       break;
    
     }
-    document.getElementById('output').innerHTML =  disp + '(' + window.orientation + ')';
+    document.getElementById('output').innerHTML =  disp + '(テスト）';
    }
