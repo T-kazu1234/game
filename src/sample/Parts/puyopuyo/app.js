@@ -170,7 +170,7 @@ enchant();
             });
             //game.rootScene.addChild(button);
 
-        var button_light = new Button("決定　", "bule",80,80);
+        var button_light = new Button("決定　", "light",80,80);
             button_light.x = game.width-120;
             button_light.y = game.height-100;
             button_light.addEventListener("touchstart", function(){
