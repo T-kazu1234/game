@@ -10,7 +10,8 @@ class RensaAnimation {
 
     //削除対象の[ぷよ]がなくなるまで、落下と連鎖処理を繰り替えす為の関数
     var loopFunc = async (cnt) => {
-    
+      console.clear();
+      console.log("loopFunc = ",loopFunc);
       //宙に浮いている[ぷよ]を下に落とす
       this.dropFloting();
 

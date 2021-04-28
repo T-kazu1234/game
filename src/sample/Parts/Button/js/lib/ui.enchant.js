@@ -496,25 +496,19 @@ enchant.ui.Button.DEFAULT_THEME = {
             boxShadow: 'none'
         }
     },
+    /*
     Y_button: {
         normal: {
-            color: 'rgb(54, 54, 54)', 
-            background: { type: 'radial-gradient', start: 'rgb(0, 150, 0)  60%', end: 'rgb(0, 150, 0) 100%' },
-            border: { color: '#026', radius: '50%'  , width: 1, type: 'solid' },//ボーダ（境界線）を太くすると立体感が出る
-            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#666' },
-            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(0, 0, 0, 0.5)' }
+          }
         },
         active: {
-            color: 'rgb(54, 54, 54)',
-            background: { type: 'linear-gradient', start: 'rgb(0, 216, 255)', end: 'rgb(0, 216, 255)' },
-            border: { color: '#000', width: 1, type: 'solid' },
-            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#000' },
-            boxShadow: 'none'
+    
+ 
         }
     }
+    */
     
 };
-
 
 
 /**

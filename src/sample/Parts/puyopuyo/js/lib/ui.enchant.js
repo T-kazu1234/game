@@ -471,21 +471,57 @@ enchant.ui.Button.DEFAULT_THEME = {
     },
     blue: {
         normal: {
-            color: '#fff',
-            background: { type: 'linear-gradient', start: '#04f', end: '#04c' },
+            display: 'inline-block',
+            textdecoration: 'none',
+            //color: '#fff',
+            color: 'rgba(0, 0, 0, 1)',/*アイコン色*/
+            background: { type: 'linear-gradient', start:'#e8e8e8'  , end: '#d6d6d6' },
             border: { color: '#026', width: 1, type: 'solid' },
-            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#666' },
-            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(0, 0, 0, 0.5)' }
+            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.66)' },
+            //textshadow: {'1px','1px','1px' ,},
+            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.5)' },
+            //boxshadow: inset 0 2px 0 rgba(255,255,255,0.5),  
+
+            width: '80px',
+            height: '80px',
+            lineheight: '80px',
+            fontsize: '40px',
+            borderradius: '50%',
+            textalign: 'center',
+            overflow: 'hidden',
+            fontweight: 'bold',
+            //borderbottom: {solid 2px,'#b5b5b5'}
         },
         active: {
+            /*押したとき*/
+            /*
             color: '#ccc',
             background: { type: 'linear-gradient', start: '#029', end: '#026' },
             border: { color: '#026', width: 1, type: 'solid' },
             textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#000' },
             boxShadow: 'none'
-        }
+            */
+            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.5)' },
+            //boxshadow: {inset: 0 1px 0 ,color: 'rgba(255,255,255,0.5)'}, 0 2px 2px rgba(0, 0, 0, 0.19);
+            //border-bottom: none;
+              }
+
+        
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * @scope enchant.ui.MutableText.prototype

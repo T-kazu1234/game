@@ -79,6 +79,7 @@ class GameController {
     } else if (keyCode == KEY_CODE.DOWN) {
       //下キー
       this.context().dropingPuyoPair.moveBottom();
+      
     } else if (keyCode == KEY_CODE.UP) {
       //上キー
       this.context().dropingPuyoPair.moveTop();

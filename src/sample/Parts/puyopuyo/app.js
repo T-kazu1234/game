@@ -41,7 +41,7 @@ enchant();
         "images/gameover.png",
         "images/pad.png",
         "images/Button.png",
-     // "sound/PuyoPuyo.mp3"
+        //"sound/PuyoPuyo.mp3"
         );
 
     // ロードが完了したら、ゲームの処理を実行していく
@@ -51,15 +51,15 @@ enchant();
          * サウンドファイルまでの URL アドレスを指定
         */
 
-        /*
+        
         var audio = new Audio();
-        audio.src = "sound/PuyoPuyo.mp3";
+        //audio.src = "sound/PuyoPuyo.mp3";
         MusicPlay();
-        */
+        
 
         function MusicPlay(){
             //audio.play();// 再生を開始する
-            console.log("MusicPlayを呼び出された");
+            //console.log("MusicPlayを呼び出された");
         };
 
         function MusicStop(){
@@ -127,15 +127,15 @@ enchant();
                     pad.frame = 5 , 
                     pad.rotation = 0,
                     padinput.isGameInputUp = game.input.up;
-                    //console.log("MusicPlayをコールした"),
-                    //MusicPlay();
+                    console.log("MusicPlayをコールした"),
+                    MusicPlay();
                 //下
                 if (game.input.down) 
                     pad.frame = 5 , 
                     pad.rotation = 180,
                     padinput.isGameInputDown = game.input.down;
-                    //console.log("MusicStopをコールした"),
-                    //MusicStop();
+                    console.log("MusicStopをコールした"),
+                    MusicStop();
                 //左
                 if (game.input.left) 
                     pad.frame = 5 , 
@@ -160,7 +160,7 @@ enchant();
          * @param {Number} button.y 回転ボタンy座標
          * @param {boolean} InputA 回転ボタンが押されたかの判定
          */
-        var button = new Button("　回転　","blue",80,80);
+        var button = new Button("　回転　","light",80,80);
             button.x = game.width-60;
             button.y = game.height-200;
             button.addEventListener("touchstart", function(){
@@ -170,7 +170,7 @@ enchant();
             });
             //game.rootScene.addChild(button);
 
-        var button_light = new Button("　決定　", "light",80,80);
+        var button_light = new Button("決定　", "bule",80,80);
             button_light.x = game.width-120;
             button_light.y = game.height-100;
             button_light.addEventListener("touchstart", function(){

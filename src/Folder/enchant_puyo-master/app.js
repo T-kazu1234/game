@@ -18,7 +18,7 @@ window.onload = function () {
         "images/gameover.png",
         "images/pad.png",
         "images/Button.png",
-        "sound/PuyoPuyo.mp3"
+        //"sound/PuyoPuyo.mp3"//
         );
 
     // ロードが完了したら、ゲームの処理を実行していく
