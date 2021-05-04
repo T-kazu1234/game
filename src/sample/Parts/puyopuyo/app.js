@@ -158,25 +158,25 @@ enchant();
          * @param {Number} button.y 回転ボタンy座標
          * @param {boolean} InputA 回転ボタンが押されたかの判定
          */
-        var button = new Button("B","B_button",80,80);
-            button.x = game.width-button.width;
-            button.y = game.height-button.height;
-            button.addEventListener("touchstart", function(){
+        var B_Button = new Button("B","B_button",100,100);
+            B_Button.x = game.width-B_Button.width;
+            B_Button.y = game.height-B_Button.height;
+            B_Button.addEventListener("touchstart", function(){
                  var InputA = new GameController();
                     InputA.isButtonInputA = true;
                     InputA.padinput();
             });
 
 
-        var button_light = new Button("A", "A_button",80,80);
-            button_light.x = button.x - button_light.width;
-            button_light.y = game.height-100;
-            button_light.addEventListener("touchstart", function(){
+        var A_Button = new Button("A", "A_button",100,100);
+            A_Button.x = B_Button.x - A_Button.width;
+            A_Button.y = game.height-200;
+            A_Button.addEventListener("touchstart", function(){
                 var InputB = new GameController();
                 InputB.isButtonInputB = true;
                 InputB.padinput();
                 });                
-            //game.rootScene.addChild(button_light);
+            //game.rootScene.addChild(A_Button);
 
         //var ScoreLabel = new ScoreLabel(10,10);
 
@@ -185,10 +185,10 @@ enchant();
         /* ボタングループを作成してそこにボタンを追加
         var ButtonGroup = new Group();
             ButtonGroup.addChild(button);
-            ButtonGroup.addChild(button_light);
+            ButtonGroup.addChild(A_Button);
             ButtonGroup.x =　10;    
             button.x = 0;
-            button_light.x = button.x - button_light.width;
+            A_Button.x = button.x - A_Button.width;
         */
 
         //コンテキストクラスの作成
@@ -244,8 +244,8 @@ label[5].font = "30px monospace";
         game.rootScene.addChild(GameMap.createEnchantMap());
         //game.rootScene.addChild(ButtonGroup);
         //game.rootScene.addChild(ScoreLabel);
-        game.rootScene.addChild(button);
-        game.rootScene.addChild(button_light);
+        game.rootScene.addChild(B_Button);
+        game.rootScene.addChild(A_Button);
         game.rootScene.addChild(pad);
         /*
         game.rootScene.addChild(label[2]);
