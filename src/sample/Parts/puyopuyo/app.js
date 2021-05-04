@@ -127,14 +127,14 @@ enchant();
                     pad.frame = 5 , 
                     pad.rotation = 0,
                     padinput.isGameInputUp = game.input.up;
-                    console.log("MusicPlayをコールした"),
+                    //console.log("MusicPlayをコールした"),
                     MusicPlay();
                 //下
                 if (game.input.down) 
                     pad.frame = 5 , 
                     pad.rotation = 180,
                     padinput.isGameInputDown = game.input.down;
-                    console.log("MusicStopをコールした"),
+                    //console.log("MusicStopをコールした"),
                     MusicStop();
                 //左
                 if (game.input.left) 
@@ -152,6 +152,40 @@ enchant();
         //game.rootScene.addChild(pad);
         //game.rootScene.backgroundColor = 'rgb(0, 0, 0)';        
 
+        
+        /*
+        var realbutton = {
+            display: "inlineblock",
+            textdecoration: "none",
+            color: "rgba(0, 0, 0, 1)",//アイコン色 
+            width: "80px",  
+            height: "80px",  
+            lineheight: "80px",
+            fontsize: "40px",
+            borderradius: 50%  ;
+            textalign: center  ;
+            overflow: hidden  ;
+            fontweight: bold  ;
+            
+            backgroundimage: "lineargradient(#e8e8e8 0%, #d6d6d6 100%)"
+            */
+            //textshadow: 1px 1px 1px rgba(255, 255, 255, 0.66)  ;
+            //boxshadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.5)  ;
+            //borderbottom: solid 2px #b5b5b5  ;
+            
+          //}
+
+
+
+          var realbutton = new Entity();
+          realbutton._element = document.createElement('button');
+          //realbutton._element.type = "submit";
+          realbutton._element.className = "btn-MusicPlay";
+          realbutton.x = 100;
+          realbutton.y = 100;
+          realbutton.width = 100;
+          realbutton.height = 100;
+
 
        /**
          * 回転ボタンの作成
@@ -160,9 +194,9 @@ enchant();
          * @param {Number} button.y 回転ボタンy座標
          * @param {boolean} InputA 回転ボタンが押されたかの判定
          */
-        var button = new Button("　回転　","light",80,80);
-            button.x = game.width-60;
-            button.y = game.height-200;
+        var button = new Button("　回転　","green",80,80);
+            button.x = game.width-button.width;
+            button.y = game.height-button.height;
             button.addEventListener("touchstart", function(){
                  var InputA = new GameController();
                     InputA.isButtonInputA = true;
@@ -171,7 +205,7 @@ enchant();
             //game.rootScene.addChild(button);
 
         var button_light = new Button("決定　", "light",80,80);
-            button_light.x = game.width-120;
+            button_light.x = button.x - button_light.width;
             button_light.y = game.height-100;
             button_light.addEventListener("touchstart", function(){
                 var InputB = new GameController();
@@ -180,6 +214,18 @@ enchant();
                 });                
             //game.rootScene.addChild(button_light);
 
+        //var ScoreLabel = new ScoreLabel(10,10);
+
+        /**
+         * Groupクラス
+        /* ボタングループを作成してそこにボタンを追加
+        var ButtonGroup = new Group();
+            ButtonGroup.addChild(button);
+            ButtonGroup.addChild(button_light);
+            ButtonGroup.x =　10;    
+            button.x = 0;
+            button_light.x = button.x - button_light.width;
+        */
 
         //コンテキストクラスの作成
         context = new GameContext(game);
@@ -232,9 +278,12 @@ label[5].font = "30px monospace";
 
         // マップの作成
         game.rootScene.addChild(GameMap.createEnchantMap());
+        //game.rootScene.addChild(ButtonGroup);
+        //game.rootScene.addChild(ScoreLabel);
         game.rootScene.addChild(button);
         game.rootScene.addChild(button_light);
         game.rootScene.addChild(pad);
+        game.rootScene.addChild(realbutton);
 
         game.rootScene.addChild(label[2]);
         game.rootScene.addChild(label[3]);

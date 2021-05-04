@@ -312,7 +312,7 @@ enchant.ui.Button = enchant.Class.create(enchant.Entity, {
         style["height"] = "2em";
         style["line-height"] = "2em";
         style["min-width"] = "2em";
-        style["padding"] = "2px 10px";
+        style["padding"] = "0px 0px";
         style["text-align"] = "center";
         style["font-weight"] = "bold";
         style["border-radius"] = "0.5em";
@@ -437,9 +437,9 @@ enchant.ui.Button.theme2css = function(theme) {
 };
 
 enchant.ui.Button.DEFAULT_THEME = {
-    dark: {
+    green: {
         normal: {
-            color: '#fff',
+            color: '#aaa',
             background: { type: 'linear-gradient', start: '#666', end: '#333' },
             border: { color: '#333', width: 1, type: 'solid' },
             textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#666' },
