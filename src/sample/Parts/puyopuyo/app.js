@@ -149,42 +149,6 @@ enchant();
                 //インスタンス(padinput)のMethod(padinput)を呼ぶ。上手く呼べたらpadinput内の//console.logが反応
                     padinput.padinput();
         });
-        //game.rootScene.addChild(pad);
-        //game.rootScene.backgroundColor = 'rgb(0, 0, 0)';        
-
-        
-        /*
-        var realbutton = {
-            display: "inlineblock",
-            textdecoration: "none",
-            color: "rgba(0, 0, 0, 1)",//アイコン色 
-            width: "80px",  
-            height: "80px",  
-            lineheight: "80px",
-            fontsize: "40px",
-            borderradius: 50%  ;
-            textalign: center  ;
-            overflow: hidden  ;
-            fontweight: bold  ;
-            
-            backgroundimage: "lineargradient(#e8e8e8 0%, #d6d6d6 100%)"
-            */
-            //textshadow: 1px 1px 1px rgba(255, 255, 255, 0.66)  ;
-            //boxshadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.5)  ;
-            //borderbottom: solid 2px #b5b5b5  ;
-            
-          //}
-
-
-
-          var realbutton = new Entity();
-          realbutton._element = document.createElement('button');
-          //realbutton._element.type = "submit";
-          realbutton._element.className = "btn-MusicPlay";
-          realbutton.x = 100;
-          realbutton.y = 100;
-          realbutton.width = 100;
-          realbutton.height = 100;
 
 
        /**
@@ -202,7 +166,7 @@ enchant();
                     InputA.isButtonInputA = true;
                     InputA.padinput();
             });
-            //game.rootScene.addChild(button);
+
 
         var button_light = new Button("A", "A_button",80,80);
             button_light.x = button.x - button_light.width;
@@ -283,13 +247,12 @@ label[5].font = "30px monospace";
         game.rootScene.addChild(button);
         game.rootScene.addChild(button_light);
         game.rootScene.addChild(pad);
-        game.rootScene.addChild(realbutton);
-
+        /*
         game.rootScene.addChild(label[2]);
         game.rootScene.addChild(label[3]);
         game.rootScene.addChild(label[4]);
         game.rootScene.addChild(label[5]);
-
+        */
 
         game.rootScene.backgroundColor = 'rgb(0, 0, 0)';        
 
