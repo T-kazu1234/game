@@ -2,101 +2,20 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>ミュージックプレイヤー</title>
-<link rel="stylesheet" href="css/main.css" type="text/css">
+<title>ui.enchant.jsbuttontest</title>
+<!--立体感のあるボタンcssファイルの指定-->
+<link rel="stylesheet" href="css/button.css" type="text/css">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/sample.js"></script>
 <body>
-<!-- Hello world!-->
-<!-- YouTube Player APIを使って色々やってみる -->
-<!-- https://www.tam-tam.co.jp/tipsnote/javascript/post6217.html -->
-<table>
-	<tbody>
-		<tr>
-
-		</tr>
-		<tr>
-    </tr>
-	</tbody>
-</table>
-        <!--class="btn-square"-->
-        <!--cssにクラスを追加
-          Class="btn-MusicPause" //一時停止ボタン
-          Class="btn-MusicPrev"  //一分前へ
-		-->
-        <button class="btn-MusicPlay"  id="play" >再生</button>
-        <button class="btn-MusicPlay"  id="pause">一時停止</button>
-        <button class="btn-MusicPlay"  id="prev">1分前へ</button>
-        <button class="btn-MusicPlay"  id="next">1分先へ</button>
-        <button class="btn-MusicPlay"  id="volup">音量アップ</button>
-        <button class="btn-MusicPlay"  id="voldown">音量ダウン</button>
-        <button class="btn-MusicPlay"  id="mute">ミュート</button>
-        <!--
-		-->
-<table>
-	<tbody>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-      <td nowrap align="center"  valign="bottom" class="up" ><td><button class="btn-MusicPlay"  id="volup">上</button></td>
-			<td></td>
-      <td></td>
-      <td class="game" rowspan="3"><div id="sample"></div></td>
-			<td></td>
-			<td class="X"><button class="btn-MusicPlay"  id="testa">再</button></td>      
-      <td></td>
-		</tr>
-		<tr>
-			<td nowrap align="left"　class="Right"><button class="btn-MusicPlay"  id="prev">X</button></td>
-			<td></td>
-			<td nowrap align="left" class="left"><button class="btn-MusicPlay"  id="next">Y</button></td>
-			<td></td>
-			<td class="Y"></tdclass><button class="btn-MusicPlay"  id="mute">B</button></td>
-			<td class="A"><button class="btn-MusicPlay"  id="testb">A</button></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td nowrap align="center"  valign="top" class="Down" ><button class="btn-MusicPlay"  id="voldown">下</button></td>
-			<td></td>
-			<td></td>
-      <td nowrap align="center"  valign="top" class="B"><button class="btn-MusicPlay"  id="pause">止</button></td>
-			<td></td>
-		</tr>
-		<tr>
-      <td></td>
-			<td></td>
-      <td></td>
-      <td></td> 
-			<td>
-        曲の選択:
-        <!-- <select v-model"MusicFile" multiple> -->
-        <select "MusicFile">
-          <option value="-tKVN2mAKRI">打上花火</option>
-          <option value="DefDzfdHjwo">ShinyDays</option>
-          <option value="i1qrQWyuM3U">君じゃなきゃダメみたい</option>
-          <option value="d7zJQYmWjok">Girlish Lover</option>
-          <option value="GvbdNan1j68"></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-        <input type="submit" value="◀この曲を表示する">      </td>
-
-      </td>
-			<td>
-			<td>
-      </td>
-		</tr>
-	</tbody>
-</table>
+<!--
+class="btn-square"　cssにクラスを追加
+Class="btn-MusicPause" //一時停止ボタン
+Class="btn-MusicPrev"  //一分前へ
+-->
+<button class="btn-MusicPlay"  id="X_button">X</button>
+<button class="btn-MusicPlay"  id="Y_button">Y</button>
+<button class="btn-MusicPlay"  id="B_button">B</button>
+<button class="btn-MusicPlay"  id="A_button">A</button>
 </body>
 </html>

@@ -308,14 +308,21 @@ enchant.ui.Button = enchant.Class.create(enchant.Entity, {
         // デフォルトのスタイル (テーマで上書き可能)
         var style = this._style;
         style["display"] = "inline-block";
-        style["font-size"] = "12px";
-        style["height"] = "2em";
-        style["line-height"] = "2em";
-        style["min-width"] = "2em";
+        style["text-decoration"] = "none";//add
+        style["width"] = "80px";//add
+        style["font-size"] = "40px"; 
+        style["height"] = "80px";//add
+        style["overflow"] = "hidden";
+        style["line-height"] = "80px";//change 2em　→　80px
+        //style["min-width"] = "2em";
         style["padding"] = "0px 0px";
         style["text-align"] = "center";
         style["font-weight"] = "bold";
-        style["border-radius"] = "0.5em";
+        style["border-radius"] = "50%";
+        style["background-image"] = "linear-gradient(#e8e8e8 0%,#d6d6d6 100%)";//add
+        style["text-shadow"]= "1px 1px 1px rgba(255, 255, 255, 0.66)";//add
+        style["box-shadow"]= "inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.5)";//add
+        style["border-bottom"] =  "solid 2px #b5b5b5"  ;
 
         // テーマの指定がなければ "dark" を使う
         theme = theme || "dark";
@@ -437,62 +444,71 @@ enchant.ui.Button.theme2css = function(theme) {
 };
 
 enchant.ui.Button.DEFAULT_THEME = {
-    green: {
+    A_button: {
         normal: {
-            color: '#aaa',
-            background: { type: 'linear-gradient', start: '#666', end: '#333' },
+            color: '#fff',
+            background: { type: 'linear-gradient', start: '#ff4500', end: '#ff0000' },
             border: { color: '#333', width: 1, type: 'solid' },
             textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#666' },
             boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.3)' }
         },
         active: {
-            color: '#ccc',
-            background: { type: 'linear-gradient', start: '#333', end: '#000' },
+            color: '#333',
+            background: { type: 'linear-gradient', start: '#fff', end: '#00D9FB' },
             border: { color: '#333', width: 1, type: 'solid' },
             textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#000' },
             boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.3)' }
         }
     },
-    light: {
+    B_button: {
         normal: {
-            color: '#333',
-            background: { type: 'linear-gradient', start: '#fff', end:'#ccc' },
+            color: '#fff',
+            background: { type: 'linear-gradient', start: '#98fb98', end:'#228b22' },
             border: { color: '#999', width: 1, type: 'solid' },
             textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#fff' },
             boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(0, 0, 0, 1)' },
         },
         active: {
             color: '#333',
-            background: { type: 'linear-gradient', start: '#ccc', end: '#999' },
+            background: { type: 'linear-gradient', start: '#fff', end: '#00D9FB' },
             border: { color: '#666', width: 1, type: 'solid' },
             textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#ccc' },
             boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.3)' }
         }
     },
-    blue: {
+    X_button: {
         normal: {
             color: '#fff',
-            background: { type: 'linear-gradient', start: '#04f', end: '#04c' },
-            border: { color: '#026', width: 1, type: 'solid' },
-            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#666' },
-            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(0, 0, 0, 0.5)' }
+            background: { type: 'linear-gradient', start: '#fffacd', end:'#ffff00' },
+            border: { color: '#999', width: 1, type: 'solid' },
+            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#fff' },
+            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(0, 0, 0, 1)' },
         },
         active: {
-            color: '#ccc',
-            background: { type: 'linear-gradient', start: '#029', end: '#026' },
-            border: { color: '#026', width: 1, type: 'solid' },
-            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#000' },
-            boxShadow: 'none'
+            color: '#333',
+            background: { type: 'linear-gradient', start: '#fff', end: '#00D9FB' },
+            border: { color: '#666', width: 1, type: 'solid' },
+            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#ccc' },
+            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.3)' }
         }
-        
+    },
+    Y_button: {
+        normal: {
+            color: '#fff',
+            background: { type: 'linear-gradient', start: '#4169e1', end:'#0000cd' },
+            border: { color: '#999', width: 1, type: 'solid' },
+            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#fff' },
+            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(0, 0, 0, 1)' },
+        },
+        active: {
+            color: '#333',
+            background: { type: 'linear-gradient', start: '#fff', end: '#00D9FB' },
+            border: { color: '#666', width: 1, type: 'solid' },
+            textShadow: { offsetX: 0, offsetY: 1, blur: 0, color: '#ccc' },
+            boxShadow: { offsetX: 0, offsetY: 1, blur: 0, color: 'rgba(255, 255, 255, 0.3)' }
+        }
     }
 };
-
-
-
-
-
-
 
 
 

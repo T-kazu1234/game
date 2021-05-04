@@ -194,7 +194,7 @@ enchant();
          * @param {Number} button.y 回転ボタンy座標
          * @param {boolean} InputA 回転ボタンが押されたかの判定
          */
-        var button = new Button("　回転　","green",80,80);
+        var button = new Button("B","B_button",80,80);
             button.x = game.width-button.width;
             button.y = game.height-button.height;
             button.addEventListener("touchstart", function(){
@@ -204,7 +204,7 @@ enchant();
             });
             //game.rootScene.addChild(button);
 
-        var button_light = new Button("決定　", "light",80,80);
+        var button_light = new Button("A", "A_button",80,80);
             button_light.x = button.x - button_light.width;
             button_light.y = game.height-100;
             button_light.addEventListener("touchstart", function(){
