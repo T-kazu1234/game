@@ -1,7 +1,7 @@
     var music = new Audio();
     function init() {
             music.preload = "auto";
-            music.src = "sound/PuyoPuyo.mp3";
+            music.src = "SoundEffect/powerup02.mp3";
             music.load();
         
             music.addEventListener("ended", function () 
