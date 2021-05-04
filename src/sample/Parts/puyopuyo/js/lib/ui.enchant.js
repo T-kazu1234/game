@@ -443,6 +443,12 @@ enchant.ui.Button.theme2css = function(theme) {
     return obj;
 };
 
+/**
+ * 色の名前とカラーコードが一目でわかるWEB色見本
+ * WEB色見本 原色大辞典 - HTMLカラーコード
+ * ブラウザで名前が定義されている140色の色名と16進数
+ * https://www.colordic.org/ 
+ */
 enchant.ui.Button.DEFAULT_THEME = {
     A_button: {
         normal: {
