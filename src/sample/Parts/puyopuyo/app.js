@@ -47,33 +47,15 @@ enchant();
         "images/gameover.png",
         "images/pad.png",
         "images/Button.png",
-        //"sound/PuyoPuyo.mp3"
+        "SoundEffect/powerup02.mp3"
         );
 
     /** 
      *ロードが完了したら、ゲームの処理を実行していく
      */
     game.onload = function () {
-        /**  
-         * AudioElement を作成
-         * サウンドファイルまでの URL アドレスを指定
-        */
 
-        
-        var audio = new Audio();
-        //audio.src = "sound/PuyoPuyo.mp3";
-        MusicPlay();
-        
 
-        function MusicPlay(){
-            //audio.play();// 再生を開始する
-            //console.log("MusicPlayを呼び出された");
-        };
-
-        function MusicStop(){
-            audio.pause();
-            audio.currentTime = 0;
-        };
 /**
  * 時間経過毎にぷよを下に落とすためのタイマー
                             

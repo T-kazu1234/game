@@ -79,6 +79,24 @@ class RensaAnimation {
     });
   }
 
+/**
+ * ぷよ削除音再生
+ * AudioElement を作成
+ * サウンドファイルまでの URL アドレスを指定
+*/
+
+MusicPlay(){
+  var audio = new Audio();
+      audio.src = "SoundEffect/powerup02.mp3";
+      audio.play();// 再生を開始する
+      console.log("MusicPlayを呼び出された");
+      };
+
+MusicStop(){
+    audio.pause();
+    audio.currentTime = 0;
+    };
+
   /**
    * 連作処理
    */
@@ -116,11 +134,15 @@ class RensaAnimation {
       if (ckList[row][col] == "D") {
         this.map().removePuyo(row, col);
         removeCount++;
+        this.MusicPlay();
       }
     });
 
     return removeCount;
   }
+
+
+
 
   /**
    * 隣り合うマスに同色の[ぷよ]が居るか探す
