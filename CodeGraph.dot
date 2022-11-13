@@ -1,0 +1,62 @@
+digraph g{
+    graph[
+        layout = circo
+    ]
+    node01
+        [
+        shape=record,
+        label=
+        "{
+            GameMap.js|{constructor|{puyolist}}|
+            {Method|{canMove|SetPuyo|movePuyo|removePuyo|removeAllPuyo|Puyo}}
+         }"
+        ];
+
+    node02
+        [
+        shape=record,
+        label=
+        "{
+            Puyo.js|{constructor|{sprite|sprite.image|sprite.x|sprite.y|sprite.frame|isAnimete}}|
+            {Method|{setPosition|moveWithAnimate|static:randamCreate}}
+        }"
+        ];
+    node03
+        [
+            shape=record,
+            label=
+            "{
+                PuyoPair.js|{constructor|{puyo1|puyo2|row|col|angle|stockIndex}}|
+                {Method|{map|setPosition|setStockPosition|moveLeft|moveRight|moveTop|moveBottom|moveBottomLast|canMove|rotation|fix||}}
+            }"
+        ];
+    node04
+        [
+            shape=record,
+            label=
+            "{
+            RensaAnimation.js|
+                {Method|{process|loopFunc|||}}
+            }"
+        ];
+    node05
+        [
+            shape=record,
+            label="GameContext.js"
+        ];
+    node06
+        [
+            shape=record,
+            label="{
+                app.js
+            }"
+        ]
+
+//描画
+    node01->node02->node03;
+    node02->node04;
+    node05->node02;
+    node04->node03;
+    node04->node06;
+    node05->node03;
+}
